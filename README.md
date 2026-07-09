@@ -2,7 +2,7 @@
 
 > **Empowering women to grow, restart and lead.**
 
-Herizon is an AI-powered career empowerment platform built for the **Vibe2Vision Hackathon** under **Track 3 - ElevateHer: Education, FinTech & Career Empowerment**.
+Herizon is an AI-powered career empowerment platform built for the **Vibe2Vision Hackathon** under **Track 3 – ElevateHer: Education, FinTech & Career Empowerment**.
 
 ## 📖 About
 
@@ -110,10 +110,10 @@ Your personal AI mentor.
 
 **Event:** Vibe2Vision Hackathon
 
-**Track:** ElevateHer - Education, FinTech & Career Empowerment
+**Track:** ElevateHer — Education, FinTech & Career Empowerment
 
 ---
 
 # 📄 License
 
-Developed by **Team Galaxantic** for the **Vibe2Vision Hackathon**.
+Developed by **Team Galaxantic** for the **Vibe2Vision Hackathon 2026**.

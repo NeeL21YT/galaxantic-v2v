@@ -1,0 +1,422 @@
+@import "tailwindcss";
+
+/* ============================================================
+   HERIZON DESIGN SYSTEM
+   Global CSS with Tailwind v4 @theme tokens
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. ROOT DESIGN TOKENS
+   ------------------------------------------------------------ */
+:root {
+  /* Brand Colors */
+  --color-champagne: #f5e6d1;
+  --color-light-red: #ffc8cb;
+  --color-rose-gold: #b46c72;
+  --color-rose-gold-dark: #9a5a60;
+  --color-rose-gold-light: #c98a8f;
+  --color-puce-red: #6e2e34;
+  --color-puce-red-dark: #561e24;
+  --color-rackley: #5e7b9b;
+  --color-rackley-dark: #4a6480;
+  --color-rackley-light: #7a9ab5;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e8e8e8;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+
+  /* Semantic Colors */
+  --color-background: #fffdf9;
+  --color-surface: #ffffff;
+  --color-surface-hover: #fdf8f3;
+  --color-border: #ede4d8;
+  --color-border-light: #f5ede2;
+  --color-text-primary: #2d1a1c;
+  --color-text-secondary: #6b5b5d;
+  --color-text-muted: #9b8b8d;
+
+  /* Typography */
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(110, 46, 52, 0.06), 0 1px 2px -1px rgba(110, 46, 52, 0.04);
+  --shadow-md: 0 4px 16px 0 rgba(110, 46, 52, 0.08), 0 2px 6px -2px rgba(110, 46, 52, 0.05);
+  --shadow-lg: 0 10px 40px 0 rgba(110, 46, 52, 0.10), 0 4px 12px -4px rgba(110, 46, 52, 0.06);
+  --shadow-xl: 0 20px 60px 0 rgba(110, 46, 52, 0.12), 0 8px 24px -8px rgba(110, 46, 52, 0.08);
+  --shadow-card: 0 2px 12px 0 rgba(110, 46, 52, 0.07);
+  --shadow-card-hover: 0 8px 32px 0 rgba(110, 46, 52, 0.12);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Container */
+  --container-max: 1200px;
+  --container-padding: 1.5rem;
+}
+
+/* ------------------------------------------------------------
+   2. TAILWIND v4 THEME EXTENSION
+   ------------------------------------------------------------ */
+@theme inline {
+  /* Colors */
+  --color-champagne: var(--color-champagne);
+  --color-light-red: var(--color-light-red);
+  --color-rose-gold: var(--color-rose-gold);
+  --color-rose-gold-dark: var(--color-rose-gold-dark);
+  --color-rose-gold-light: var(--color-rose-gold-light);
+  --color-puce-red: var(--color-puce-red);
+  --color-puce-red-dark: var(--color-puce-red-dark);
+  --color-rackley: var(--color-rackley);
+  --color-rackley-dark: var(--color-rackley-dark);
+  --color-rackley-light: var(--color-rackley-light);
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-hover: var(--color-surface-hover);
+  --color-border: var(--color-border);
+  --color-border-light: var(--color-border-light);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-sans: var(--font-body);
+
+  /* Border Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --radius-full: var(--radius-full);
+
+  /* Shadows */
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+}
+
+/* ------------------------------------------------------------
+   3. BASE / RESET
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------------------
+   4. TYPOGRAPHY
+   ------------------------------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-puce-red);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h4 { font-size: 1.25rem; }
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+a {
+  color: var(--color-rose-gold);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-rose-gold-dark);
+}
+
+/* ------------------------------------------------------------
+   5. SELECTION
+   ------------------------------------------------------------ */
+::selection {
+  background-color: var(--color-light-red);
+  color: var(--color-puce-red-dark);
+}
+
+/* ------------------------------------------------------------
+   6. SCROLLBAR
+   ------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-champagne);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rose-gold-light);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose-gold);
+}
+
+/* ------------------------------------------------------------
+   7. FOCUS STATES
+   ------------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--color-rose-gold);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ------------------------------------------------------------
+   8. COMPONENT UTILITIES (reusable across design system)
+   ------------------------------------------------------------ */
+
+/* Container */
+.container-app {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Gradient Backgrounds */
+.gradient-brand {
+  background: linear-gradient(
+    135deg,
+    var(--color-champagne) 0%,
+    #fdf4ee 40%,
+    #f9efe8 100%
+  );
+}
+
+.gradient-hero {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(245, 230, 209, 0.7) 0%,
+    rgba(255, 200, 203, 0.15) 50%,
+    transparent 100%
+  );
+}
+
+.gradient-cta {
+  background: linear-gradient(
+    135deg,
+    var(--color-puce-red) 0%,
+    var(--color-rose-gold) 60%,
+    #c4808a 100%
+  );
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-puce-red), var(--color-rose-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Base */
+.card-base {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card-base:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background: var(--color-border);
+  margin: 0;
+}
+
+/* Section spacing */
+.section-padding {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+.section-padding-sm {
+  padding-top: var(--spacing-section-sm);
+  padding-bottom: var(--spacing-section-sm);
+}
+
+/* Badge Base */
+.badge-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.875rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+/* Button base */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: inherit;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  user-select: none;
+  color: inherit;
+}
+
+.btn-base * {
+  color: inherit;
+}
+
+.btn-base:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Input base */
+.input-base {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.input-base::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input-base:focus {
+  border-color: var(--color-rose-gold);
+  box-shadow: 0 0 0 3px rgba(180, 108, 114, 0.12);
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gray-100) 25%,
+    var(--color-champagne) 50%,
+    var(--color-gray-100) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Step connector line */
+.step-connector {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-rose-gold-light), var(--color-champagne));
+  transform: translateY(-50%);
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
