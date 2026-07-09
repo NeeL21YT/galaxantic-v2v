@@ -76,7 +76,7 @@ Your personal AI mentor.
 
 ### Frontend
 
-- Next.js 15
+- Next.js 16
 - TypeScript
 - Tailwind CSS
 - Lucide React
