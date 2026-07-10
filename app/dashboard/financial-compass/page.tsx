@@ -223,12 +223,64 @@ export default function FinancialCompassPage() {
     setCurrentStep(step);
   }
 
+  function validateStep(step: number): boolean {
+    const errors: ValidationError[] = [];
+
+    if (step === 1) {
+      const income = parseFloat(formData.monthlyIncome);
+      if (!formData.monthlyIncome || isNaN(income) || income <= 0)
+        errors.push({ field: "monthlyIncome", message: "Monthly income is required and must be greater than zero." });
+
+      if (!formData.employmentType)
+        errors.push({ field: "employmentType", message: "Please select your employment type." });
+
+      if (formData.employmentType === "other" && !formData.customEmploymentType?.trim())
+        errors.push({ field: "customEmploymentType", message: "Please describe your employment type." });
+
+      const savings = parseFloat(formData.currentSavings);
+      if (!formData.currentSavings || isNaN(savings) || savings < 0)
+        errors.push({ field: "currentSavings", message: "Current savings is required (enter 0 if none)." });
+
+      const expenses = parseFloat(formData.monthlyExpenses);
+      if (!formData.monthlyExpenses || isNaN(expenses) || expenses < 0)
+        errors.push({ field: "monthlyExpenses", message: "Monthly expenses is required (enter 0 if none)." });
+    }
+
+    if (step === 2) {
+      if (!formData.goal)
+        errors.push({ field: "goal", message: "Please select a financial goal." });
+      if (formData.goal === "other" && !formData.customGoal?.trim())
+        errors.push({ field: "customGoal", message: "Please describe your financial goal." });
+    }
+
+    if (step === 3) {
+      const target = parseFloat(formData.targetAmount);
+      if (!formData.targetAmount || isNaN(target) || target <= 0)
+        errors.push({ field: "targetAmount", message: "Target amount is required and must be greater than zero." });
+      if (!formData.targetTimeline?.trim())
+        errors.push({ field: "targetTimeline", message: "Target timeline is required." });
+      // Business goal: expectedInvestment acts as targetAmount
+      if (isBusinessGoal) {
+        const inv = parseFloat(formData.expectedInvestment);
+        if (!formData.expectedInvestment || isNaN(inv) || inv <= 0)
+          errors.push({ field: "targetAmount", message: "Expected investment is required." });
+      }
+    }
+
+    setValidationErrors(errors);
+    return errors.length === 0;
+  }
+
   function handleNext() {
+    if (!validateStep(currentStep)) return;
     if (currentStep < TOTAL_STEPS) goToStep(currentStep + 1);
   }
 
   function handleBack() {
-    if (currentStep > 1) goToStep(currentStep - 1);
+    if (currentStep > 1) {
+      setValidationErrors([]);
+      goToStep(currentStep - 1);
+    }
   }
 
   function toggleActionItem(id: string) {
@@ -238,6 +290,7 @@ export default function FinancialCompassPage() {
   }
 
   async function handleGeneratePlan() {
+    if (!validateStep(3)) return;
     setError(null);
     setValidationErrors([]);
     setIsGenerating(true);
@@ -436,6 +489,7 @@ export default function FinancialCompassPage() {
               formData={formData}
               onSelect={(goal) => updateForm("goal", goal)}
               onCustomGoalChange={(v) => updateForm("customGoal", v)}
+              validationErrors={validationErrors}
               disabled={isGenerating}
             />
           )}
@@ -548,9 +602,14 @@ function Step1({
       subtitle="Tell us where you are financially right now."
     >
       <div className="flex flex-col gap-4">
+        {/* Required note */}
+        <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+          Fields marked <span style={{ color: "#dc2626" }}>*</span> are required.
+        </p>
+
         <Input
           id="monthly-income"
-          label="Monthly Income (₹)"
+          label={<>Monthly Income (₹) <span style={{ color: "#dc2626" }}>*</span></>}
           type="number"
           min="0"
           placeholder="e.g. 50000"
@@ -567,7 +626,7 @@ function Step1({
             className="text-sm font-medium mb-2 block"
             style={{ color: "var(--color-text-primary)" }}
           >
-            Employment Type
+            Employment Type <span style={{ color: "#dc2626" }}>*</span>
           </legend>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {EMPLOYMENT_OPTIONS.map((opt) => (
@@ -630,10 +689,10 @@ function Step1({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Input
             id="current-savings"
-            label="Current Savings (₹)"
+            label={<>Current Savings (₹) <span style={{ color: "#dc2626" }}>*</span></>}
             type="number"
             min="0"
-            placeholder="e.g. 25000"
+            placeholder="e.g. 25000 (enter 0 if none)"
             value={formData.currentSavings}
             onChange={(e) => updateForm("currentSavings", e.target.value)}
             leftIcon={<span className="text-sm font-medium">₹</span>}
@@ -642,7 +701,7 @@ function Step1({
           />
           <Input
             id="monthly-expenses"
-            label="Monthly Expenses (₹)"
+            label={<>Monthly Expenses (₹) <span style={{ color: "#dc2626" }}>*</span></>}
             type="number"
             min="0"
             placeholder="e.g. 30000"
@@ -664,11 +723,13 @@ function Step2({
   formData,
   onSelect,
   onCustomGoalChange,
+  validationErrors,
   disabled,
 }: {
   formData: FinancialFormData;
   onSelect: (goal: string) => void;
   onCustomGoalChange: (v: string) => void;
+  validationErrors: ValidationError[];
   disabled: boolean;
 }) {
   return (
@@ -677,19 +738,34 @@ function Step2({
       subtitle="What do you want to achieve? Select the one that fits best."
     >
       <div className="flex flex-col gap-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {FINANCIAL_GOALS.map((goal, i) => (
-            <GoalCard
-              key={goal.id}
-              id={goal.id}
-              icon={goal.icon}
-              label={goal.label}
-              description={goal.description}
-              selected={formData.goal === goal.id}
-              onClick={() => onSelect(goal.id as FinancialGoalType)}
-              index={i}
-            />
-          ))}
+        {/* Required note */}
+        <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+          Fields marked <span style={{ color: "#dc2626" }}>*</span> are required.
+        </p>
+
+        <div>
+          <p className="text-sm font-medium mb-2" style={{ color: "var(--color-text-primary)" }}>
+            Financial Goal <span style={{ color: "#dc2626" }}>*</span>
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {FINANCIAL_GOALS.map((goal, i) => (
+              <GoalCard
+                key={goal.id}
+                id={goal.id}
+                icon={goal.icon}
+                label={goal.label}
+                description={goal.description}
+                selected={formData.goal === goal.id}
+                onClick={() => onSelect(goal.id as FinancialGoalType)}
+                index={i}
+              />
+            ))}
+          </div>
+          {validationErrors.find((e) => e.field === "goal") && (
+            <p className="text-xs mt-2" style={{ color: "#dc2626" }}>
+              {validationErrors.find((e) => e.field === "goal")?.message}
+            </p>
+          )}
         </div>
 
         {/* Custom goal field */}
@@ -703,11 +779,12 @@ function Step2({
             >
               <Input
                 id="custom-goal"
-                label="Describe your goal"
+                label={<>Describe your goal <span style={{ color: "#dc2626" }}>*</span></>}
                 placeholder="e.g. Save for wedding, Build retirement fund..."
                 value={formData.customGoal}
                 onChange={(e) => onCustomGoalChange(e.target.value)}
                 disabled={disabled}
+                error={validationErrors.find((e) => e.field === "customGoal")?.message}
               />
             </motion.div>
           )}
@@ -745,6 +822,10 @@ function Step3({
         subtitle="Help us understand your business idea so we can tailor your plan."
       >
         <div className="flex flex-col gap-4">
+          {/* Required note */}
+          <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+            Fields marked <span style={{ color: "#dc2626" }}>*</span> are required.
+          </p>
           <Textarea
             id="business-idea"
             label="Business Idea"
@@ -790,7 +871,7 @@ function Step3({
           </div>
           <Input
             id="expected-investment"
-            label="Expected Investment (₹)"
+            label={<>Expected Investment (₹) <span style={{ color: "#dc2626" }}>*</span></>}
             type="number"
             min="0"
             placeholder="e.g. 200000"
@@ -802,7 +883,7 @@ function Step3({
           />
           <Input
             id="goal-timeline"
-            label="Target Timeline"
+            label={<>Target Timeline <span style={{ color: "#dc2626" }}>*</span></>}
             placeholder="e.g. 24 months"
             value={formData.targetTimeline}
             onChange={(e) => updateForm("targetTimeline", e.target.value)}
@@ -829,6 +910,11 @@ function Step3({
       subtitle="Give us a few more details to personalise your plan."
     >
       <div className="flex flex-col gap-4">
+          {/* Required note */}
+          <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
+            Fields marked <span style={{ color: "#dc2626" }}>*</span> are required.
+          </p>
+
         <Textarea
           id="goal-details"
           label="Describe your goal"
@@ -840,7 +926,7 @@ function Step3({
         />
         <Input
           id="goal-amount"
-          label="Target Amount (₹)"
+          label={<>Target Amount (₹) <span style={{ color: "#dc2626" }}>*</span></>}
           type="number"
           min="0"
           placeholder="e.g. 500000"
@@ -852,7 +938,7 @@ function Step3({
         />
         <Input
           id="goal-timeline"
-          label="Target Timeline"
+          label={<>Target Timeline <span style={{ color: "#dc2626" }}>*</span></>}
           placeholder="e.g. 24 months or 2 years"
           value={formData.targetTimeline}
           onChange={(e) => updateForm("targetTimeline", e.target.value)}

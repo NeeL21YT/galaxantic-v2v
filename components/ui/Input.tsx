@@ -14,7 +14,7 @@ import { forwardRef } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /** Visible label above the input */
-  label?: string;
+  label?: React.ReactNode;
   /** Helper text shown below the input */
   helperText?: string;
   /** Error message (replaces helperText when present) */
@@ -43,7 +43,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   },
   ref
 ) {
-  const inputId = id ?? (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  const inputId = id ?? (typeof label === "string" ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
 
   return (
     <div className={cn("flex flex-col gap-1.5", wrapperClassName)}>
