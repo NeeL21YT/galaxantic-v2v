@@ -12,14 +12,17 @@ import { SearchBar } from "@/components/dashboard/SearchBar";
 import { NotificationButton } from "@/components/dashboard/NotificationButton";
 import { AvatarDropdown } from "@/components/dashboard/AvatarDropdown";
 import { Breadcrumb } from "@/components/dashboard/Breadcrumb";
-import { PLACEHOLDER_USER } from "@/lib/data/placeholder";
 
 interface DashboardNavbarProps {
   onMenuClick: () => void;
   breadcrumbs?: Array<{ label: string; href?: string }>;
+  /** Real user display name from server-side auth */
+  userName: string;
+  /** Real user email from server-side auth */
+  userEmail: string;
 }
 
-export function DashboardNavbar({ onMenuClick, breadcrumbs = [] }: DashboardNavbarProps) {
+export function DashboardNavbar({ onMenuClick, breadcrumbs = [], userName, userEmail }: DashboardNavbarProps) {
   const hour = new Date().getHours();
   const greeting =
     hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
@@ -57,7 +60,7 @@ export function DashboardNavbar({ onMenuClick, breadcrumbs = [] }: DashboardNavb
             className="text-xs hidden sm:block"
             style={{ color: "var(--color-text-muted)" }}
           >
-            {greeting}, {PLACEHOLDER_USER.name.split(" ")[0]} 👋
+            {greeting}, {userName.split(" ")[0]} 👋
           </p>
           {breadcrumbs.length > 0 && <Breadcrumb segments={breadcrumbs} />}
         </div>
@@ -70,9 +73,8 @@ export function DashboardNavbar({ onMenuClick, breadcrumbs = [] }: DashboardNavb
         </div>
         <NotificationButton count={3} />
         <AvatarDropdown
-          name={PLACEHOLDER_USER.name}
-          email={PLACEHOLDER_USER.email}
-          avatarUrl={PLACEHOLDER_USER.avatarUrl}
+          name={userName}
+          email={userEmail}
         />
       </div>
     </header>

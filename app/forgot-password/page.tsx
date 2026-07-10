@@ -1,37 +1,42 @@
 /**
  * app/forgot-password/page.tsx
  *
- * Forgot password — sends reset email.
- * TODO Stage 2: wire to Supabase Auth.
+ * Forgot password — wired to Supabase Auth via resetPassword server action.
+ * Sends a reset email with a link to /auth/callback?next=/dashboard/settings.
  */
 
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import Link from "next/link";
 import { ArrowLeft, Send, CheckCircle2, KeyRound } from "lucide-react";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { Toast } from "@/components/ui/Toast";
 import { isValidEmail } from "@/lib/utils";
+import { resetPassword } from "@/lib/supabase/actions";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | undefined>();
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) { setError("Email is required"); return; }
     if (!isValidEmail(email)) { setError("Enter a valid email address"); return; }
     setError(undefined);
-    setLoading(true);
 
-    // TODO Stage 2: await supabase.auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/reset-password` })
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSent(true);
+    startTransition(async () => {
+      const result = await resetPassword(email);
+      if (result.success) {
+        setSent(true);
+      } else {
+        setError(result.error);
+      }
+    });
   }
 
   return (
@@ -80,6 +85,15 @@ export default function ForgotPasswordPage() {
       ) : (
         /* Form */
         <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
+          {/* Auth error toast */}
+          {error && (
+            <Toast
+              message={error}
+              variant="error"
+              onDismiss={() => setError(undefined)}
+            />
+          )}
+
           <Input
             id="reset-email"
             label="Email Address"
@@ -87,7 +101,6 @@ export default function ForgotPasswordPage() {
             placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            error={error}
             autoComplete="email"
             required
             aria-required="true"
@@ -97,7 +110,7 @@ export default function ForgotPasswordPage() {
             type="submit"
             variant="primary"
             fullWidth
-            loading={loading}
+            loading={isPending}
             rightIcon={<Send className="w-4 h-4" aria-hidden="true" />}
           >
             Send Reset Link

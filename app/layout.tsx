@@ -70,7 +70,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${playfair.variable}`}
+      // Dark Reader checks this attribute to skip sites that declare themselves dark.
+      // suppressHydrationWarning prevents React from complaining about any remaining
+      // extension-injected attributes (data-darkreader-*, --darkreader-* etc.)
+      // that appear before hydration in browsers with Dark Reader installed.
+      data-darkreader-scheme="dark"
+      suppressHydrationWarning
+    >
+      <head>
+        {/* color-scheme: dark — tells the browser and Dark Reader this site is
+            already dark-mode-aware. Prevents auto-inversion of the design. */}
+        <meta name="color-scheme" content="dark" />
+      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );

@@ -6,9 +6,10 @@
 
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useTransition } from "react";
 import { ChevronDown, Settings, LogOut, User } from "lucide-react";
 import Link from "next/link";
+import { signOut } from "@/lib/supabase/actions";
 
 interface AvatarDropdownProps {
   name: string;
@@ -27,6 +28,7 @@ function getInitials(name: string): string {
 
 export function AvatarDropdown({ name, email, avatarUrl }: AvatarDropdownProps) {
   const [open, setOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -134,16 +136,19 @@ export function AvatarDropdown({ name, email, avatarUrl }: AvatarDropdownProps) 
 
             <button
               type="button"
-              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-150"
+              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-150 disabled:opacity-60"
               style={{ color: "#dc2626" }}
               onClick={() => {
                 setOpen(false);
-                // TODO Stage 2: implement Supabase sign-out
+                startTransition(async () => {
+                  await signOut();
+                });
               }}
+              disabled={isPending}
               role="menuitem"
             >
               <LogOut className="w-4 h-4" />
-              Sign Out
+              {isPending ? "Signing out…" : "Sign Out"}
             </button>
           </div>
         </div>
