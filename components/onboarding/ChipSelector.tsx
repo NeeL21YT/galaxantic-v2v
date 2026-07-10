@@ -7,8 +7,9 @@
 
 "use client";
 
-import { Check } from "lucide-react";
+import { Check, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 interface ChipSelectorProps {
   options: string[];
@@ -26,6 +27,8 @@ export function ChipSelector({
   maxSelect,
   label,
 }: ChipSelectorProps) {
+  const [customValue, setCustomValue] = useState("");
+
   function toggle(option: string) {
     if (selected.includes(option)) {
       onChange(selected.filter((s) => s !== option));
@@ -35,15 +38,28 @@ export function ChipSelector({
     }
   }
 
+  function addCustom() {
+    const val = customValue.trim();
+    if (val && !selected.includes(val)) {
+      if (maxSelect && selected.length >= maxSelect) return;
+      onChange([...selected, val]);
+      setCustomValue("");
+    }
+  }
+
+  // Combine default options with any custom options already selected
+  const displayOptions = Array.from(new Set([...options, ...selected]));
+  const isOtherSelected = selected.includes("Other");
+
   return (
-    <fieldset className="border-none p-0 m-0">
+    <fieldset className="border-none p-0 m-0 w-full">
       <legend className="sr-only">{label}</legend>
       <div
         className="flex flex-wrap gap-2"
         role="group"
         aria-label={label}
       >
-        {options.map((option) => {
+        {displayOptions.map((option) => {
           const isSelected = selected.includes(option);
           return (
             <button
@@ -80,6 +96,42 @@ export function ChipSelector({
           );
         })}
       </div>
+
+      {isOtherSelected && (
+        <div className="mt-4 flex gap-2 w-full animate-fade-in-up items-center">
+          <input
+            type="text"
+            placeholder="Type a custom entry and press Enter..."
+            value={customValue}
+            onChange={(e) => setCustomValue(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                addCustom();
+              }
+            }}
+            className="flex-1 rounded-xl px-4 py-2.5 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2"
+            style={{
+              background: "var(--color-background)",
+              border: "1px solid var(--color-border)",
+              color: "var(--color-text-primary)",
+            }}
+          />
+          <button
+            type="button"
+            onClick={addCustom}
+            className="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2"
+            style={{
+              background: "var(--color-rose-gold)",
+              color: "#fff",
+            }}
+          >
+            <Plus className="w-4 h-4 mr-1" />
+            Add
+          </button>
+        </div>
+      )}
+
       {maxSelect && (
         <p
           className="mt-2 text-xs"
