@@ -26,19 +26,28 @@ Helping women confidently restart their careers.
 
 ---
 
-## 🎯 Opportunity Navigator
+## 🧭 Financial Compass
 
-Discover opportunities tailored to individual goals.
+Navigate your financial journey with confidence.
+
+- Financial Goal Setting (Business, Education, Personal)
+- Monthly Income & Expense Tracking
+- Budget Recommendations & Planning
+- Financial Health Score
+- Step-by-step Interactive Wizard
+
+---
+
+## 📰 HerLens (Opportunity Navigator)
+
+Discover opportunities tailored to individual goals via a smart feed.
 
 - Personalized Opportunity Feed
-- Internship Discovery
-- Scholarship Discovery
-- Fellowship Discovery
-- Hackathon Discovery
+- News and Global Opportunities via NewsData.io
+- Internship & Scholarship Discovery
+- Fellowship & Hackathon Discovery
 - Job Recommendations
-- Eligibility Checker
-- Deadline Tracker
-- Smart Opportunity Search
+- Category-based Filtering
 
 ---
 
