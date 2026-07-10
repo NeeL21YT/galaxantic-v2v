@@ -9,7 +9,6 @@ import {
   TrendingUp,
   AlertCircle,
   CheckCircle2,
-  ArrowRight,
   Clock,
 } from "lucide-react";
 import { PageHeader } from "@/components/dashboard/PageHeader";

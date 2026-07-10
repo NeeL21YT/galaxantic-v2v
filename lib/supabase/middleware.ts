@@ -38,7 +38,7 @@ export async function createMiddlewareClient(request: NextRequest): Promise<{
         setAll(cookiesToSet, headers) {
           // Write cookies to both the request (for downstream middleware)
           // and the response (so the browser receives the refreshed token).
-          cookiesToSet.forEach(({ name, value, options }) =>
+          cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           );
 

@@ -14,6 +14,7 @@ import { getProfile } from "@/lib/db/profiles";
 import { getUser } from "@/lib/supabase/server";
 import { getLatestAnalyzedResume } from "@/lib/db/resumes";
 import { getMatchedCount } from "@/app/dashboard/opportunities/actions";
+import { loadCoachActivities } from "@/lib/coach/history";
 import {
   PLACEHOLDER_ACTIVITY,
   PLACEHOLDER_MILESTONES,
@@ -23,6 +24,23 @@ export const metadata = {
   title: "Dashboard - Herizon",
   description: "Your career hub. Track readiness, opportunities, and milestones.",
 };
+
+function formatActivityTime(value: string): string {
+  const timestamp = new Date(value).getTime();
+  if (Number.isNaN(timestamp)) return "recently";
+
+  const diffMs = Date.now() - timestamp;
+  const diffMinutes = Math.max(0, Math.floor(diffMs / 60_000));
+
+  if (diffMinutes < 1) return "now";
+  if (diffMinutes < 60) return `${diffMinutes}m ago`;
+
+  const diffHours = Math.floor(diffMinutes / 60);
+  if (diffHours < 24) return `${diffHours}h ago`;
+
+  const diffDays = Math.floor(diffHours / 24);
+  return `${diffDays}d ago`;
+}
 
 export default async function DashboardPage() {
   const activeMilestone = PLACEHOLDER_MILESTONES.find((m) => m.status === "in-progress");
@@ -35,6 +53,7 @@ export default async function DashboardPage() {
     getLatestAnalyzedResume(),
     getMatchedCount(),
   ]);
+  const coachActivities = user ? await loadCoachActivities(user.id) : [];
   const firstName =
     profile?.full_name?.trim().split(" ")[0] ||
     (user?.user_metadata?.full_name as string | undefined)?.split(" ")[0] ||
@@ -43,6 +62,16 @@ export default async function DashboardPage() {
 
   const resumeScore = latestResume?.resume_score ?? null;
   const careerReadiness = latestResume?.career_readiness ?? null;
+  const recentActivity = [
+    ...coachActivities.map((activity) => ({
+      id: activity.id,
+      icon: <Bot className="w-4 h-4" style={{ color: "var(--color-rose-gold)" }} />,
+      title: activity.title,
+      description: activity.description,
+      time: formatActivityTime(activity.createdAt),
+    })),
+    ...PLACEHOLDER_ACTIVITY.filter((item) => item.title !== "AI Coach Session"),
+  ].slice(0, 5);
 
   return (
     <>
@@ -127,8 +156,8 @@ export default async function DashboardPage() {
             />
             <QuickActionCard
               icon={<Bot />}
-              label="Ask AI Coach"
-              description="Get personalised advice"
+              label={coachActivities.length > 0 ? "Continue AI Coach" : "Ask AI Coach"}
+              description={coachActivities.length > 0 ? coachActivities[0].description : "Get personalised advice"}
               href="/dashboard/ai-coach"
               accent="amber"
               index={3}
@@ -148,7 +177,7 @@ export default async function DashboardPage() {
           }
         >
           <ul className="flex flex-col gap-3 mt-3" role="list" aria-label="Recent activity">
-            {PLACEHOLDER_ACTIVITY.map((item) => (
+            {recentActivity.map((item) => (
               <li
                 key={item.id}
                 className="flex items-start gap-3 py-2 border-b last:border-0"

@@ -25,7 +25,15 @@ interface DashboardNavbarProps {
 export function DashboardNavbar({ onMenuClick, breadcrumbs = [], userName, userEmail }: DashboardNavbarProps) {
   const hour = new Date().getHours();
   const greeting =
-    hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
+    hour < 5
+      ? "Good night"
+      : hour < 12
+      ? "Good morning"
+      : hour < 17
+      ? "Good afternoon"
+      : hour < 21
+      ? "Good evening"
+      : "Good night";
 
   return (
     <header
@@ -60,7 +68,7 @@ export function DashboardNavbar({ onMenuClick, breadcrumbs = [], userName, userE
             className="text-xs hidden sm:block"
             style={{ color: "var(--color-text-muted)" }}
           >
-            {greeting}, {userName.split(" ")[0]} 👋
+            <span suppressHydrationWarning>{greeting}</span>, {userName.split(" ")[0]} 👋
           </p>
           {breadcrumbs.length > 0 && <Breadcrumb segments={breadcrumbs} />}
         </div>

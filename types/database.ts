@@ -158,6 +158,44 @@ export interface SavedOpportunityInsert {
   url?: string;
 }
 
+/* ── AI coach chat ──────────────────────────────────────────── */
+
+export interface ChatConversation {
+  id: string;
+  user_id: string;
+  title: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ChatConversationInsert {
+  user_id: string;
+  title?: string;
+}
+
+export interface ChatConversationUpdate {
+  title?: string;
+  updated_at?: string;
+}
+
+export type ChatMessageRole = "user" | "assistant";
+
+export interface ChatMessageRow {
+  id: string;
+  conversation_id: string;
+  user_id: string;
+  role: ChatMessageRole;
+  message: string;
+  created_at: string;
+}
+
+export interface ChatMessageInsert {
+  conversation_id: string;
+  user_id: string;
+  role: ChatMessageRole;
+  message: string;
+}
+
 /* ── financial_plans ────────────────────────────────────────── */
 
 export interface FinancialPlan {

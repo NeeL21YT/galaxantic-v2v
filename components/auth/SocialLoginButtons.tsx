@@ -12,7 +12,8 @@ interface SocialLoginButtonsProps {
   action?: "login" | "register";
 }
 
-export function SocialLoginButtons(_props: SocialLoginButtonsProps) {
+export function SocialLoginButtons(props: SocialLoginButtonsProps) {
+  void props;
   // Hidden until Google OAuth is configured in Supabase.
   return null;
 }

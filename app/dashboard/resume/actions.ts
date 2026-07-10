@@ -109,7 +109,7 @@ export async function processResume(
   try {
     const uploadResult = await uploadResumeToStorage(user.id, fileName, mimeType, buffer);
     filePath = uploadResult.filePath;
-  } catch (err) {
+  } catch {
     return {
       success: false,
       error: "Failed to upload file to storage. Please try again.",

@@ -61,8 +61,12 @@ export function SettingsPageClient({ userEmail, userName }: SettingsPageClientPr
               />
             </div>
             <div className="flex justify-end">
-              <Button variant="primary" size="sm" onClick={() => { /* TODO: wire up profile update */ }}>
-                <Save className="w-3.5 h-3.5" aria-hidden="true" />
+              <Button 
+                variant="primary" 
+                size="sm" 
+                leftIcon={<Save className="w-3.5 h-3.5" aria-hidden="true" />}
+                onClick={() => { /* TODO: wire up profile update */ }}
+              >
                 Save Changes
               </Button>
             </div>

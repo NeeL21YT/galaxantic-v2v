@@ -8,7 +8,6 @@
 
 import { CheckCircle2, Circle, Clock } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 import type { Milestone, MilestoneStatus } from "@/types/dashboard";
 
 const statusConfig: Record<

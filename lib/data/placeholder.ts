@@ -275,12 +275,17 @@ export const PLACEHOLDER_CHAT_MESSAGES: ChatMessage[] = [
 ];
 
 export const SUGGESTED_PROMPTS = [
-  "Help me explain my career gap",
-  "Review my resume bullet points",
-  "Prepare me for PM interviews",
-  "What skills should I learn next?",
-  "Find opportunities matching my profile",
-  "Write my LinkedIn summary",
+  "Improve my resume",
+  "Suggest certifications",
+  "Prepare me for interviews",
+  "How do I explain my career break?",
+  "What should I learn next?",
+  "Recommend projects",
+  "Help me switch careers",
+  "Improve my ATS score",
+  "Prepare me for Google interviews",
+  "Suggest freelance opportunities",
+  "Help me become job ready",
 ];
 
 /* ── Activity Feed ──────────────────────────────────────────── */
@@ -2045,4 +2050,3 @@ export const PLACEHOLDER_BUSINESS_PLAN: BusinessPlanCard[] = [
     description: "To reach ₹2L capital in 25 months",
   },
 ];
-
