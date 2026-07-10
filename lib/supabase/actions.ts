@@ -251,6 +251,10 @@ function mapAuthError(message: string): string {
     return "Network error. Please check your connection and try again.";
   }
 
-  // Fallback - return the original message if we don't recognise it.
+  // Fallback - return the original message if we don't recognise it,
+  // unless it's an empty object string (which happens on some SMTP errors).
+  if (!message || message === "{}" || message === "[]") {
+    return "Something went wrong with the authentication server. Please try again.";
+  }
   return message;
 }
