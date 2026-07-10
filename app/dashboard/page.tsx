@@ -12,6 +12,7 @@ import { QuickActionCard } from "@/components/dashboard/QuickActionCard";
 import { Button } from "@/components/ui/Button";
 import { getProfile } from "@/lib/db/profiles";
 import { getUser } from "@/lib/supabase/server";
+import { getLatestAnalyzedResume } from "@/lib/db/resumes";
 import {
   PLACEHOLDER_ACTIVITY,
   PLACEHOLDER_MILESTONES,
@@ -26,13 +27,20 @@ export default async function DashboardPage() {
   const activeMilestone = PLACEHOLDER_MILESTONES.find((m) => m.status === "in-progress");
   const completedCount = PLACEHOLDER_MILESTONES.filter((m) => m.status === "completed").length;
 
-  // Fetch real name from profile; fall back to auth metadata then email prefix
-  const [profile, user] = await Promise.all([getProfile(), getUser()]);
+  // Fetch real name, profile and latest resume analysis in parallel
+  const [profile, user, latestResume] = await Promise.all([
+    getProfile(),
+    getUser(),
+    getLatestAnalyzedResume(),
+  ]);
   const firstName =
     profile?.full_name?.trim().split(" ")[0] ||
     (user?.user_metadata?.full_name as string | undefined)?.split(" ")[0] ||
     user?.email?.split("@")[0] ||
     "there";
+
+  const resumeScore = latestResume?.resume_score ?? null;
+  const careerReadiness = latestResume?.career_readiness ?? null;
 
   return (
     <>
@@ -46,8 +54,8 @@ export default async function DashboardPage() {
         <StatCard
           icon={<TrendingUp />}
           label="Career Readiness"
-          value="—"
-          description="Complete onboarding to track"
+          value={careerReadiness !== null ? `${careerReadiness}%` : "—"}
+          description={careerReadiness !== null ? undefined : "Upload a resume to track"}
           accent="rose"
           index={0}
         />
@@ -71,8 +79,8 @@ export default async function DashboardPage() {
         <StatCard
           icon={<FileText />}
           label="Resume Score"
-          value="72"
-          description="4 AI suggestions pending"
+          value={resumeScore !== null ? String(resumeScore) : "—"}
+          description={resumeScore !== null ? "4 AI suggestions pending" : "Upload a resume to score"}
           accent="amber"
           index={3}
         />

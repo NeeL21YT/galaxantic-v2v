@@ -64,7 +64,17 @@ export interface ProfileUpdate {
 
 /* ── resumes ────────────────────────────────────────────────── */
 
-export type AnalysisStatus = "pending" | "processing" | "analyzed" | "failed";
+export type AnalysisStatus =
+  | "uploading"
+  | "uploaded"
+  | "extracting"
+  | "analyzing"
+  | "completed"
+  | "failed"
+  // legacy values kept for backward-compat
+  | "pending"
+  | "processing"
+  | "analyzed";
 
 export interface Resume {
   id: string;
@@ -75,8 +85,18 @@ export interface Resume {
   file_type: string | null;
   analysis_status: AnalysisStatus;
   resume_score: number | null;
+  ats_score: number | null;
+  career_readiness: number | null;
+  extracted_text: string | null;
+  text_hash: string | null;
+  analysis_json: Record<string, unknown> | null;
+  model_used: string | null;
+  analysis_version: string | null;
+  analysis_duration_ms: number | null;
+  analyzed_at: string | null;
   uploaded_at: string | null;
   created_at: string;
+  updated_at: string | null;
 }
 
 export interface ResumeInsert {
@@ -85,6 +105,7 @@ export interface ResumeInsert {
   file_path: string;
   file_size: number;
   file_type: string;
+  analysis_status?: AnalysisStatus;
   uploaded_at?: string;
 }
 
