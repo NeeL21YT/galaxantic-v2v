@@ -142,7 +142,19 @@ export async function processResume(
   try {
     extractedText = await extractText(buffer, mimeType);
   } catch (err) {
-    await markResumeFailed(resumeId, `Extraction failed: ${err instanceof Error ? err.message : String(err)}`);
+    const errorMsg = err instanceof Error ? err.message : String(err);
+    await markResumeFailed(resumeId, `Extraction failed: ${errorMsg}`);
+    
+    // Provide a highly actionable error message if the PDF uses an unsupported compression
+    // method (very common with modern Canva or Apple Pages PDFs when parsed by older libraries).
+    if (errorMsg.includes("Invalid PDF structure") || errorMsg.includes("Unknown compression method")) {
+      return {
+        success: false,
+        error: "Your PDF uses an unsupported format. Please open the file, click 'Print', choose 'Save as PDF', and upload that new file.",
+        code: "PDF_FORMAT_UNSUPPORTED",
+      };
+    }
+
     return {
       success: false,
       error: "Could not extract text from the file. Make sure the file is not password-protected or corrupted.",
