@@ -97,7 +97,7 @@ export function HerLensPageClient({
           className="text-xs"
           style={{ color: "var(--color-text-muted)" }}
         >
-          Automatically refreshed every hour
+          Automatically refreshed every 12 hrs
         </span>
       </motion.div>
 
