@@ -14,54 +14,52 @@ Whether someone is returning after a career break, exploring new opportunities, 
 
 # ✨ Features
 
-## 💼 Career Break Companion
+Herizon is an **AI Career Operating System** powered by a **Shared Context Architecture**. Rather than isolated tools, Gemini 2.5 Flash understands your complete profile, resume analysis, and career gaps across every feature to provide hyper-personalized guidance.
 
-Helping women confidently restart their careers.
-
+## 💼 Career Break
+Confidently return to work after any career break.
 - AI Career Gap Analysis
-- Resume Optimization
-- Personalized 30/60/90-Day Career Roadmap
-- Skill Gap Recommendations
+- Missing Skill Detection
 - Career Readiness Score
 
----
+## 📄 Resume Intelligence
+- PDF Resume Upload & Parsing
+- AI-Powered Resume Scoring
+- ATS Parsing Score
+- Missing Skills Identification
 
-## 🧭 Financial Compass
+## 🗺️ Interactive Roadmap
+- AI-Generated 30/60/90-Day Action Plan
+- Interactive Checklists & Milestones
+- Database Persistence for Progress Tracking
+- Built directly from your Resume gaps
 
-Navigate your financial journey with confidence.
-
-- Financial Goal Setting (Business, Education, Personal)
-- Monthly Income & Expense Tracking
-- Budget Recommendations & Planning
-- Financial Health Score
-- Step-by-step Interactive Wizard
-
----
-
-## 📰 HerLens (Opportunity Navigator)
-
-Discover opportunities tailored to individual goals via a smart feed.
-
-- Personalized Opportunity Feed
-- News and Global Opportunities via NewsData.io
-- Internship & Scholarship Discovery
-- Fellowship & Hackathon Discovery
-- Job Recommendations
-- Category-based Filtering
-
----
+## 🧭 Opportunity Navigator
+Your personalized feed of internships, scholarships, fellowships, hackathons, and job openings.
+- AI-Ranked Opportunities based on your Resume
+- Eligibility Filtering & Deadlines
+- Bookmark & Save Opportunities
 
 ## 🤖 AI Career Coach
-
-Your personal AI mentor.
-
-- AI Career Mentor
-- Resume Review
+Your always-on personal mentor.
+- Context-Aware AI Chat (knows your resume & goals)
+- Persistent Conversation History
 - Interview Preparation
-- Personalized Learning Roadmap
-- Career Guidance
-- Skill Recommendations
-- Goal Tracking
+- Personalized Career Guidance
+
+## 📰 HerLens
+Daily bite-sized, AI-summarized news focusing on women in business, tech, and leadership.
+- Powered by NewsData.io
+- Gemini Bullet-Point Summaries
+- Category-based Filtering
+- Fast Supabase Caching
+
+## 💰 Financial Compass
+Plan your financial independence with a hybrid approach.
+- Deterministic Financial Math & Health Scores
+- AI-Generated Budget Strategies
+- 30/60/90-Day Financial Action Plan
+- Saved Financial Plans
 
 ---
 
@@ -84,22 +82,23 @@ Your personal AI mentor.
 # 🛠 Tech Stack
 
 ### Frontend
-
-- Next.js 16
+- Next.js 16 (App Router)
+- React 19
 - TypeScript
 - Tailwind CSS
-- Lucide React
+- Framer Motion
 
 ### Backend
+- Supabase (PostgreSQL, Auth, Storage)
+- Row Level Security (RLS)
+- Next.js Server Actions
 
-- Supabase
-
-### AI
-
-- Gemini API
+### AI & APIs
+- Google Gemini 2.5 Flash API (Model Fallback Chain)
+- `@google/genai` SDK
+- NewsData.io API
 
 ### Deployment
-
 - Vercel
 
 ---
