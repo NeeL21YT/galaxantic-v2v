@@ -19,7 +19,9 @@ import {
   useTransition,
   useCallback,
   useMemo,
+  useEffect,
 } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -76,9 +78,12 @@ export function OpportunitiesPageClient({
   initialBookmarks,
 }: OpportunitiesPageClientProps) {
   /* State */
-  const [activeTab, setActiveTab] = useState<Tab>("matches");
+  const searchParams = useSearchParams();
+  const initialSearch = searchParams?.get("search") ?? "";
+  
+  const [activeTab, setActiveTab] = useState<Tab>(initialSearch ? "browse" : "matches");
   const [filters, setFilters] = useState<FiltersType>(DEFAULT_FILTERS);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [showFilters, setShowFilters] = useState(false);
   const [isRanking, startRanking] = useTransition();
   const [topMatches, setTopMatches] = useState<RankedOpportunity[]>(
@@ -95,6 +100,17 @@ export function OpportunitiesPageClient({
   const [bookmarkSet, setBookmarkSet] = useState<Set<string>>(
     () => new Set(topMatches.filter((m) => m.isBookmarked).map((m) => m.opportunity.id))
   );
+
+  // Sync with global search bar
+  useEffect(() => {
+    const q = searchParams?.get("search");
+    if (q && q !== searchQuery) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSearchQuery(q);
+      setActiveTab("browse");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   /* Search index map for O(1) lookups */
   const searchMap = useMemo(() => {
