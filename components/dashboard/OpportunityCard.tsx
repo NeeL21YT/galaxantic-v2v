@@ -46,7 +46,6 @@ export function OpportunityCard({ opportunity, index = 0 }: OpportunityCardProps
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-3">
-          {/* Logo placeholder */}
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
             style={{ background: "var(--color-surface-hover)", border: "1px solid var(--color-border-light)" }}

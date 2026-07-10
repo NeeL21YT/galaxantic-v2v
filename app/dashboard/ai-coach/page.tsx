@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PageHeader } from "@/components/dashboard/PageHeader";
 import { ChatBubble } from "@/components/dashboard/ChatBubble";
 import { Button } from "@/components/ui/Button";
-import { SUGGESTED_PROMPTS } from "@/lib/data/placeholder";
+import { SUGGESTED_PROMPTS } from "@/lib/coach/suggested-prompts";
 import type { ChatMessage } from "@/types/dashboard";
 import {
   deleteConversationAction,
@@ -411,7 +411,7 @@ export default function AICoachPage() {
               </p>
             ) : conversations.length === 0 ? (
               <p className="text-xs px-2 py-3" style={{ color: "var(--color-text-muted)" }}>
-                No saved chats yet.
+                Start your first AI coaching conversation.
               </p>
             ) : (
               <div className="flex flex-col gap-2">

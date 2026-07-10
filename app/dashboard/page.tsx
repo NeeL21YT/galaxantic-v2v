@@ -4,25 +4,44 @@
  * Dashboard home - metrics, quick actions, recent activity.
  */
 
-import { LayoutDashboard, FileText, Bot, Compass, Map, TrendingUp } from "lucide-react";
+import {
+  Bookmark,
+  Bot,
+  Compass,
+  FileText,
+  LayoutDashboard,
+  Map,
+  TrendingUp,
+  Wallet,
+  UserRound,
+} from "lucide-react";
+import type { ReactNode } from "react";
 import { PageHeader } from "@/components/dashboard/PageHeader";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { DashboardCard } from "@/components/dashboard/DashboardCard";
 import { QuickActionCard } from "@/components/dashboard/QuickActionCard";
 import { Button } from "@/components/ui/Button";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getProfile } from "@/lib/db/profiles";
 import { getUser } from "@/lib/supabase/server";
 import { getLatestAnalyzedResume } from "@/lib/db/resumes";
 import { getMatchedCount } from "@/app/dashboard/opportunities/actions";
-import { loadCoachActivities } from "@/lib/coach/history";
-import {
-  PLACEHOLDER_ACTIVITY,
-  PLACEHOLDER_MILESTONES,
-} from "@/lib/data/placeholder";
+import { getLatestRoadmap, roadmapJsonToMilestones } from "@/lib/db/roadmaps";
+import { loadDashboardActivity, type DashboardActivity } from "@/lib/dashboard/activity";
 
 export const metadata = {
   title: "Dashboard - Herizon",
   description: "Your career hub. Track readiness, opportunities, and milestones.",
+};
+
+const activityIcon: Record<DashboardActivity["type"], ReactNode> = {
+  resume_upload: <FileText className="w-4 h-4" style={{ color: "var(--color-rackley)" }} />,
+  resume_analysis: <FileText className="w-4 h-4" style={{ color: "var(--color-rackley)" }} />,
+  roadmap_generated: <Map className="w-4 h-4" style={{ color: "#16a34a" }} />,
+  financial_plan: <Wallet className="w-4 h-4" style={{ color: "#d97706" }} />,
+  opportunity_bookmarked: <Bookmark className="w-4 h-4" style={{ color: "var(--color-rose-gold)" }} />,
+  coach_session: <Bot className="w-4 h-4" style={{ color: "var(--color-rose-gold)" }} />,
+  profile_updated: <UserRound className="w-4 h-4" style={{ color: "var(--color-rackley)" }} />,
 };
 
 function formatActivityTime(value: string): string {
@@ -43,9 +62,6 @@ function formatActivityTime(value: string): string {
 }
 
 export default async function DashboardPage() {
-  const activeMilestone = PLACEHOLDER_MILESTONES.find((m) => m.status === "in-progress");
-  const completedCount = PLACEHOLDER_MILESTONES.filter((m) => m.status === "completed").length;
-
   // Fetch real name, profile, latest resume analysis, and opportunity count in parallel
   const [profile, user, latestResume, matchedCount] = await Promise.all([
     getProfile(),
@@ -53,7 +69,17 @@ export default async function DashboardPage() {
     getLatestAnalyzedResume(),
     getMatchedCount(),
   ]);
-  const coachActivities = user ? await loadCoachActivities(user.id) : [];
+  const [latestRoadmap, recentActivity] = user
+    ? await Promise.all([
+        getLatestRoadmap(user.id),
+        loadDashboardActivity(user.id, 5),
+      ])
+    : [null, []];
+
+  const milestones = roadmapJsonToMilestones(latestRoadmap?.roadmap_json ?? null);
+  const activeMilestone = milestones.find((m) => m.status === "in-progress") ?? milestones[0] ?? null;
+  const completedCount = milestones.filter((m) => m.status === "completed").length;
+
   const firstName =
     profile?.full_name?.trim().split(" ")[0] ||
     (user?.user_metadata?.full_name as string | undefined)?.split(" ")[0] ||
@@ -62,16 +88,6 @@ export default async function DashboardPage() {
 
   const resumeScore = latestResume?.resume_score ?? null;
   const careerReadiness = latestResume?.career_readiness ?? null;
-  const recentActivity = [
-    ...coachActivities.map((activity) => ({
-      id: activity.id,
-      icon: <Bot className="w-4 h-4" style={{ color: "var(--color-rose-gold)" }} />,
-      title: activity.title,
-      description: activity.description,
-      time: formatActivityTime(activity.createdAt),
-    })),
-    ...PLACEHOLDER_ACTIVITY.filter((item) => item.title !== "AI Coach Session"),
-  ].slice(0, 5);
 
   return (
     <>
@@ -85,32 +101,32 @@ export default async function DashboardPage() {
         <StatCard
           icon={<TrendingUp />}
           label="Career Readiness"
-          value={careerReadiness !== null ? `${careerReadiness}%` : "-"}
-          description={careerReadiness !== null ? undefined : "Upload a resume to track"}
+          value={careerReadiness !== null ? `${careerReadiness}%` : "—"}
+          description={careerReadiness !== null ? undefined : "Upload your resume to generate your readiness score."}
           accent="rose"
           index={0}
         />
         <StatCard
           icon={<Compass />}
           label="Matched Opportunities"
-          value={matchedCount > 0 ? String(matchedCount) : "-"}
-          description={matchedCount === 0 ? "Complete your profile" : undefined}
+          value={String(matchedCount)}
+          description={matchedCount === 0 ? "Complete your profile to receive AI matches." : undefined}
           accent="blue"
           index={1}
         />
         <StatCard
           icon={<Map />}
           label="Milestones Done"
-          value={`${completedCount} / ${PLACEHOLDER_MILESTONES.length}`}
-          description="On track for 90-day goal"
+          value={`${completedCount} / ${milestones.length}`}
+          description={milestones.length === 0 ? "Generate your AI roadmap." : undefined}
           accent="green"
           index={2}
         />
         <StatCard
           icon={<FileText />}
           label="Resume Score"
-          value={resumeScore !== null ? String(resumeScore) : "-"}
-          description={resumeScore !== null ? "4 AI suggestions pending" : "Upload a resume to score"}
+          value={resumeScore !== null ? String(resumeScore) : "—"}
+          description={resumeScore !== null ? undefined : "Upload your resume to receive an AI score."}
           accent="amber"
           index={3}
         />
@@ -149,15 +165,15 @@ export default async function DashboardPage() {
             <QuickActionCard
               icon={<Map />}
               label="Continue Roadmap"
-              description="Next: Skill Assessment"
+              description={activeMilestone ? `Next: ${activeMilestone.title}` : "Generate your AI roadmap"}
               href="/dashboard/roadmap"
               accent="green"
               index={2}
             />
             <QuickActionCard
               icon={<Bot />}
-              label={coachActivities.length > 0 ? "Continue AI Coach" : "Ask AI Coach"}
-              description={coachActivities.length > 0 ? coachActivities[0].description : "Get personalised advice"}
+              label={recentActivity.some((activity) => activity.type === "coach_session") ? "Continue AI Coach" : "Ask AI Coach"}
+              description="Get personalised advice"
               href="/dashboard/ai-coach"
               accent="amber"
               index={3}
@@ -176,37 +192,47 @@ export default async function DashboardPage() {
             </Button>
           }
         >
-          <ul className="flex flex-col gap-3 mt-3" role="list" aria-label="Recent activity">
-            {recentActivity.map((item) => (
-              <li
-                key={item.id}
-                className="flex items-start gap-3 py-2 border-b last:border-0"
-                style={{ borderColor: "var(--color-border-light)" }}
-              >
-                <span
-                  className="w-8 h-8 rounded-xl flex items-center justify-center text-base flex-shrink-0 mt-0.5"
-                  style={{ background: "var(--color-surface-hover)" }}
-                  aria-hidden="true"
+          {recentActivity.length === 0 ? (
+            <EmptyState
+              compact
+              icon={<LayoutDashboard className="w-6 h-6" />}
+              title="No recent activity yet."
+              description="Begin your journey by uploading a resume."
+              action={<Button href="/dashboard/resume" variant="primary" size="sm">Upload Resume</Button>}
+            />
+          ) : (
+            <ul className="flex flex-col gap-3 mt-3" role="list" aria-label="Recent activity">
+              {recentActivity.map((item) => (
+                <li
+                  key={item.id}
+                  className="flex items-start gap-3 py-2 border-b last:border-0"
+                  style={{ borderColor: "var(--color-border-light)" }}
                 >
-                  {item.icon}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <p
-                    className="text-xs font-semibold leading-tight"
-                    style={{ color: "var(--color-puce-red)", fontFamily: "var(--font-heading)" }}
+                  <span
+                    className="w-8 h-8 rounded-xl flex items-center justify-center text-base flex-shrink-0 mt-0.5"
+                    style={{ background: "var(--color-surface-hover)" }}
+                    aria-hidden="true"
                   >
-                    {item.title}
-                  </p>
-                  <p className="text-xs mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                    {item.description}
-                  </p>
-                </div>
-                <span className="text-[10px] flex-shrink-0 mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                  {item.time}
-                </span>
-              </li>
-            ))}
-          </ul>
+                    {activityIcon[item.type]}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p
+                      className="text-xs font-semibold leading-tight"
+                      style={{ color: "var(--color-puce-red)", fontFamily: "var(--font-heading)" }}
+                    >
+                      {item.title}
+                    </p>
+                    <p className="text-xs mt-0.5" style={{ color: "var(--color-text-muted)" }}>
+                      {item.description}
+                    </p>
+                  </div>
+                  <span className="text-[10px] flex-shrink-0 mt-0.5" style={{ color: "var(--color-text-muted)" }}>
+                    {formatActivityTime(item.createdAt)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </DashboardCard>
       </div>
 
@@ -231,7 +257,7 @@ export default async function DashboardPage() {
                 className="text-sm font-semibold"
                 style={{ color: "var(--color-puce-red)", fontFamily: "var(--font-heading)" }}
               >
-                In Progress: {activeMilestone.title}
+                {activeMilestone.status === "in-progress" ? "In Progress" : "Next"}: {activeMilestone.title}
               </p>
               <p className="text-xs mt-0.5" style={{ color: "var(--color-text-muted)" }}>
                 {activeMilestone.description}

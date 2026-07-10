@@ -119,7 +119,6 @@ export function DashboardSidebar({ onCollapseChange }: DashboardSidebarProps) {
           <SidebarItem key={item.href} {...item} collapsed={collapsed} />
         ))}
 
-        {/* Logout placeholder */}
         <button
           type="button"
           className="group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200 w-full"

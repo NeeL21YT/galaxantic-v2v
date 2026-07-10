@@ -9,6 +9,14 @@ import { createClient } from "@/lib/supabase/server";
 import type { Resume, ResumeInsert, AnalysisStatus } from "@/types/database";
 import type { ResumeAnalysis } from "@/types/resume-analysis";
 
+async function getAuthenticatedUserId(): Promise<string | null> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  return user?.id ?? null;
+}
+
 /* ── Read ──────────────────────────────────────────────────── */
 
 /**
@@ -16,9 +24,13 @@ import type { ResumeAnalysis } from "@/types/resume-analysis";
  */
 export async function getUserResumes(): Promise<Resume[]> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) return [];
+
   const { data, error } = await supabase
     .from("resumes")
     .select("*")
+    .eq("user_id", userId)
     .order("created_at", { ascending: false })
     .limit(5);
 
@@ -53,9 +65,13 @@ export async function clearAllUserResumes(userId: string): Promise<boolean> {
  */
 export async function getLatestAnalyzedResume(): Promise<Resume | null> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) return null;
+
   const { data, error } = await supabase
     .from("resumes")
     .select("*")
+    .eq("user_id", userId)
     .eq("analysis_status", "completed")
     .order("analyzed_at", { ascending: false })
     .limit(1)
@@ -73,10 +89,14 @@ export async function getLatestAnalyzedResume(): Promise<Resume | null> {
  */
 export async function getResumeById(id: string): Promise<Resume | null> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) return null;
+
   const { data, error } = await supabase
     .from("resumes")
     .select("*")
     .eq("id", id)
+    .eq("user_id", userId)
     .maybeSingle();
 
   if (error) {
@@ -142,10 +162,14 @@ export async function updateResumeStatus(
   status: AnalysisStatus
 ): Promise<void> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) return;
+
   const { error } = await supabase
     .from("resumes")
     .update({ analysis_status: status })
-    .eq("id", id);
+    .eq("id", id)
+    .eq("user_id", userId);
 
   if (error) {
     console.error("[db/resumes] updateResumeStatus:", error.message);
@@ -161,6 +185,9 @@ export async function saveExtractedText(
   textHash: string
 ): Promise<void> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) return;
+
   const { error } = await supabase
     .from("resumes")
     .update({
@@ -168,7 +195,8 @@ export async function saveExtractedText(
       text_hash: textHash,
       analysis_status: "analyzing",
     })
-    .eq("id", id);
+    .eq("id", id)
+    .eq("user_id", userId);
 
   if (error) {
     console.error("[db/resumes] saveExtractedText:", error.message);
@@ -194,6 +222,9 @@ export async function saveAnalysis({
   analysisDurationMs,
 }: SaveAnalysisParams): Promise<void> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) throw new Error("Not authenticated.");
+
   const { error } = await supabase
     .from("resumes")
     .update({
@@ -207,7 +238,8 @@ export async function saveAnalysis({
       analyzed_at: new Date().toISOString(),
       analysis_status: "completed",
     })
-    .eq("id", id);
+    .eq("id", id)
+    .eq("user_id", userId);
 
   if (error) {
     console.error("[db/resumes] saveAnalysis:", error.message);
@@ -223,11 +255,15 @@ export async function markResumeFailed(
   reason: string
 ): Promise<void> {
   const supabase = await createClient();
+  const userId = await getAuthenticatedUserId();
+  if (!userId) return;
+
   await supabase
     .from("resumes")
     .update({
       analysis_status: "failed",
       analysis_json: { error: reason } as Record<string, unknown>,
     })
-    .eq("id", id);
+    .eq("id", id)
+    .eq("user_id", userId);
 }

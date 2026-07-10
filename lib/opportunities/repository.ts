@@ -3,16 +3,14 @@
  *
  * OpportunityRepository abstraction.
  *
- * Today: reads from local JSON files (data/*.json).
- * Future: swap to Supabase, REST API, or any other source
- * by returning a different implementation from createOpportunityRepository()
- * - without touching the filter engine, ranking engine, or UI.
+ * The active implementation intentionally returns no records until a real
+ * opportunity source is connected. This prevents generated local records from
+ * appearing as personalized recommendations.
  *
  * Server-side only.
  */
 
 import type { Opportunity, SearchIndexEntry } from "./types";
-import { loadDataset, buildSearchIndexFromDataset } from "./dataset-loader";
 
 /* ── Repository Contract ─────────────────────────────────────── */
 
@@ -34,28 +32,19 @@ export interface OpportunityRepository {
  * Change this single line to swap data sources project-wide.
  */
 export function createOpportunityRepository(): OpportunityRepository {
-  return createJsonFileRepository();
+  return createEmptyOpportunityRepository();
 }
 
-/* ── JSON File Implementation ────────────────────────────────── */
+/* ── Empty Implementation ────────────────────────────────────── */
 
-function createJsonFileRepository(): OpportunityRepository {
+function createEmptyOpportunityRepository(): OpportunityRepository {
   return {
-    findAll: loadDataset,
+    findAll: async () => [],
 
-    findById: async (id: string): Promise<Opportunity | null> => {
-      const all = await loadDataset();
-      return all.find((o) => o.id === id) ?? null;
-    },
+    findById: async (): Promise<Opportunity | null> => null,
 
-    getSearchIndex: async (): Promise<SearchIndexEntry[]> => {
-      const all = await loadDataset();
-      return buildSearchIndexFromDataset(all);
-    },
+    getSearchIndex: async (): Promise<SearchIndexEntry[]> => [],
 
-    count: async (): Promise<number> => {
-      const all = await loadDataset();
-      return all.length;
-    },
+    count: async (): Promise<number> => 0,
   };
 }

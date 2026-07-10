@@ -1,183 +1,216 @@
 /**
  * app/dashboard/career-break/page.tsx
  *
- * Career Break Companion - gap analysis, skill gaps, readiness, next steps.
+ * Career Break Companion - renders only stored user analysis.
  */
 
 import {
-  Briefcase,
-  TrendingUp,
   AlertCircle,
+  Briefcase,
   CheckCircle2,
   Clock,
+  FileText,
+  TrendingUp,
 } from "lucide-react";
 import { PageHeader } from "@/components/dashboard/PageHeader";
 import { DashboardCard } from "@/components/dashboard/DashboardCard";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { Button } from "@/components/ui/Button";
-import { PLACEHOLDER_USER, PLACEHOLDER_SKILL_GAPS } from "@/lib/data/placeholder";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { getLatestAnalyzedResume } from "@/lib/db/resumes";
+import type { ResumeAnalysis } from "@/types/resume-analysis";
 
 export const metadata = {
   title: "Career Break Companion - Herizon",
   description: "Analyse your career gap and plan your confident comeback.",
 };
 
-const NEXT_STEPS = [
-  { icon: "📝", title: "Update your resume", description: "Add career break framing", href: "/dashboard/resume", done: true },
-  { icon: "🎯", title: "Complete skill assessment", description: "Identify your top gaps", href: "/dashboard/ai-coach", done: false },
-  { icon: "🌐", title: "Reconnect with network", description: "Reach out to 10 contacts", href: "#", done: false },
-  { icon: "🔍", title: "Apply to opportunities", description: "3 new matches await", href: "/dashboard/opportunities", done: false },
-];
+function getAnalysis(value: Record<string, unknown> | null): ResumeAnalysis | null {
+  if (!value) return null;
+  const analysis = value as unknown as ResumeAnalysis;
+  if (
+    typeof analysis.careerReadiness !== "number" ||
+    typeof analysis.careerGapDetected !== "boolean" ||
+    !Array.isArray(analysis.missingSkills) ||
+    !Array.isArray(analysis.resumeImprovements) ||
+    !Array.isArray(analysis.recommendedProjects)
+  ) {
+    return null;
+  }
+  return analysis;
+}
 
-const priorityColor = {
-  high: { bg: "rgba(239,68,68,0.10)", text: "#dc2626" },
-  medium: { bg: "rgba(245,158,11,0.10)", text: "#d97706" },
-  low: { bg: "rgba(34,197,94,0.10)", text: "#16a34a" },
-};
+function statusColor(status: "good" | "warn" | "bad") {
+  if (status === "good") return { bg: "rgba(34,197,94,0.10)", text: "#16a34a" };
+  if (status === "warn") return { bg: "rgba(245,158,11,0.10)", text: "#d97706" };
+  return { bg: "rgba(239,68,68,0.10)", text: "#dc2626" };
+}
 
-export default function CareerBreakPage() {
+export default async function CareerBreakPage() {
+  const latestResume = await getLatestAnalyzedResume();
+  const analysis = getAnalysis(latestResume?.analysis_json ?? null);
+
+  if (!analysis) {
+    return (
+      <>
+        <PageHeader
+          title="Career Break Companion"
+          subtitle="Start with a resume analysis so Herizon can assess your return-to-work context."
+        />
+        <DashboardCard title="Start Your Career Break Analysis" subtitle="No stored analysis found for your account.">
+          <EmptyState
+            icon={<Briefcase className="w-8 h-8" />}
+            title="Start your AI career break analysis."
+            description="Upload your first resume to generate career gap insights, readiness scoring, and next steps from your own data."
+            action={<Button href="/dashboard/resume" variant="primary">Upload Resume</Button>}
+            secondaryAction={<Button href="/dashboard/ai-coach" variant="outline">Chat with AI Coach</Button>}
+          />
+        </DashboardCard>
+      </>
+    );
+  }
+
+  const gapRows = [
+    {
+      label: "Experience level",
+      value: analysis.summary ? "Available from resume analysis" : "Not captured",
+      status: analysis.summary ? "good" : "bad",
+    },
+    {
+      label: "Career framing",
+      value: analysis.careerGapDetected ? "Gap detected" : "No significant gap detected",
+      status: analysis.careerGapDetected ? "warn" : "good",
+    },
+    {
+      label: "Skill relevance",
+      value: analysis.missingSkills.length > 0 ? `${analysis.missingSkills.length} gaps identified` : "No missing skills identified",
+      status: analysis.missingSkills.length > 0 ? "warn" : "good",
+    },
+    {
+      label: "Portfolio status",
+      value: analysis.recommendedProjects.length > 0 ? `${analysis.recommendedProjects.length} project recommendations` : "No project recommendations",
+      status: analysis.recommendedProjects.length > 0 ? "warn" : "good",
+    },
+    {
+      label: "LinkedIn status",
+      value: "Not captured in stored analysis",
+      status: "bad",
+    },
+  ] as const;
+
+  const actionItems = [
+    ...analysis.resumeImprovements,
+    ...analysis.certifications,
+    ...analysis.recommendedProjects,
+  ].slice(0, 6);
+
   return (
     <>
       <PageHeader
         title="Career Break Companion"
-        subtitle="Your personalised return-to-work analysis and action plan."
+        subtitle="Your stored return-to-work analysis from your latest resume."
         action={
           <Button href="/dashboard/ai-coach" variant="primary" size="sm">
-            Chat with AI Coach →
+            Chat with AI Coach
           </Button>
         }
       />
 
-      {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <StatCard icon={<TrendingUp />} label="Career Readiness" value={`${PLACEHOLDER_USER.careerReadiness}%`} trend="up" trendLabel="+8% this week" accent="rose" index={0} />
-        <StatCard icon={<Clock />} label="Break Duration" value="24 mo" description="Jan 2023 - Jan 2025" accent="blue" index={1} />
-        <StatCard icon={<Briefcase />} label="Skills to Upskill" value="5" description="Identified by AI" accent="amber" index={2} />
-        <StatCard icon={<CheckCircle2 />} label="Steps Completed" value="1 / 4" description="Resume refresh done" accent="green" index={3} />
+        <StatCard icon={<TrendingUp />} label="Career Readiness" value={`${analysis.careerReadiness}%`} accent="rose" index={0} />
+        <StatCard icon={<Clock />} label="Break Duration" value="—" description="Not captured in stored analysis" accent="blue" index={1} />
+        <StatCard icon={<Briefcase />} label="Skills to Upskill" value={String(analysis.missingSkills.length)} description="From latest analysis" accent="amber" index={2} />
+        <StatCard icon={<CheckCircle2 />} label="Action Items" value={String(actionItems.length)} description="Database-backed recommendations" accent="green" index={3} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
-        {/* Gap Analysis */}
-        <DashboardCard title="Career Gap Analysis" subtitle="AI assessment of your career history">
+        <DashboardCard title="Career Gap Analysis" subtitle="Stored AI assessment for this account">
           <div className="mt-3 space-y-3">
-            {[
-              { label: "Experience level", value: "Mid-Senior", status: "good" },
-              { label: "Career break framing", value: "Needs improvement", status: "warn" },
-              { label: "Skills relevance", value: "Partially updated", status: "warn" },
-              { label: "LinkedIn profile", value: "Not optimised", status: "bad" },
-              { label: "Portfolio / projects", value: "Not provided", status: "bad" },
-            ].map((row) => (
-              <div key={row.label} className="flex items-center justify-between py-1.5 border-b last:border-0"
-                style={{ borderColor: "var(--color-border-light)" }}>
-                <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>{row.label}</span>
-                <span
-                  className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold"
-                  style={{
-                    background: row.status === "good" ? "rgba(34,197,94,0.10)" : row.status === "warn" ? "rgba(245,158,11,0.10)" : "rgba(239,68,68,0.10)",
-                    color: row.status === "good" ? "#16a34a" : row.status === "warn" ? "#d97706" : "#dc2626",
-                  }}
-                >
-                  {row.value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </DashboardCard>
-
-        {/* Skill Gaps */}
-        <DashboardCard title="Skill Gap Analysis" subtitle="Skills to bridge for your target roles">
-          <div className="mt-3 space-y-4">
-            {PLACEHOLDER_SKILL_GAPS.map((sg) => {
-              const pColor = priorityColor[sg.priority];
+            {gapRows.map((row) => {
+              const colors = statusColor(row.status);
               return (
-                <div key={sg.skill}>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-medium" style={{ color: "var(--color-text-primary)" }}>
-                      {sg.skill}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                        {sg.current}% → {sg.target}%
-                      </span>
-                      <span className="px-1.5 py-0.5 rounded-full text-[9px] font-semibold uppercase"
-                        style={{ background: pColor.bg, color: pColor.text }}>
-                        {sg.priority}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="relative h-2 rounded-full overflow-hidden" style={{ background: "var(--color-border)" }}>
-                    <div className="absolute inset-y-0 left-0 rounded-full transition-all" style={{ width: `${sg.target}%`, background: "rgba(180,108,114,0.25)" }} />
-                    <div className="absolute inset-y-0 left-0 rounded-full" style={{ width: `${sg.current}%`, background: "var(--color-rose-gold)" }} />
-                  </div>
+                <div
+                  key={row.label}
+                  className="flex items-center justify-between gap-3 py-1.5 border-b last:border-0"
+                  style={{ borderColor: "var(--color-border-light)" }}
+                >
+                  <span className="text-xs" style={{ color: "var(--color-text-secondary)" }}>{row.label}</span>
+                  <span
+                    className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-right"
+                    style={{ background: colors.bg, color: colors.text }}
+                  >
+                    {row.value}
+                  </span>
                 </div>
               );
             })}
           </div>
         </DashboardCard>
+
+        <DashboardCard title="Skill Gap Analysis" subtitle="Missing skills from the latest stored analysis">
+          {analysis.missingSkills.length === 0 ? (
+            <EmptyState
+              compact
+              icon={<CheckCircle2 className="w-6 h-6" />}
+              title="No skill gaps identified."
+              description="Your latest resume analysis did not return missing skills."
+            />
+          ) : (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {analysis.missingSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
+                  style={{
+                    background: "rgba(245,158,11,0.10)",
+                    color: "#d97706",
+                    border: "1px solid rgba(245,158,11,0.20)",
+                  }}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          )}
+        </DashboardCard>
       </div>
 
-      {/* Career Readiness + Next Steps */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        {/* Readiness gauge */}
-        <DashboardCard title="Career Readiness Score" subtitle="Based on resume, skills, and activity">
-          <div className="flex flex-col items-center py-6 gap-3">
-            <div className="relative w-32 h-32">
-              <svg width="128" height="128" viewBox="0 0 128 128" aria-hidden="true">
-                <circle cx="64" cy="64" r="54" fill="none" stroke="var(--color-border)" strokeWidth="10" />
-                <circle
-                  cx="64" cy="64" r="54"
-                  fill="none"
-                  stroke="var(--color-rose-gold)"
-                  strokeWidth="10"
-                  strokeDasharray={`${(PLACEHOLDER_USER.careerReadiness / 100) * (2 * Math.PI * 54)} ${2 * Math.PI * 54}`}
-                  strokeLinecap="round"
-                  transform="rotate(-90 64 64)"
-                />
-              </svg>
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)", color: "var(--color-puce-red)" }}>
-                  {PLACEHOLDER_USER.careerReadiness}
-                </span>
-                <span className="text-[10px]" style={{ color: "var(--color-text-muted)" }}>out of 100</span>
-              </div>
-            </div>
-            <p className="text-sm text-center" style={{ color: "var(--color-text-secondary)" }}>
-              You&apos;re in good shape! Complete the skill assessment to unlock your personalised learning path.
+        <DashboardCard title="Career Framing" subtitle="Resume-derived career break context">
+          <div className="flex items-start gap-3 mt-2">
+            {analysis.careerGapDetected ? (
+              <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#d97706" }} aria-hidden="true" />
+            ) : (
+              <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#16a34a" }} aria-hidden="true" />
+            )}
+            <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+              {analysis.careerGapExplanation || analysis.summary}
             </p>
-            <Button href="/dashboard/ai-coach" variant="outline" size="sm">
-              Improve My Score
-            </Button>
           </div>
         </DashboardCard>
 
-        {/* Recommended Next Steps */}
-        <DashboardCard title="Recommended Next Steps" subtitle="Your personalised action plan">
-          <ul className="mt-3 flex flex-col gap-3" role="list">
-            {NEXT_STEPS.map((step, i) => (
-              <li key={i}>
-                <a
-                  href={step.href}
-                  className="flex items-center gap-3 p-3 rounded-xl transition-all duration-150 group"
-                  style={{
-                    background: step.done ? "rgba(34,197,94,0.06)" : "var(--color-surface-hover)",
-                    border: "1px solid var(--color-border-light)",
-                    opacity: step.done ? 0.7 : 1,
-                  }}
+        <DashboardCard title="Recommendations" subtitle="Action items from your stored AI analysis">
+          {actionItems.length === 0 ? (
+            <EmptyState
+              compact
+              icon={<FileText className="w-6 h-6" />}
+              title="No recommendations yet."
+              description="Re-run resume analysis to generate updated recommendations."
+            />
+          ) : (
+            <ul className="mt-3 flex flex-col gap-3" role="list">
+              {actionItems.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 p-3 rounded-xl"
+                  style={{ background: "var(--color-surface-hover)", border: "1px solid var(--color-border-light)" }}
                 >
-                  <span className="text-xl flex-shrink-0" aria-hidden="true">{step.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs font-semibold" style={{ color: step.done ? "#16a34a" : "var(--color-puce-red)", fontFamily: "var(--font-heading)" }}>
-                      {step.done && <span aria-hidden="true">✓ </span>}{step.title}
-                    </p>
-                    <p className="text-[10px]" style={{ color: "var(--color-text-muted)" }}>{step.description}</p>
-                  </div>
-                  {!step.done && (
-                    <AlertCircle className="w-4 h-4 flex-shrink-0 group-hover:text-rose-gold" style={{ color: "var(--color-text-muted)" }} aria-hidden="true" />
-                  )}
-                </a>
-              </li>
-            ))}
-          </ul>
+                  <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "var(--color-rose-gold)" }} aria-hidden="true" />
+                  <span className="text-xs leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </DashboardCard>
       </div>
     </>

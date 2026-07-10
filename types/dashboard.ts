@@ -126,7 +126,7 @@ export interface NewsArticle {
   detailedSummary: string;
   keyTakeaways: string[];
   sourceName: string;
-  sourceUrl: string; // placeholder "#"
+  sourceUrl: string;
 }
 
 /* ── Financial Compass ──────────────────────────────────────── */
@@ -284,4 +284,3 @@ export interface FinancialPlanResult {
   meta: FinancialPlanMeta;
   updatedAt: string;
 }
-

@@ -419,9 +419,17 @@ export function OpportunitiesPageClient({
       {noDataset && (
         <EmptyState
           icon={<Compass className="w-8 h-8" />}
-          title="Dataset Loading Soon"
-          description="The opportunity dataset is being prepared. Check back shortly - it will appear automatically once ready."
-          actions={null}
+          title="No personalized matches yet."
+          description="Complete your profile to improve recommendations."
+          actions={
+            <a
+              href="/dashboard/onboarding"
+              className="btn-base px-5 py-2.5 text-sm"
+              style={{ background: "var(--color-rose-gold)", color: "#fff" }}
+            >
+              Complete Profile
+            </a>
+          }
         />
       )}
 
@@ -445,7 +453,7 @@ export function OpportunitiesPageClient({
                     description={
                       isRanking
                         ? "Herizon AI is analysing your profile against the filtered opportunities."
-                        : "Upload your resume to get AI-powered opportunity matches tailored to your profile."
+                        : "Complete your profile to improve recommendations."
                     }
                     actions={
                       !isRanking ? (

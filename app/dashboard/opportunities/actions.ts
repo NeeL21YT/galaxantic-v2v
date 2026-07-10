@@ -80,6 +80,21 @@ export async function getOpportunities(
     }
 
     const analysis = extractAnalysis(latestResume);
+    if (!profile.onboarding_completed || !analysis) {
+      return {
+        topMatches: [],
+        allFiltered: [],
+        searchIndex: [],
+        meta: {
+          total: 0,
+          filtered: 0,
+          sentToAI: 0,
+          ranked: 0,
+          fromCache: false,
+        },
+      };
+    }
+
     const repo = createOpportunityRepository();
     const [allOpps, searchIndex, bookmarkMap] = await Promise.all([
       repo.findAll(),
@@ -225,7 +240,8 @@ export async function getMatchedCount(): Promise<number> {
       Promise.resolve(createOpportunityRepository()),
       getProfile(),
     ]);
-    if (!profile) return 0;
+    const latestResume = await getLatestAnalyzedResume();
+    if (!profile?.onboarding_completed || !latestResume?.analysis_json) return 0;
     const allOpps = await repo.findAll();
     const { DEFAULT_FILTERS } = await import("@/lib/opportunities/types");
     const filtered = applyDeterministicFilter(allOpps, {

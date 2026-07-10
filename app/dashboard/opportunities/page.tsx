@@ -39,7 +39,7 @@ export default async function OpportunitiesPage() {
         subtitle={
           totalFiltered > 0
             ? `${totalMatched} AI-ranked matches · ${totalFiltered} opportunities in your filters`
-            : "Discover AI-matched opportunities for your career stage and goals."
+            : "Complete your profile and resume analysis to receive AI-matched opportunities."
         }
       />
 

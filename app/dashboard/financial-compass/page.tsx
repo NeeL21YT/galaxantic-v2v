@@ -48,7 +48,7 @@ import { Checklist } from "@/components/financial/Checklist";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
-import { FINANCIAL_GOALS } from "@/lib/data/placeholder";
+import { FINANCIAL_GOALS } from "@/lib/data/financial-goals";
 import { generateInputHash } from "@/lib/financial/calculations";
 import {
   generateFinancialPlanAction,

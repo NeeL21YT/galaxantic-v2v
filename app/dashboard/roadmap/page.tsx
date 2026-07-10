@@ -1,7 +1,7 @@
 /**
  * app/dashboard/roadmap/page.tsx
  *
- * Roadmap - 30/60/90-day milestone timeline.
+ * Roadmap - database-backed 30/60/90-day milestone timeline.
  */
 
 import { Map, CheckCircle2, Clock, Circle } from "lucide-react";
@@ -9,7 +9,9 @@ import { PageHeader } from "@/components/dashboard/PageHeader";
 import { DashboardCard } from "@/components/dashboard/DashboardCard";
 import { TimelineCard } from "@/components/dashboard/TimelineCard";
 import { Button } from "@/components/ui/Button";
-import { PLACEHOLDER_MILESTONES } from "@/lib/data/placeholder";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { getUser } from "@/lib/supabase/server";
+import { getLatestRoadmap, roadmapJsonToMilestones } from "@/lib/db/roadmaps";
 
 export const metadata = {
   title: "Roadmap - Herizon",
@@ -22,29 +24,54 @@ const PHASES = [
   { label: "90 Days", description: "Offer & onboarding", phase: 90 as const },
 ];
 
-export default function RoadmapPage() {
-  const completed = PLACEHOLDER_MILESTONES.filter((m) => m.status === "completed").length;
-  const total = PLACEHOLDER_MILESTONES.length;
-  const progress = Math.round((completed / total) * 100);
+export default async function RoadmapPage() {
+  const user = await getUser();
+  const latestRoadmap = user ? await getLatestRoadmap(user.id) : null;
+  const milestones = roadmapJsonToMilestones(latestRoadmap?.roadmap_json ?? null);
+
+  if (milestones.length === 0) {
+    return (
+      <>
+        <PageHeader
+          title="Career Roadmap"
+          subtitle="Generate your personalized roadmap from your own Herizon analysis."
+        />
+        <DashboardCard title="Generate Your AI Career Roadmap" subtitle="No stored roadmap found for your account.">
+          <EmptyState
+            icon={<Map className="w-8 h-8" />}
+            title="Generate your personalized roadmap."
+            description="Your roadmap will be generated after completing Career Break Analysis and Resume Analysis."
+            action={<Button href="/dashboard/resume" variant="primary">Upload Resume</Button>}
+            secondaryAction={<Button href="/dashboard/career-break" variant="outline">View Career Break</Button>}
+          />
+        </DashboardCard>
+      </>
+    );
+  }
+
+  const completed = milestones.filter((m) => m.status === "completed").length;
+  const inProgress = milestones.filter((m) => m.status === "in-progress").length;
+  const upcoming = milestones.filter((m) => m.status === "upcoming").length;
+  const total = milestones.length;
+  const progress = total > 0 ? Math.round((completed / total) * 100) : 0;
 
   return (
     <>
       <PageHeader
         title="Career Roadmap"
-        subtitle="Your personalised 90-day return-to-work plan."
+        subtitle="Your stored 90-day return-to-work plan."
         action={
-          <Button 
-            href="/dashboard/ai-coach" 
-            variant="primary" 
+          <Button
+            href="/dashboard/resume"
+            variant="primary"
             size="sm"
             leftIcon={<Map className="w-3.5 h-3.5" aria-hidden="true" />}
           >
-            Update with AI
+            Update with Resume
           </Button>
         }
       />
 
-      {/* Progress summary */}
       <div
         className="rounded-2xl p-5 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
         style={{
@@ -55,9 +82,9 @@ export default function RoadmapPage() {
       >
         <div className="flex items-center gap-4">
           {[
-            { icon: <CheckCircle2 className="w-4 h-4" />, label: "Completed", value: PLACEHOLDER_MILESTONES.filter(m => m.status === "completed").length, color: "#16a34a" },
-            { icon: <Clock className="w-4 h-4" />, label: "In Progress", value: PLACEHOLDER_MILESTONES.filter(m => m.status === "in-progress").length, color: "var(--color-rackley)" },
-            { icon: <Circle className="w-4 h-4" />, label: "Upcoming", value: PLACEHOLDER_MILESTONES.filter(m => m.status === "upcoming").length, color: "var(--color-text-muted)" },
+            { icon: <CheckCircle2 className="w-4 h-4" />, label: "Completed", value: completed, color: "#16a34a" },
+            { icon: <Clock className="w-4 h-4" />, label: "In Progress", value: inProgress, color: "var(--color-rackley)" },
+            { icon: <Circle className="w-4 h-4" />, label: "Upcoming", value: upcoming, color: "var(--color-text-muted)" },
           ].map((s) => (
             <div key={s.label} className="flex items-center gap-2">
               <span style={{ color: s.color }}>{s.icon}</span>
@@ -71,7 +98,6 @@ export default function RoadmapPage() {
           ))}
         </div>
 
-        {/* Overall progress bar */}
         <div className="flex flex-col gap-1 min-w-[160px]">
           <div className="flex justify-between text-xs" style={{ color: "var(--color-text-muted)" }}>
             <span>Overall Progress</span>
@@ -89,32 +115,42 @@ export default function RoadmapPage() {
         </div>
       </div>
 
-      {/* Phase tabs */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {PHASES.map(({ label, description, phase }) => {
-          const milestones = PLACEHOLDER_MILESTONES.filter((m) => m.phase === phase);
+          const phaseMilestones = milestones.filter((m) => m.phase === phase);
           return (
             <DashboardCard
               key={phase}
               title={label}
               subtitle={description}
               headerAction={
-                <span className="text-xs px-2 py-0.5 rounded-full"
-                  style={{ background: "var(--color-surface-hover)", color: "var(--color-text-muted)" }}>
-                  {milestones.length} tasks
+                <span
+                  className="text-xs px-2 py-0.5 rounded-full"
+                  style={{ background: "var(--color-surface-hover)", color: "var(--color-text-muted)" }}
+                >
+                  {phaseMilestones.length} tasks
                 </span>
               }
             >
-              <div className="mt-4">
-                {milestones.map((m, i) => (
-                  <TimelineCard
-                    key={m.id}
-                    milestone={m}
-                    index={i}
-                    isLast={i === milestones.length - 1}
-                  />
-                ))}
-              </div>
+              {phaseMilestones.length === 0 ? (
+                <EmptyState
+                  compact
+                  icon={<Circle className="w-6 h-6" />}
+                  title="No tasks in this phase."
+                  description="This stored roadmap has no milestones for this phase."
+                />
+              ) : (
+                <div className="mt-4">
+                  {phaseMilestones.map((milestone, index) => (
+                    <TimelineCard
+                      key={milestone.id}
+                      milestone={milestone}
+                      index={index}
+                      isLast={index === phaseMilestones.length - 1}
+                    />
+                  ))}
+                </div>
+              )}
             </DashboardCard>
           );
         })}

@@ -146,7 +146,6 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
                 </ul>
               </div>
 
-              {/* Source placeholder */}
               <div
                 className="flex items-center justify-between rounded-xl px-4 py-3"
                 style={{

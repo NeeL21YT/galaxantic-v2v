@@ -2,7 +2,7 @@
  * components/sections/HeroSection.tsx
  *
  * Full-bleed hero with animated headline, CTAs, trust badge,
- * and an abstract illustration placeholder on the right.
+ * and an abstract illustration on the right.
  */
 
 "use client";

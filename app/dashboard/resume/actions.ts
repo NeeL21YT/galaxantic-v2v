@@ -29,6 +29,7 @@ import {
   findResumeByHash,
   clearAllUserResumes,
 } from "@/lib/db/resumes";
+import { saveRoadmapFromResumeAnalysis } from "@/lib/db/roadmaps";
 import { revalidatePath } from "next/cache";
 import type { Resume } from "@/types/database";
 import type { ProcessResumeResult } from "@/types/resume-analysis";
@@ -173,8 +174,10 @@ export async function processResume(
       analysisDurationMs: 0, // instant - reused from cache
     });
     await saveExtractedText(resumeId, extractedText, textHash);
+    await saveRoadmapFromResumeAnalysis(user.id, resumeId, dupAnalysis);
 
     revalidatePath("/dashboard/resume");
+    revalidatePath("/dashboard/roadmap");
     revalidatePath("/dashboard");
 
     return {
@@ -232,12 +235,14 @@ export async function processResume(
       analysisVersion: geminiResult.analysisVersion,
       analysisDurationMs: geminiResult.analysisDurationMs,
     });
+    await saveRoadmapFromResumeAnalysis(user.id, resumeId, geminiResult.analysis);
   } catch {
     return { success: false, error: "Analysis completed but failed to save. Please try again.", code: "SAVE_FAILED" };
   }
 
   /* ── Revalidate cache ── */
   revalidatePath("/dashboard/resume");
+  revalidatePath("/dashboard/roadmap");
   revalidatePath("/dashboard");
 
   return {
@@ -306,8 +311,11 @@ export async function reanalyzeResume(
     analysisVersion: geminiResult.analysisVersion,
     analysisDurationMs: geminiResult.analysisDurationMs,
   });
+  await saveRoadmapFromResumeAnalysis(user.id, resumeId, geminiResult.analysis);
 
   revalidatePath("/dashboard/resume");
+  revalidatePath("/dashboard/roadmap");
+  revalidatePath("/dashboard");
 
   return {
     success: true,

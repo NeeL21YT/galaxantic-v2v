@@ -9,14 +9,43 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { Save, Eye, EyeOff, AlertTriangle } from "lucide-react";
 import { PageHeader } from "@/components/dashboard/PageHeader";
 import { SettingsCard } from "@/components/dashboard/SettingsCard";
 import { DeleteAccountModal } from "@/components/dashboard/DeleteAccountModal";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { PLACEHOLDER_NOTIFICATIONS } from "@/lib/data/placeholder";
+import type { NotificationSetting } from "@/types/dashboard";
+import { updateSettingsProfileAction } from "@/app/dashboard/settings/actions";
+
+const NOTIFICATION_OPTIONS: NotificationSetting[] = [
+  {
+    id: "new-opportunities",
+    label: "New Opportunities",
+    description: "Get notified when new matching roles are found",
+    enabled: true,
+  },
+  {
+    id: "milestone-reminders",
+    label: "Milestone Reminders",
+    description: "Reminders for upcoming roadmap deadlines",
+    enabled: true,
+  },
+  {
+    id: "ai-coach-messages",
+    label: "AI Coach Messages",
+    description: "Receive suggestions from your AI coach",
+    enabled: false,
+  },
+  {
+    id: "weekly-progress-report",
+    label: "Weekly Progress Report",
+    description: "Summary of your progress every Monday",
+    enabled: true,
+  },
+];
 
 interface SettingsPageClientProps {
   userEmail: string;
@@ -24,15 +53,42 @@ interface SettingsPageClientProps {
 }
 
 export function SettingsPageClient({ userEmail, userName }: SettingsPageClientProps) {
-  const [notifications, setNotifications] = useState(PLACEHOLDER_NOTIFICATIONS);
+  const router = useRouter();
+  const [notifications, setNotifications] = useState(NOTIFICATION_OPTIONS);
+  const [fullName, setFullName] = useState(userName);
+  const [savedName, setSavedName] = useState(userName);
+  const [profileError, setProfileError] = useState<string | null>(null);
+  const [profileSuccess, setProfileSuccess] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [isSavingProfile, startSavingProfile] = useTransition();
 
   function toggleNotification(id: string) {
     setNotifications((prev) =>
       prev.map((n) => (n.id === id ? { ...n, enabled: !n.enabled } : n))
     );
   }
+
+  function handleSaveProfile() {
+    setProfileError(null);
+    setProfileSuccess(null);
+
+    startSavingProfile(async () => {
+      const result = await updateSettingsProfileAction({ fullName });
+
+      if (!result.success) {
+        setProfileError(result.error);
+        return;
+      }
+
+      setFullName(result.fullName);
+      setSavedName(result.fullName);
+      setProfileSuccess("Profile updated.");
+      router.refresh();
+    });
+  }
+
+  const nameChanged = fullName.trim().replace(/\s+/g, " ") !== savedName.trim().replace(/\s+/g, " ");
 
   return (
     <>
@@ -47,8 +103,14 @@ export function SettingsPageClient({ userEmail, userName }: SettingsPageClientPr
               <Input
                 label="Full Name"
                 id="full-name"
-                defaultValue={userName}
+                value={fullName}
+                onChange={(event) => {
+                  setFullName(event.target.value);
+                  setProfileError(null);
+                  setProfileSuccess(null);
+                }}
                 placeholder="Your full name"
+                error={profileError ?? undefined}
               />
               <Input
                 label="Email Address"
@@ -65,11 +127,18 @@ export function SettingsPageClient({ userEmail, userName }: SettingsPageClientPr
                 variant="primary" 
                 size="sm" 
                 leftIcon={<Save className="w-3.5 h-3.5" aria-hidden="true" />}
-                onClick={() => { /* TODO: wire up profile update */ }}
+                onClick={handleSaveProfile}
+                loading={isSavingProfile}
+                disabled={!nameChanged || isSavingProfile}
               >
-                Save Changes
+                {isSavingProfile ? "Saving..." : "Save Changes"}
               </Button>
             </div>
+            {profileSuccess && (
+              <p className="text-xs text-right" style={{ color: "#16a34a" }} role="status">
+                {profileSuccess}
+              </p>
+            )}
           </div>
         </SettingsCard>
 
