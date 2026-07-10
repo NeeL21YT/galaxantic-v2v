@@ -1,0 +1,1183 @@
+[
+  {
+    "id": "competition_179_m3cvc91",
+    "title": "Designathon 2027",
+    "organization": "Unstop",
+    "category": "competition",
+    "description": "Join Unstop as a Designathon 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Communication",
+      "Python",
+      "UI Design"
+    ],
+    "preferredSkills": [
+      "PostgreSQL",
+      "TypeScript",
+      "Azure"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-10-04T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": "$1864/month",
+    "applyUrl": "https://example.com/apply/4ng6ia",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "student",
+    "tags": [
+      "Finance",
+      "AI"
+    ]
+  },
+  {
+    "id": "competition_180_eqks3n1",
+    "title": "Algorithmic Coding Challenge 2027",
+    "organization": "MLH",
+    "category": "competition",
+    "description": "MLH is seeking a highly motivated Algorithmic Coding Challenge 2027 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Rust",
+      "MongoDB",
+      "Docker",
+      "React"
+    ],
+    "preferredSkills": [
+      "Node.js",
+      "UX Research",
+      "Figma"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-17T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/d6j9wc",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Frontend",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "competition_181_me5mna5",
+    "title": "Algorithmic Coding Challenge 2026",
+    "organization": "Wipro",
+    "category": "competition",
+    "description": "Discover what you're capable of with Wipro. The Algorithmic Coding Challenge 2026 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Docker",
+      "SQL"
+    ],
+    "preferredSkills": [
+      "Machine Learning"
+    ],
+    "location": "Toronto",
+    "country": "Canada",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-08T14:30:00.201Z",
+    "duration": "3 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/cx6o10",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "career_break",
+    "tags": [
+      "Remote",
+      "AI",
+      "Finance",
+      "Education"
+    ]
+  },
+  {
+    "id": "competition_182_f73o9hu",
+    "title": "Business Case Competition 2026",
+    "organization": "PwC",
+    "category": "competition",
+    "description": "PwC is seeking a highly motivated Business Case Competition 2026 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "AWS",
+      "UX Research",
+      "Data Science"
+    ],
+    "preferredSkills": [
+      "MongoDB",
+      "Rust",
+      "Research"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-22T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/ywwamw",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "career_break",
+    "tags": [
+      "Education",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "competition_183_0yzlthq",
+    "title": "Algorithmic Coding Challenge 2027",
+    "organization": "Apple",
+    "category": "competition",
+    "description": "Apple is seeking a highly motivated Algorithmic Coding Challenge 2027 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Node.js",
+      "Python",
+      "Machine Learning"
+    ],
+    "preferredSkills": [
+      "SQL",
+      "React",
+      "Rust"
+    ],
+    "location": "Pune",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-29T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$2853/month",
+    "applyUrl": "https://example.com/apply/k6kkbj",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Remote",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "competition_184_nygah0t",
+    "title": "Business Case Competition 2027",
+    "organization": "Razorpay",
+    "category": "competition",
+    "description": "Join Razorpay as a Business Case Competition 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Kubernetes",
+      "Go",
+      "Cybersecurity"
+    ],
+    "preferredSkills": [
+      "Leadership",
+      "AWS",
+      "Cybersecurity"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-17T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/hf87a5",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "any",
+    "tags": [
+      "Women",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "competition_185_7jtoree",
+    "title": "Designathon 2027",
+    "organization": "IEEE",
+    "category": "competition",
+    "description": "IEEE is seeking a highly motivated Designathon 2027 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Python",
+      "Teaching"
+    ],
+    "preferredSkills": [
+      "Machine Learning",
+      "Cybersecurity"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-09T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/jotn0h",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "any",
+    "tags": [
+      "Leadership",
+      "Research",
+      "AI",
+      "Finance"
+    ]
+  },
+  {
+    "id": "competition_186_3sj28j1",
+    "title": "Algorithmic Coding Challenge 2027",
+    "organization": "Google Women Techmakers",
+    "category": "competition",
+    "description": "Discover what you're capable of with Google Women Techmakers. The Algorithmic Coding Challenge 2027 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Communication",
+      "Rust",
+      "Java",
+      "SQL",
+      "Teaching"
+    ],
+    "preferredSkills": [
+      "Marketing"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-23T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$1813/month",
+    "applyUrl": "https://example.com/apply/5pvkd5",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "Frontend",
+      "Finance",
+      "AI"
+    ]
+  },
+  {
+    "id": "competition_187_v6vu67c",
+    "title": "Business Case Competition 2027",
+    "organization": "PwC",
+    "category": "competition",
+    "description": "Join PwC as a Business Case Competition 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "UI Design"
+    ],
+    "preferredSkills": [
+      "Flutter",
+      "Leadership",
+      "SQL"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-28T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/g2r363",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "Open Source",
+      "Remote"
+    ]
+  },
+  {
+    "id": "competition_188_ad7t8ku",
+    "title": "Algorithmic Coding Challenge 2026",
+    "organization": "Reliance Foundation",
+    "category": "competition",
+    "description": "Join Reliance Foundation as a Algorithmic Coding Challenge 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Flutter",
+      "MongoDB",
+      "Docker",
+      "PostgreSQL"
+    ],
+    "preferredSkills": [
+      "Go",
+      "Cybersecurity"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-26T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$3946/month",
+    "applyUrl": "https://example.com/apply/w336rc",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "working",
+    "tags": [
+      "Frontend",
+      "Remote",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "competition_189_4cdwk6i",
+    "title": "Algorithmic Coding Challenge 2027",
+    "organization": "Smart India Hackathon",
+    "category": "competition",
+    "description": "Smart India Hackathon is seeking a highly motivated Algorithmic Coding Challenge 2027 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Kubernetes",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "AWS"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-10-05T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$1358/month",
+    "applyUrl": "https://example.com/apply/k6886f",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Finance",
+      "Leadership",
+      "Healthcare",
+      "Education"
+    ]
+  },
+  {
+    "id": "competition_190_v1x2uwt",
+    "title": "Algorithmic Coding Challenge 2027",
+    "organization": "Flipkart",
+    "category": "competition",
+    "description": "Flipkart is seeking a highly motivated Algorithmic Coding Challenge 2027 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Research",
+      "Android",
+      "Data Science"
+    ],
+    "preferredSkills": [
+      "React",
+      "MongoDB"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-01T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$4802/month",
+    "applyUrl": "https://example.com/apply/y7t865",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "working",
+    "tags": [
+      "Healthcare",
+      "Open Source",
+      "Women"
+    ]
+  },
+  {
+    "id": "competition_191_y8fw35f",
+    "title": "Designathon 2026",
+    "organization": "Microsoft Imagine Cup",
+    "category": "competition",
+    "description": "Discover what you're capable of with Microsoft Imagine Cup. The Designathon 2026 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "TypeScript",
+      "Android",
+      "React"
+    ],
+    "preferredSkills": [
+      "Machine Learning"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-09T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": "$4460/month",
+    "applyUrl": "https://example.com/apply/v9pt9o",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "any",
+    "tags": [
+      "Leadership",
+      "AI"
+    ]
+  },
+  {
+    "id": "competition_192_5goy6y9",
+    "title": "Designathon 2027",
+    "organization": "Zoho",
+    "category": "competition",
+    "description": "We at Zoho are excited to announce our opening for the Designathon 2027 position. As a key participant in this competition, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Next.js",
+      "React",
+      "Docker"
+    ],
+    "preferredSkills": [
+      "Java",
+      "Android",
+      "iOS"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-19T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/rl7k6i",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "postgraduate",
+    "careerStage": "any",
+    "tags": [
+      "Women",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "competition_193_bbi6cjf",
+    "title": "Business Case Competition 2027",
+    "organization": "Apple",
+    "category": "competition",
+    "description": "Join Apple as a Business Case Competition 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Machine Learning",
+      "Go",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "Cybersecurity",
+      "React"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-04T14:30:00.201Z",
+    "duration": "3 months",
+    "stipend": "$4831/month",
+    "applyUrl": "https://example.com/apply/asezn4",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "career_break",
+    "tags": [
+      "Cloud",
+      "Women",
+      "Finance"
+    ]
+  },
+  {
+    "id": "competition_194_bh8v0l5",
+    "title": "Algorithmic Coding Challenge 2027",
+    "organization": "Kaggle",
+    "category": "competition",
+    "description": "Join Kaggle as a Algorithmic Coding Challenge 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Azure",
+      "Rust",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "Android",
+      "Machine Learning"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-24T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/r468nv",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "competition_195_durxw18",
+    "title": "Designathon 2026",
+    "organization": "OpenAI",
+    "category": "competition",
+    "description": "Discover what you're capable of with OpenAI. The Designathon 2026 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Rust",
+      "Java",
+      "Communication"
+    ],
+    "preferredSkills": [
+      "Cybersecurity",
+      "Communication"
+    ],
+    "location": "Berlin",
+    "country": "Germany",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-18T14:30:00.201Z",
+    "duration": "6 months",
+    "stipend": "$3492/month",
+    "applyUrl": "https://example.com/apply/ack69g",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "student",
+    "tags": [
+      "Finance",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "competition_196_ec8oeyj",
+    "title": "Designathon 2027",
+    "organization": "Wipro",
+    "category": "competition",
+    "description": "We at Wipro are excited to announce our opening for the Designathon 2027 position. As a key participant in this competition, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "MongoDB",
+      "AWS",
+      "Python",
+      "iOS"
+    ],
+    "preferredSkills": [
+      "Data Science",
+      "Kubernetes"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-27T14:30:00.201Z",
+    "duration": "4 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/cnrtu7",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "career_break",
+    "tags": [
+      "Backend",
+      "Leadership",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "competition_197_dlj148u",
+    "title": "Algorithmic Coding Challenge 2026",
+    "organization": "ACM",
+    "category": "competition",
+    "description": "Discover what you're capable of with ACM. The Algorithmic Coding Challenge 2026 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "iOS",
+      "Node.js",
+      "Go"
+    ],
+    "preferredSkills": [
+      "Node.js"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-16T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$1340/month",
+    "applyUrl": "https://example.com/apply/qw5nlv",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Education",
+      "Women",
+      "Research",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "competition_198_8j24h8d",
+    "title": "Designathon 2026",
+    "organization": "Hack2Skill",
+    "category": "competition",
+    "description": "Discover what you're capable of with Hack2Skill. The Designathon 2026 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "React",
+      "iOS",
+      "Cybersecurity",
+      "UI Design"
+    ],
+    "preferredSkills": [
+      "Go",
+      "AWS"
+    ],
+    "location": "Seattle",
+    "country": "United States",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-23T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/o8wo0q",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "student",
+    "tags": [
+      "Backend",
+      "Remote"
+    ]
+  },
+  {
+    "id": "competition_199_r3o47bt",
+    "title": "Business Case Competition 2026",
+    "organization": "Apple",
+    "category": "competition",
+    "description": "We at Apple are excited to announce our opening for the Business Case Competition 2026 position. As a key participant in this competition, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "React",
+      "Teaching"
+    ],
+    "preferredSkills": [
+      "React"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-31T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$1636/month",
+    "applyUrl": "https://example.com/apply/08pf1m",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "working",
+    "tags": [
+      "Remote",
+      "Cloud",
+      "Women",
+      "Finance"
+    ]
+  },
+  {
+    "id": "competition_200_xqt6hlf",
+    "title": "Business Case Competition 2026",
+    "organization": "Smart India Hackathon",
+    "category": "competition",
+    "description": "Smart India Hackathon is seeking a highly motivated Business Case Competition 2026 to join us. This competition is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Next.js",
+      "TypeScript",
+      "Data Science",
+      "SQL"
+    ],
+    "preferredSkills": [
+      "Docker",
+      "TypeScript"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-30T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/c9gxcp",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "Finance",
+      "Backend"
+    ]
+  },
+  {
+    "id": "competition_201_tdo6it1",
+    "title": "Algorithmic Coding Challenge 2026",
+    "organization": "Netflix",
+    "category": "competition",
+    "description": "Discover what you're capable of with Netflix. The Algorithmic Coding Challenge 2026 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Teaching",
+      "TypeScript",
+      "Research"
+    ],
+    "preferredSkills": [
+      "Communication"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-22T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$2956/month",
+    "applyUrl": "https://example.com/apply/fsqyj6",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "student",
+    "tags": [
+      "Education",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "competition_202_j69x3ki",
+    "title": "Business Case Competition 2027",
+    "organization": "Google Summer of Code",
+    "category": "competition",
+    "description": "Join Google Summer of Code as a Business Case Competition 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This competition offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Python",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "Finance"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-29T14:30:00.201Z",
+    "duration": "6 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/pzf7tg",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "phd",
+    "careerStage": "any",
+    "tags": [
+      "Research",
+      "AI",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "competition_203_fteuu04",
+    "title": "Designathon 2027",
+    "organization": "Microsoft Imagine Cup",
+    "category": "competition",
+    "description": "Discover what you're capable of with Microsoft Imagine Cup. The Designathon 2027 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Figma",
+      "React"
+    ],
+    "preferredSkills": [
+      "Flutter",
+      "Kubernetes",
+      "TypeScript"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-25T14:30:00.201Z",
+    "duration": "3 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/gigdsf",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "any",
+    "tags": [
+      "Cloud",
+      "AI",
+      "Open Source",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "competition_204_vxm49hy",
+    "title": "Business Case Competition 2027",
+    "organization": "Atlassian",
+    "category": "competition",
+    "description": "Discover what you're capable of with Atlassian. The Business Case Competition 2027 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Machine Learning"
+    ],
+    "preferredSkills": [
+      "Docker",
+      "UI Design",
+      "Machine Learning"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-27T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/m3drc2",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "career_break",
+    "tags": [
+      "Remote",
+      "Healthcare",
+      "Finance",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "competition_205_vy2lsiy",
+    "title": "Designathon 2027",
+    "organization": "Smart India Hackathon",
+    "category": "competition",
+    "description": "Discover what you're capable of with Smart India Hackathon. The Designathon 2027 role is a fast-paced competition aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Docker",
+      "Next.js",
+      "Machine Learning",
+      "UI Design",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "Flutter"
+    ],
+    "location": "Pune",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-10-04T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/yelmhd",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "any",
+    "tags": [
+      "Healthcare",
+      "Open Source",
+      "Remote"
+    ]
+  },
+  {
+    "id": "competition_206_67gau7p",
+    "title": "Business Case Competition 2026",
+    "organization": "Microsoft",
+    "category": "competition",
+    "description": "We at Microsoft are excited to announce our opening for the Business Case Competition 2026 position. As a key participant in this competition, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Leadership",
+      "Docker",
+      "UX Research",
+      "SQL",
+      "Research"
+    ],
+    "preferredSkills": [
+      "Cybersecurity"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-02T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$2199/month",
+    "applyUrl": "https://example.com/apply/49tley",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "Finance",
+      "Education"
+    ]
+  }
+]

@@ -1,0 +1,890 @@
+[
+  {
+    "id": "fellowship_158_md3mpo3",
+    "title": "Research Fellowship 2026",
+    "organization": "Flipkart",
+    "category": "fellowship",
+    "description": "Flipkart is seeking a highly motivated Research Fellowship 2026 to join us. This fellowship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Machine Learning",
+      "Figma",
+      "Research",
+      "Android"
+    ],
+    "preferredSkills": [
+      "TypeScript"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-25T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/8x7vmm",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Remote",
+      "Leadership",
+      "Women"
+    ]
+  },
+  {
+    "id": "fellowship_159_w3lg0c7",
+    "title": "AI Ethics Fellow 2027",
+    "organization": "Intel",
+    "category": "fellowship",
+    "description": "Discover what you're capable of with Intel. The AI Ethics Fellow 2027 role is a fast-paced fellowship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Node.js",
+      "iOS"
+    ],
+    "preferredSkills": [
+      "Android"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-16T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$4772/month",
+    "applyUrl": "https://example.com/apply/etxt4j",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "any",
+    "tags": [
+      "Cloud",
+      "Finance",
+      "Leadership",
+      "Backend"
+    ]
+  },
+  {
+    "id": "fellowship_160_dgen3x8",
+    "title": "Research Fellowship 2026",
+    "organization": "AMD",
+    "category": "fellowship",
+    "description": "We at AMD are excited to announce our opening for the Research Fellowship 2026 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Research",
+      "PostgreSQL",
+      "Finance",
+      "Flutter"
+    ],
+    "preferredSkills": [
+      "AWS"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-19T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/fm7d8k",
+    "featured": true,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "any",
+    "tags": [
+      "Women",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "fellowship_161_3tt8zsy",
+    "title": "AI Ethics Fellow 2026",
+    "organization": "Intel",
+    "category": "fellowship",
+    "description": "Intel is seeking a highly motivated AI Ethics Fellow 2026 to join us. This fellowship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Machine Learning",
+      "TypeScript",
+      "iOS",
+      "Teaching"
+    ],
+    "preferredSkills": [
+      "Rust",
+      "AWS",
+      "Leadership"
+    ],
+    "location": "Mumbai",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-02T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$4509/month",
+    "applyUrl": "https://example.com/apply/ihndz1",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Women",
+      "Research",
+      "AI",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "fellowship_162_2tw9ve2",
+    "title": "Open Source Fellow 2026",
+    "organization": "Hack2Skill",
+    "category": "fellowship",
+    "description": "We at Hack2Skill are excited to announce our opening for the Open Source Fellow 2026 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "Flutter",
+      "Machine Learning",
+      "Python",
+      "React"
+    ],
+    "preferredSkills": [
+      "Cybersecurity",
+      "Finance"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-02T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": "$1074/month",
+    "applyUrl": "https://example.com/apply/zoaeqw",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Frontend",
+      "Finance",
+      "Remote"
+    ]
+  },
+  {
+    "id": "fellowship_163_wwhuukp",
+    "title": "Research Fellowship 2027",
+    "organization": "Infosys",
+    "category": "fellowship",
+    "description": "Discover what you're capable of with Infosys. The Research Fellowship 2027 role is a fast-paced fellowship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "PostgreSQL",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "Research",
+      "Figma"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-16T14:30:00.201Z",
+    "duration": "2 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/wb8lau",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "any",
+    "tags": [
+      "Leadership",
+      "Research",
+      "Education"
+    ]
+  },
+  {
+    "id": "fellowship_164_zt3yc6p",
+    "title": "AI Ethics Fellow 2027",
+    "organization": "Meesho",
+    "category": "fellowship",
+    "description": "We at Meesho are excited to announce our opening for the AI Ethics Fellow 2027 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Java",
+      "PostgreSQL"
+    ],
+    "preferredSkills": [
+      "React",
+      "Flutter",
+      "Docker"
+    ],
+    "location": "Berlin",
+    "country": "Germany",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-13T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$3227/month",
+    "applyUrl": "https://example.com/apply/ows272",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "working",
+    "tags": [
+      "Education",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "fellowship_165_js7tpp3",
+    "title": "Research Fellowship 2026",
+    "organization": "IEEE",
+    "category": "fellowship",
+    "description": "We at IEEE are excited to announce our opening for the Research Fellowship 2026 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Rust",
+      "UX Research",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "Next.js",
+      "Node.js",
+      "Python"
+    ],
+    "location": "Berlin",
+    "country": "Germany",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-24T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/oj276w",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "career_break",
+    "tags": [
+      "Healthcare",
+      "Backend",
+      "Open Source",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "fellowship_166_jhiyvo3",
+    "title": "Research Fellowship 2026",
+    "organization": "Accenture",
+    "category": "fellowship",
+    "description": "Discover what you're capable of with Accenture. The Research Fellowship 2026 role is a fast-paced fellowship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Leadership",
+      "AWS",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "Research",
+      "Docker",
+      "UX Research"
+    ],
+    "location": "Singapore",
+    "country": "Singapore",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-30T14:30:00.201Z",
+    "duration": "4 months",
+    "stipend": "$3172/month",
+    "applyUrl": "https://example.com/apply/lbm3rh",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "any",
+    "tags": [
+      "Frontend",
+      "Finance"
+    ]
+  },
+  {
+    "id": "fellowship_167_z83vs78",
+    "title": "Open Source Fellow 2027",
+    "organization": "Outreachy",
+    "category": "fellowship",
+    "description": "Join Outreachy as a Open Source Fellow 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This fellowship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Figma",
+      "AWS",
+      "Java"
+    ],
+    "preferredSkills": [
+      "AWS",
+      "React"
+    ],
+    "location": "New York",
+    "country": "United States",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-13T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/b3z507",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "student",
+    "tags": [
+      "Finance",
+      "Open Source",
+      "Research"
+    ]
+  },
+  {
+    "id": "fellowship_168_rpdwlhx",
+    "title": "Research Fellowship 2026",
+    "organization": "Devfolio",
+    "category": "fellowship",
+    "description": "Join Devfolio as a Research Fellowship 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This fellowship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Next.js",
+      "Docker"
+    ],
+    "preferredSkills": [
+      "Python",
+      "SQL"
+    ],
+    "location": "Berlin",
+    "country": "Germany",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-10-05T14:30:00.201Z",
+    "duration": "5 months",
+    "stipend": "$1342/month",
+    "applyUrl": "https://example.com/apply/cwrna6",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "any",
+    "tags": [
+      "Education",
+      "Open Source",
+      "Frontend",
+      "Remote"
+    ]
+  },
+  {
+    "id": "fellowship_169_n3bq1xb",
+    "title": "AI Ethics Fellow 2026",
+    "organization": "Amazon",
+    "category": "fellowship",
+    "description": "Amazon is seeking a highly motivated AI Ethics Fellow 2026 to join us. This fellowship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UX Research",
+      "TypeScript",
+      "iOS"
+    ],
+    "preferredSkills": [
+      "Teaching"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-24T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/eezna0",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "career_break",
+    "tags": [
+      "Women",
+      "AI"
+    ]
+  },
+  {
+    "id": "fellowship_170_ry2f9c6",
+    "title": "Research Fellowship 2026",
+    "organization": "Google Summer of Code",
+    "category": "fellowship",
+    "description": "Join Google Summer of Code as a Research Fellowship 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This fellowship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Python",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "Finance"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-28T14:30:00.201Z",
+    "duration": "4 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/6s9rid",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Frontend",
+      "Backend",
+      "Education"
+    ]
+  },
+  {
+    "id": "fellowship_171_5if246k",
+    "title": "AI Ethics Fellow 2026",
+    "organization": "Meesho",
+    "category": "fellowship",
+    "description": "Join Meesho as a AI Ethics Fellow 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This fellowship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Python",
+      "AWS",
+      "TypeScript",
+      "Data Science"
+    ],
+    "preferredSkills": [
+      "Machine Learning",
+      "Docker"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-03T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$4319/month",
+    "applyUrl": "https://example.com/apply/5vtba2",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "working",
+    "tags": [
+      "Finance",
+      "AI",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "fellowship_172_mych6rp",
+    "title": "AI Ethics Fellow 2027",
+    "organization": "Meesho",
+    "category": "fellowship",
+    "description": "Meesho is seeking a highly motivated AI Ethics Fellow 2027 to join us. This fellowship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Kubernetes",
+      "Data Science",
+      "Figma"
+    ],
+    "preferredSkills": [
+      "PostgreSQL"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-27T14:30:00.201Z",
+    "duration": "4 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/pyxfa4",
+    "featured": true,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "phd",
+    "careerStage": "career_break",
+    "tags": [
+      "Remote",
+      "AI"
+    ]
+  },
+  {
+    "id": "fellowship_173_s4y024w",
+    "title": "AI Ethics Fellow 2027",
+    "organization": "Intel",
+    "category": "fellowship",
+    "description": "Join Intel as a AI Ethics Fellow 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This fellowship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Machine Learning",
+      "Flutter",
+      "PostgreSQL"
+    ],
+    "preferredSkills": [
+      "Android",
+      "SQL"
+    ],
+    "location": "Sydney",
+    "country": "Australia",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-29T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/7imlua",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "working",
+    "tags": [
+      "Frontend",
+      "Cloud",
+      "Women"
+    ]
+  },
+  {
+    "id": "fellowship_174_39px75k",
+    "title": "Open Source Fellow 2026",
+    "organization": "Microsoft",
+    "category": "fellowship",
+    "description": "We at Microsoft are excited to announce our opening for the Open Source Fellow 2026 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "MongoDB",
+      "Machine Learning",
+      "UX Research"
+    ],
+    "preferredSkills": [
+      "Figma",
+      "AWS"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-10T14:30:00.201Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/mjr3h1",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "Finance",
+      "Open Source",
+      "Remote",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "fellowship_175_eeb8d8s",
+    "title": "Open Source Fellow 2027",
+    "organization": "OpenAI",
+    "category": "fellowship",
+    "description": "We at OpenAI are excited to announce our opening for the Open Source Fellow 2027 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Android",
+      "Kubernetes",
+      "Java",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "Marketing",
+      "Machine Learning",
+      "UX Research"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-23T14:30:00.201Z",
+    "duration": "4 months",
+    "stipend": "$4318/month",
+    "applyUrl": "https://example.com/apply/qaadx1",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "any",
+    "tags": [
+      "Cloud",
+      "Education",
+      "Research",
+      "Women"
+    ]
+  },
+  {
+    "id": "fellowship_176_4b300hj",
+    "title": "Open Source Fellow 2027",
+    "organization": "Reliance Foundation",
+    "category": "fellowship",
+    "description": "We at Reliance Foundation are excited to announce our opening for the Open Source Fellow 2027 position. As a key participant in this fellowship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UX Research",
+      "Java",
+      "React",
+      "Next.js"
+    ],
+    "preferredSkills": [
+      "Marketing"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-17T14:30:00.201Z",
+    "duration": "2 months",
+    "stipend": "$1641/month",
+    "applyUrl": "https://example.com/apply/yhjfv2",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "Finance",
+      "Leadership",
+      "Women",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "fellowship_177_2eksye6",
+    "title": "Open Source Fellow 2027",
+    "organization": "Deloitte",
+    "category": "fellowship",
+    "description": "Discover what you're capable of with Deloitte. The Open Source Fellow 2027 role is a fast-paced fellowship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "SQL",
+      "Marketing"
+    ],
+    "preferredSkills": [
+      "Kubernetes",
+      "Figma"
+    ],
+    "location": "Mumbai",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-29T14:30:00.201Z",
+    "duration": null,
+    "stipend": "$3419/month",
+    "applyUrl": "https://example.com/apply/ejeek0",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Open Source",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "fellowship_178_vkswlk9",
+    "title": "Research Fellowship 2027",
+    "organization": "PhonePe",
+    "category": "fellowship",
+    "description": "Join PhonePe as a Research Fellowship 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This fellowship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "React",
+      "Figma"
+    ],
+    "preferredSkills": [
+      "SQL"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-24T14:30:00.201Z",
+    "duration": "2 months",
+    "stipend": "$3818/month",
+    "applyUrl": "https://example.com/apply/6c9yp0",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "working",
+    "tags": [
+      "AI",
+      "Leadership"
+    ]
+  }
+]

@@ -25,6 +25,8 @@ export interface OpportunityRepository {
   count(): Promise<number>;
 }
 
+import { createLocalOpportunityRepository } from "./dataset-loader";
+
 /* ── Factory ─────────────────────────────────────────────────── */
 
 /**
@@ -32,7 +34,7 @@ export interface OpportunityRepository {
  * Change this single line to swap data sources project-wide.
  */
 export function createOpportunityRepository(): OpportunityRepository {
-  return createEmptyOpportunityRepository();
+  return createLocalOpportunityRepository();
 }
 
 /* ── Empty Implementation ────────────────────────────────────── */
