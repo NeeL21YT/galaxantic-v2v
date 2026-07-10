@@ -205,7 +205,14 @@ export interface FinancialPlan {
   monthly_expenses: number | null;
   current_savings: number | null;
   goal: string | null;
-  plan_json: Record<string, unknown> | null;
+  employment_type: string | null;
+  goal_details: string | null;
+  target_amount: number | null;
+  target_timeline: string | null;
+  model_used: string | null;
+  prompt_version: string | null;
+  input_hash: string | null;
+  plan_json: Record<string, unknown> | null; // Single source of truth for the full generated plan
   updated_at: string;
 }
 
@@ -215,6 +222,13 @@ export interface FinancialPlanUpsert {
   monthly_expenses?: number;
   current_savings?: number;
   goal?: string;
+  employment_type?: string;
+  goal_details?: string;
+  target_amount?: number;
+  target_timeline?: string;
+  model_used?: string;
+  prompt_version?: string;
+  input_hash?: string;
   plan_json?: Record<string, unknown>;
 }
 
