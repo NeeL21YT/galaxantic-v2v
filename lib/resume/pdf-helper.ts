@@ -1,18 +1,16 @@
 /**
  * lib/resume/pdf-helper.ts
  *
- * Extracts plain text from a PDF file buffer using pdf-parse.
- *
- * Uses the lib entry point (pdf-parse/lib/pdf-parse.js) instead of
- * the main entry, which tries to load test files that don't exist
- * in bundled Next.js environments.
+ * Extracts plain text from a PDF file buffer using the modern pdfjs-dist.
+ * This fixes compression errors seen in pdf-parse (which uses a 5-year-old pdf.js).
  *
  * Server-side only.
  */
 
-/**
- * Normalizes raw text by collapsing whitespace and trimming.
- */
+// Use legacy build to ensure Node.js compatibility without Web Worker crashes
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
+import type { TextItem } from "pdfjs-dist/types/src/display/api";
+
 function normalizeText(raw: string): string {
   return raw
     .replace(/\r\n/g, "\n")
@@ -23,31 +21,46 @@ function normalizeText(raw: string): string {
 }
 
 /**
- * Extracts all text from a PDF ArrayBuffer.
+ * Extracts all text from a PDF ArrayBuffer using pdfjs-dist.
  * Returns normalized plain text suitable for AI analysis.
  */
 export async function extractTextFromPDF(buffer: ArrayBuffer): Promise<string> {
   try {
-    // Use the internal lib path to bypass pdf-parse's test-file
-    // initialization that fails in Next.js / Turbopack bundled environments.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mod = await import("pdf-parse/lib/pdf-parse.js" as any);
-    const pdfParse = mod.default ?? mod;
+    const data = new Uint8Array(buffer);
+    
+    // Initialize document without web workers (safe for Server Actions)
+    const loadingTask = pdfjsLib.getDocument({
+      data,
+      useSystemFonts: true,
+      disableFontFace: true,
+    });
+    
+    const pdfDocument = await loadingTask.promise;
+    const numPages = pdfDocument.numPages;
+    let fullText = "";
 
-    const nodeBuffer = Buffer.from(buffer);
-    console.log("[pdf-helper] buffer size:", nodeBuffer.length, "bytes");
-
-    const data = await pdfParse(nodeBuffer);
-    console.log("[pdf-helper] extracted text length:", data?.text?.length ?? 0);
-
-    if (!data?.text) {
-      throw new Error("pdf-parse returned empty text - file may be image-based or corrupted.");
+    // Loop through each page and extract text
+    for (let i = 1; i <= numPages; i++) {
+      const page = await pdfDocument.getPage(i);
+      const textContent = await page.getTextContent();
+      
+      const pageText = textContent.items
+        .map((item) => {
+          const textItem = item as TextItem;
+          return textItem.str ? textItem.str : "";
+        })
+        .join(" ");
+        
+      fullText += pageText + "\n";
     }
 
-    return normalizeText(data.text);
+    if (!fullText.trim()) {
+      throw new Error("No text could be extracted - file may be image-based or corrupted.");
+    }
+
+    return normalizeText(fullText);
   } catch (err) {
-    // Log the real error so it's visible in the server terminal
-    console.error("[pdf-helper] extraction failed:", err);
+    console.error("[pdf-helper] pdfjs-dist extraction failed:", err);
     throw err;
   }
 }
