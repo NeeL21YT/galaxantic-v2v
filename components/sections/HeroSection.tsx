@@ -9,9 +9,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { IllustrationPlaceholder } from "@/components/shared/IllustrationPlaceholder";
 import { Container } from "@/components/layout/Container";
 
 /* ── Animation Variants ────────────────────────────────────── */
@@ -217,12 +217,19 @@ export function HeroSection() {
               }}
             />
 
-            <IllustrationPlaceholder
-              label="AI Career Empowerment — Illustration coming soon"
-              variant="hero"
-              aspectRatio="5/4"
-              className="relative z-10"
-            />
+            <div
+              className="relative z-10 w-full"
+              style={{ aspectRatio: "5/4" }}
+            >
+              <Image
+                src="/images/herizon_hero.webp"
+                alt="Abstract AI career platform illustration with a laptop, resume, roadmap, opportunity cards, and progress visuals in soft pastel colors."
+                fill
+                priority
+                className="object-contain drop-shadow-xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
 
             {/* Floating card — top left */}
             <motion.div

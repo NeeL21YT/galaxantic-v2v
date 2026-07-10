@@ -7,7 +7,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { X, LayoutDashboard, Briefcase, FileText, Map, Compass, Bot, Settings, LogOut } from "lucide-react";
+import { X, LayoutDashboard, Briefcase, FileText, Map, Compass, Bot, Eye, PiggyBank, Settings, LogOut } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Logo } from "@/components/shared/Logo";
 import { SidebarItem } from "./SidebarItem";
@@ -19,6 +19,8 @@ const NAV_ITEMS = [
   { href: "/dashboard/roadmap", icon: <Map />, label: "Roadmap" },
   { href: "/dashboard/opportunities", icon: <Compass />, label: "Opportunities" },
   { href: "/dashboard/ai-coach", icon: <Bot />, label: "AI Coach" },
+  { href: "/dashboard/herlens", icon: <Eye />, label: "HerLens" },
+  { href: "/dashboard/financial-compass", icon: <PiggyBank />, label: "Financial Compass" },
   { href: "/dashboard/settings", icon: <Settings />, label: "Settings" },
 ];
 

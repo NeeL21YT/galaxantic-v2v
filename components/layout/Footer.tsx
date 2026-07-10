@@ -6,9 +6,7 @@
 
 import { Logo } from "@/components/shared/Logo";
 import { Divider } from "@/components/ui/Divider";
-import { X, Globe, AtSign, GitBranch } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 /* ── Data ──────────────────────────────────────────────────── */
 
@@ -18,33 +16,24 @@ const FOOTER_LINKS = [
     links: [
       { label: "Features", href: "#features" },
       { label: "How It Works", href: "#how-it-works" },
-      { label: "Roadmap", href: "#" },
+      { label: "Get Started", href: "/register" },
     ],
   },
   {
-    heading: "Resources",
+    heading: "Company",
     links: [
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press Kit", href: "#" },
+      { label: "About", href: "#" },
+      { label: "Contact", href: "#" },
     ],
   },
   {
-    heading: "Legal",
+    heading: "Social",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
+      { label: "GitHub", href: "https://github.com/NeeL21YT/", external: true },
     ],
   },
 ];
 
-const SOCIAL_LINKS = [
-  { icon: X, label: "X (Twitter)", href: "#" },
-  { icon: Globe, label: "LinkedIn", href: "#" },
-  { icon: AtSign, label: "Instagram", href: "#" },
-  { icon: GitBranch, label: "GitHub", href: "https://github.com/NeeL21YT/galaxantic-v2v" },
-];
 
 /* ── Component ─────────────────────────────────────────────── */
 
@@ -74,28 +63,6 @@ export function Footer() {
               career guidance designed for every stage of your journey.
             </p>
 
-            {/* Social links */}
-            <div className="flex items-center gap-3 mt-1" aria-label="Social media links">
-              {SOCIAL_LINKS.map(({ icon: Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className={cn(
-                    "flex items-center justify-center w-9 h-9 rounded-full border transition-all duration-200",
-                    "hover:border-rose-gold hover:bg-champagne"
-                  )}
-                  style={{
-                    borderColor: "var(--color-border)",
-                    color: "var(--color-text-muted)",
-                  }}
-                >
-                  <Icon className="w-4 h-4" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
 
             {/* Hackathon badge */}
             <span
@@ -120,17 +87,32 @@ export function Footer() {
                 {heading}
               </h4>
               <ul className="flex flex-col gap-2.5" role="list">
-                {links.map(({ label, href }) => (
-                  <li key={label}>
-                    <Link
-                      href={href}
-                      className="text-sm transition-colors duration-150"
-                      style={{ color: "var(--color-text-secondary)" }}
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
+                {links.map(({ label, href, ...rest }) => {
+                  const isExternal = (rest as { external?: boolean }).external;
+                  return (
+                    <li key={label}>
+                      {isExternal ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm transition-colors duration-150 flex items-center gap-1.5 hover:underline"
+                          style={{ color: "var(--color-text-secondary)" }}
+                        >
+                          {label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={href}
+                          className="text-sm transition-colors duration-150"
+                          style={{ color: "var(--color-text-secondary)" }}
+                        >
+                          {label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -146,7 +128,7 @@ export function Footer() {
           >
             &copy; {year} Herizon. Built with ❤️ by{" "}
             <a
-              href="https://github.com/NeeL21YT/galaxantic-v2v"
+              href="https://github.com/NeeL21YT/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:underline"

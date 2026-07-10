@@ -9,7 +9,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Send, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Send, CheckCircle2, KeyRound } from "lucide-react";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
@@ -38,7 +38,7 @@ export default function ForgotPasswordPage() {
     <AuthLayout
       title="Reset your password"
       subtitle="Enter your email and we'll send you a link to reset your password."
-      illustration="🔑"
+      illustration={<KeyRound className="w-16 h-16" />}
       tagline="A fresh start is always one step away."
     >
       {sent ? (

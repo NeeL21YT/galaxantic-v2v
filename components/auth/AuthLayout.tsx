@@ -7,6 +7,7 @@
 
 import Link from "next/link";
 import { Logo } from "@/components/shared/Logo";
+import { Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 
 interface AuthLayoutProps {
@@ -16,8 +17,8 @@ interface AuthLayoutProps {
   subtitle: string;
   /** Tagline shown on the illustration panel */
   tagline?: string;
-  /** Emoji / illustration shown on the left panel */
-  illustration?: string;
+  /** Lucide icon shown on the left panel */
+  illustration?: ReactNode;
 }
 
 const TRUST_BADGES = [
@@ -31,7 +32,7 @@ export function AuthLayout({
   title,
   subtitle,
   tagline = "Empowering women to grow, restart and lead.",
-  illustration = "🌸",
+  illustration = <Sparkles className="w-16 h-16" />,
 }: AuthLayoutProps) {
   return (
     <div className="min-h-screen flex" style={{ background: "var(--color-background)" }}>
@@ -60,8 +61,12 @@ export function AuthLayout({
         {/* Illustration + Quote */}
         <div className="flex flex-col items-center gap-8 text-center relative z-10">
           <div
-            className="w-40 h-40 rounded-3xl flex items-center justify-center text-7xl"
-            style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)" }}
+            className="w-40 h-40 rounded-3xl flex items-center justify-center"
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              color: "rgba(255,255,255,0.85)",
+            }}
             aria-hidden="true"
           >
             {illustration}

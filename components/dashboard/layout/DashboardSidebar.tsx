@@ -14,6 +14,8 @@ import {
   Map,
   Compass,
   Bot,
+  Eye,
+  PiggyBank,
   Settings,
   LogOut,
   ChevronLeft,
@@ -29,6 +31,8 @@ const NAV_ITEMS = [
   { href: "/dashboard/roadmap", icon: <Map />, label: "Roadmap" },
   { href: "/dashboard/opportunities", icon: <Compass />, label: "Opportunities" },
   { href: "/dashboard/ai-coach", icon: <Bot />, label: "AI Coach" },
+  { href: "/dashboard/herlens", icon: <Eye />, label: "HerLens" },
+  { href: "/dashboard/financial-compass", icon: <PiggyBank />, label: "Financial Compass" },
 ];
 
 const BOTTOM_ITEMS = [

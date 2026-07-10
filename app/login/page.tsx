@@ -9,7 +9,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Eye, EyeOff, ArrowRight } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, Sparkles } from "lucide-react";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { AuthDivider } from "@/components/auth/AuthDivider";
 import { SocialLoginButtons } from "@/components/auth/SocialLoginButtons";
@@ -50,7 +50,7 @@ export default function LoginPage() {
     <AuthLayout
       title="Welcome back"
       subtitle="Sign in to your Herizon account to continue your journey."
-      illustration="✨"
+      illustration={<Sparkles className="w-16 h-16" />}
       tagline="Every great comeback starts with a single step forward."
     >
       <SocialLoginButtons action="login" />

@@ -72,11 +72,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           id={inputId}
           className={cn(
             "input-base",
-            leftIcon ? "pl-10" : "",
             rightElement ? "pr-10" : "",
             error ? "border-[#dc2626] focus:shadow-[0_0_0_3px_rgba(220,38,38,0.1)]" : "",
             className
           )}
+          style={leftIcon ? { paddingLeft: "2.25rem" } : undefined}
           aria-invalid={error ? "true" : undefined}
           aria-describedby={
             error ? `${inputId}-error` : helperText ? `${inputId}-helper` : undefined

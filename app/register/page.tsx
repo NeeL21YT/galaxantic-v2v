@@ -9,7 +9,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Eye, EyeOff, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, CheckCircle2, Sprout } from "lucide-react";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { AuthDivider } from "@/components/auth/AuthDivider";
 import { SocialLoginButtons } from "@/components/auth/SocialLoginButtons";
@@ -58,7 +58,7 @@ export default function RegisterPage() {
     <AuthLayout
       title="Create your account"
       subtitle="Join thousands of women building their next chapter with Herizon."
-      illustration="🌱"
+      illustration={<Sprout className="w-16 h-16" />}
       tagline="Your next chapter starts here. Let's build it together."
     >
       <SocialLoginButtons action="register" />
