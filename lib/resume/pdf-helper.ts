@@ -7,8 +7,7 @@
  * Server-side only.
  */
 
-// Use legacy build to ensure Node.js compatibility without Web Worker crashes
-import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
+// No top-level pdfjs-dist import to prevent premature evaluation of DOMMatrix
 import type { TextItem } from "pdfjs-dist/types/src/display/api";
 
 function normalizeText(raw: string): string {
@@ -26,6 +25,20 @@ function normalizeText(raw: string): string {
  */
 export async function extractTextFromPDF(buffer: ArrayBuffer): Promise<string> {
   try {
+    // Polyfill missing DOM elements for Vercel Node.js / Edge runtimes
+    if (typeof globalThis.DOMMatrix === "undefined") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      globalThis.DOMMatrix = class DOMMatrix {} as any;
+    }
+    if (typeof globalThis.Path2D === "undefined") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      globalThis.Path2D = class Path2D {} as any;
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const mod = (await import("pdfjs-dist/legacy/build/pdf.mjs")) as any;
+    const pdfjsLib = mod.default || mod;
+
     const data = new Uint8Array(buffer);
     
     // Initialize document without web workers (safe for Server Actions)
@@ -45,7 +58,8 @@ export async function extractTextFromPDF(buffer: ArrayBuffer): Promise<string> {
       const textContent = await page.getTextContent();
       
       const pageText = textContent.items
-        .map((item) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map((item: any) => {
           const textItem = item as TextItem;
           return textItem.str ? textItem.str : "";
         })
