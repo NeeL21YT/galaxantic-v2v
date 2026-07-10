@@ -8,7 +8,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Compass, Bot } from "lucide-react";
+import { Briefcase, Compass, Bot, FileText, Map, Eye, PiggyBank } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { FeatureCard } from "@/components/shared/FeatureCard";
@@ -19,27 +19,59 @@ import { GradientBackground } from "@/components/shared/GradientBackground";
 const FEATURES = [
   {
     icon: <Briefcase />,
-    title: "Career Break Companion",
+    title: "Career Break",
     tag: "Restart",
     description:
-      "Confidently return to work after any career break. Get an AI-powered gap analysis, personalized 30/60/90-day roadmap, skill gap recommendations, and a career readiness score tailored to your goals.",
+      "Confidently return to work after any career break. Get personalized guidance to transition back into the workforce.",
     href: "/dashboard/career-break",
   },
   {
+    icon: <FileText />,
+    title: "Resume",
+    tag: "Optimize",
+    description:
+      "AI-powered resume analysis. Identify skill gaps, get an ATS score, and receive targeted feedback to stand out to employers.",
+    href: "/dashboard/resume",
+  },
+  {
+    icon: <Map />,
+    title: "Roadmap",
+    tag: "Plan",
+    description:
+      "Your interactive 30/60/90-day action plan, automatically generated from your resume to bridge your specific career gaps.",
+    href: "/dashboard/roadmap",
+  },
+  {
     icon: <Compass />,
-    title: "Opportunity Navigator",
+    title: "Opportunities",
     tag: "Discover",
     description:
-      "Your personalized feed of internships, scholarships, fellowships, hackathons and job openings - curated by AI, filtered by eligibility, and tracked by deadline. Never miss the right opportunity.",
+      "Your personalized feed of jobs, internships, scholarships, and hackathons - ranked by AI based on your profile.",
     href: "/dashboard/opportunities",
   },
   {
     icon: <Bot />,
-    title: "AI Career Coach",
+    title: "AI Coach",
     tag: "Grow",
     description:
-      "Your always-on personal mentor. Get AI-powered resume reviews, interview preparation, learning roadmaps, and career guidance - designed to help you grow with clarity and confidence.",
+      "Your always-on personal mentor. Get tailored interview preparation, learning roadmaps, and contextual career guidance.",
     href: "/dashboard/ai-coach",
+  },
+  {
+    icon: <Eye />,
+    title: "HerLens",
+    tag: "Stay Informed",
+    description:
+      "Daily bite-sized, AI-summarized news focusing on women in business, tech, and leadership to keep you ahead of the curve.",
+    href: "/dashboard/herlens",
+  },
+  {
+    icon: <PiggyBank />,
+    title: "Financial Compass",
+    tag: "Finance",
+    description:
+      "Plan your financial independence with deterministic health scores and personalized AI budgeting strategies.",
+    href: "/dashboard/financial-compass",
   },
 ] as const;
 
@@ -77,7 +109,7 @@ export function FeaturesSection() {
                   </span>
                 </>
               }
-              subtitle="Herizon combines three powerful modules into one seamless platform - built specifically for women at every stage of their career."
+              subtitle="Herizon combines seven powerful modules into one seamless platform - built specifically for women at every stage of their career."
               align="center"
               accent
             />
