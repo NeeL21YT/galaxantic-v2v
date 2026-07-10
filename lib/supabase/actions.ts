@@ -108,7 +108,7 @@ export async function signUp(
   return {
     success: true,
     message:
-      "Account created! Check your email and click the verification link to get started.",
+      "Please wait till we verify you!",
   };
 }
 
