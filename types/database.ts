@@ -227,6 +227,17 @@ export interface HerlensNewsRow {
   summary: string | null;
   key_takeaways: string[] | null;
   source: string | null;
+  original_url: string | null;
   published_at: string | null;
   updated_at: string;
+}
+
+export interface HerlensNewsInsert {
+  category: string;
+  title: string;
+  summary: string;
+  key_takeaways: string[];
+  source?: string | null;
+  original_url?: string | null;
+  published_at?: string | null;
 }

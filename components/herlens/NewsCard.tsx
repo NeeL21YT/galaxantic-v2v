@@ -59,7 +59,7 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
 
         {/* Headline */}
         <h3
-          className="text-base font-bold leading-snug"
+          className="text-base font-bold leading-snug line-clamp-3"
           style={{
             fontFamily: "var(--font-heading)",
             color: "var(--color-puce-red)",
@@ -96,7 +96,7 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
           ) : (
             <>
               <ChevronDown className="w-4 h-4" aria-hidden="true" />
-              Expand Summary
+              Read More
             </>
           )}
         </button>
@@ -117,21 +117,7 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
               className="px-5 pb-5 flex flex-col gap-4 border-t pt-4"
               style={{ borderColor: "var(--color-border-light)" }}
             >
-              {/* Detailed Summary */}
-              <div>
-                <p
-                  className="text-xs font-semibold uppercase tracking-wider mb-2"
-                  style={{ color: "var(--color-rose-gold)" }}
-                >
-                  Detailed Summary
-                </p>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: "var(--color-text-secondary)" }}
-                >
-                  {article.detailedSummary}
-                </p>
-              </div>
+
 
               {/* Key Takeaways */}
               <div>
@@ -182,18 +168,20 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
                     {article.sourceName}
                   </span>
                 </div>
-                {/* Source link placeholder - TODO Stage 2: link to real article URL from Supabase */}
-                <span
+                <a
+                  href={article.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-1 text-xs font-medium rounded-lg px-3 py-1.5"
                   style={{
                     background: "var(--color-border)",
                     color: "var(--color-text-muted)",
                   }}
-                  aria-label="Source link not yet available"
+                  aria-label={`Read original article from ${article.sourceName}`}
                 >
                   <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-                  Coming soon
-                </span>
+                  Source
+                </a>
               </div>
             </div>
           </motion.div>
