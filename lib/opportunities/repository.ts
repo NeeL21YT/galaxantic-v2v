@@ -3,14 +3,16 @@
  *
  * OpportunityRepository abstraction.
  *
- * The active implementation intentionally returns no records until a real
- * opportunity source is connected. This prevents generated local records from
- * appearing as personalized recommendations.
+ * Today: reads from local JSON files (data/*.json).
+ * Future: swap to Supabase, REST API, or any other source
+ * by returning a different implementation from createOpportunityRepository()
+ * - without touching the filter engine, ranking engine, or UI.
  *
  * Server-side only.
  */
 
 import type { Opportunity, SearchIndexEntry } from "./types";
+import { loadDataset, buildSearchIndexFromDataset } from "./dataset-loader";
 
 /* ── Repository Contract ─────────────────────────────────────── */
 
@@ -25,8 +27,6 @@ export interface OpportunityRepository {
   count(): Promise<number>;
 }
 
-import { createLocalOpportunityRepository } from "./dataset-loader";
-
 /* ── Factory ─────────────────────────────────────────────────── */
 
 /**
@@ -34,19 +34,28 @@ import { createLocalOpportunityRepository } from "./dataset-loader";
  * Change this single line to swap data sources project-wide.
  */
 export function createOpportunityRepository(): OpportunityRepository {
-  return createLocalOpportunityRepository();
+  return createJsonFileRepository();
 }
 
-/* ── Empty Implementation ────────────────────────────────────── */
+/* ── JSON File Implementation ────────────────────────────────── */
 
-function createEmptyOpportunityRepository(): OpportunityRepository {
+function createJsonFileRepository(): OpportunityRepository {
   return {
-    findAll: async () => [],
+    findAll: loadDataset,
 
-    findById: async (): Promise<Opportunity | null> => null,
+    findById: async (id: string): Promise<Opportunity | null> => {
+      const all = await loadDataset();
+      return all.find((o) => o.id === id) ?? null;
+    },
 
-    getSearchIndex: async (): Promise<SearchIndexEntry[]> => [],
+    getSearchIndex: async (): Promise<SearchIndexEntry[]> => {
+      const all = await loadDataset();
+      return buildSearchIndexFromDataset(all);
+    },
 
-    count: async (): Promise<number> => 0,
+    count: async (): Promise<number> => {
+      const all = await loadDataset();
+      return all.length;
+    },
   };
 }
