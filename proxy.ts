@@ -7,12 +7,20 @@
  * 1. Refresh the Supabase session on every request (via getUser()).
  * 2. Redirect unauthenticated users away from /dashboard/** → /login.
  * 3. Redirect already-authenticated users away from auth pages → /dashboard.
+ * 4. Redirect authenticated users with onboarding_completed=false
+ *    away from /dashboard/** → /dashboard/onboarding (except the
+ *    onboarding page itself and the sign-out action).
  *
  * The matcher is configured to skip static assets, _next internals,
  * images, and the favicon so proxy only runs where it matters.
  *
  * NOTE: Next.js 16 renamed "middleware" to "proxy". The function must be
  * exported as `proxy` (not `middleware`).
+ *
+ * NOTE: Proxy runs in the Edge Runtime. The standard server client
+ * (lib/supabase/server.ts) uses next/headers which is NOT available
+ * in Edge. We use the middleware client (lib/supabase/middleware.ts)
+ * which reads/writes cookies from the NextRequest/NextResponse directly.
  */
 
 import { type NextRequest, NextResponse } from "next/server";
@@ -40,6 +48,25 @@ export async function proxy(request: NextRequest) {
       // Preserve the original destination so we can redirect back after login.
       loginUrl.searchParams.set("redirectTo", pathname);
       return NextResponse.redirect(loginUrl);
+    }
+
+    // ── Onboarding guard ──────────────────────────────────────
+    // If the user IS authenticated but hasn't completed onboarding,
+    // send them to /dashboard/onboarding — unless they're already there.
+    // We exempt /dashboard/onboarding itself to avoid an infinite loop.
+    if (!pathname.startsWith("/dashboard/onboarding")) {
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("onboarding_completed")
+        .eq("auth_user_id", user.id)
+        .single();
+
+      if (profile && profile.onboarding_completed === false) {
+        const onboardingUrl = request.nextUrl.clone();
+        onboardingUrl.pathname = "/dashboard/onboarding";
+        onboardingUrl.search = "";
+        return NextResponse.redirect(onboardingUrl);
+      }
     }
   }
 

@@ -77,8 +77,7 @@ export default function ForgotPasswordPage() {
               Resend
             </button>
           </p>
-          <Button href="/login" variant="secondary" fullWidth>
-            <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+          <Button href="/login" variant="secondary" fullWidth leftIcon={<ArrowLeft className="w-4 h-4" aria-hidden="true" />}>
             Back to Sign In
           </Button>
         </div>

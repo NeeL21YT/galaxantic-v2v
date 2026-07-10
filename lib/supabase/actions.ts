@@ -123,6 +123,66 @@ export async function signOut(): Promise<never> {
   redirect("/login");
 }
 
+/* ── Delete Account ─────────────────────────────────────────── */
+
+/**
+ * Permanently deletes the currently authenticated user's account.
+ *
+ * Requires SUPABASE_SERVICE_ROLE_KEY in .env.local.
+ * The auth.users cascade deletes the profiles row automatically
+ * (ON DELETE CASCADE set in the migration).
+ *
+ * Flow: validate email → admin.deleteUser() → signOut → redirect /login
+ */
+export async function deleteAccount(
+  confirmedEmail: string
+): Promise<AuthResult> {
+  const supabase = await createClient();
+
+  // Get current user and verify the confirmed email matches
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return { success: false, error: "You must be signed in to delete your account." };
+  }
+
+  if (confirmedEmail.trim().toLowerCase() !== user.email?.toLowerCase()) {
+    return { success: false, error: "Email address does not match. Please try again." };
+  }
+
+  // Use service role admin client to delete the auth user
+  // (anon key cannot delete auth users)
+  const { createAdminClient } = await import("@/lib/supabase/admin");
+
+  let adminClient;
+  try {
+    adminClient = createAdminClient();
+  } catch {
+    return {
+      success: false,
+      error: "Account deletion is not configured. Contact support.",
+    };
+  }
+
+  const { error: deleteError } = await adminClient.auth.admin.deleteUser(user.id);
+
+  if (deleteError) {
+    console.error("[deleteAccount] admin.deleteUser error:", deleteError.message);
+    return {
+      success: false,
+      error: "Failed to delete account. Please try again or contact support.",
+    };
+  }
+
+  // Clear the session cookies after deletion
+  await supabase.auth.signOut();
+
+  redirect("/login");
+}
+
 /* ── Reset Password ─────────────────────────────────────────── */
 
 /**

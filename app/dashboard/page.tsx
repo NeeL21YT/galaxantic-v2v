@@ -4,14 +4,15 @@
  * Dashboard home — metrics, quick actions, recent activity.
  */
 
-import { LayoutDashboard, Briefcase, FileText, Bot, Compass, Map, TrendingUp } from "lucide-react";
+import { LayoutDashboard, FileText, Bot, Compass, Map, TrendingUp } from "lucide-react";
 import { PageHeader } from "@/components/dashboard/PageHeader";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { DashboardCard } from "@/components/dashboard/DashboardCard";
 import { QuickActionCard } from "@/components/dashboard/QuickActionCard";
 import { Button } from "@/components/ui/Button";
+import { getProfile } from "@/lib/db/profiles";
+import { getUser } from "@/lib/supabase/server";
 import {
-  PLACEHOLDER_USER,
   PLACEHOLDER_ACTIVITY,
   PLACEHOLDER_MILESTONES,
 } from "@/lib/data/placeholder";
@@ -21,14 +22,22 @@ export const metadata = {
   description: "Your career hub. Track readiness, opportunities, and milestones.",
 };
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
   const activeMilestone = PLACEHOLDER_MILESTONES.find((m) => m.status === "in-progress");
   const completedCount = PLACEHOLDER_MILESTONES.filter((m) => m.status === "completed").length;
+
+  // Fetch real name from profile; fall back to auth metadata then email prefix
+  const [profile, user] = await Promise.all([getProfile(), getUser()]);
+  const firstName =
+    profile?.full_name?.trim().split(" ")[0] ||
+    (user?.user_metadata?.full_name as string | undefined)?.split(" ")[0] ||
+    user?.email?.split("@")[0] ||
+    "there";
 
   return (
     <>
       <PageHeader
-        title={`Welcome back, ${PLACEHOLDER_USER.name.split(" ")[0]} 👋`}
+        title={`Welcome back, ${firstName} 👋`}
         subtitle="Here's your career snapshot for today."
       />
 
@@ -37,9 +46,8 @@ export default function DashboardPage() {
         <StatCard
           icon={<TrendingUp />}
           label="Career Readiness"
-          value={`${PLACEHOLDER_USER.careerReadiness}%`}
-          trend="up"
-          trendLabel="+8% this week"
+          value="—"
+          description="Complete onboarding to track"
           accent="rose"
           index={0}
         />
