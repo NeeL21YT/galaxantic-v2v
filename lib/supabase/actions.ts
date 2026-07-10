@@ -206,8 +206,24 @@ export async function resetPassword(email: string): Promise<AuthResult> {
 
   return { success: true };
 }
+/* ── Check Verification Status ────────────────────────────────── */
 
-/* ── Error Mapping ──────────────────────────────────────────── */
+/**
+ * Checks if a given email is verified by querying auth.users.
+ * Uses a secure RPC function to bypass RLS and avoid auth API rate limits.
+ */
+export async function checkVerificationStatus(email: string): Promise<boolean> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("check_email_verified", {
+    p_email: email,
+  });
+
+  if (error || data === null) {
+    return false;
+  }
+  
+  return data as boolean;
+}
 
 /**
  * Maps Supabase raw error messages to user-friendly strings.

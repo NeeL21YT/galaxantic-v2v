@@ -8,9 +8,9 @@
 
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import Link from "next/link";
-import { Eye, EyeOff, ArrowRight, CheckCircle2, Sprout, Mail } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, CheckCircle2, Sprout, Loader2 } from "lucide-react";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { AuthDivider } from "@/components/auth/AuthDivider";
 import { SocialLoginButtons } from "@/components/auth/SocialLoginButtons";
@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Toast } from "@/components/ui/Toast";
 import { isValidEmail } from "@/lib/utils";
-import { signUp } from "@/lib/supabase/actions";
+import { signUp, signIn, checkVerificationStatus } from "@/lib/supabase/actions";
 
 const PASSWORD_RULES = [
   { label: "At least 8 characters", test: (p: string) => p.length >= 8 },
@@ -66,6 +66,32 @@ export default function RegisterPage() {
     });
   }
 
+  // Magic Link Polling: Wait for verification and auto-login
+  useEffect(() => {
+    if (!successMessage) return;
+
+    let isChecking = false;
+    const interval = setInterval(async () => {
+      if (isChecking) return;
+      isChecking = true;
+      try {
+        const isVerified = await checkVerificationStatus(email);
+        if (isVerified) {
+          clearInterval(interval);
+          // They clicked the link! Log them in automatically using the password still in state.
+          await signIn(email, password);
+          // signIn redirects to /dashboard, so we don't need to do anything else here.
+        }
+      } catch (err) {
+        console.error("Polling error:", err);
+      } finally {
+        isChecking = false;
+      }
+    }, 3000); // Check every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [successMessage, email, password]);
+
   return (
     <AuthLayout
       title="Create your account"
@@ -77,18 +103,18 @@ export default function RegisterPage() {
       {successMessage ? (
         <div className="flex flex-col items-center gap-4 text-center py-4">
           <div
-            className="w-16 h-16 rounded-2xl flex items-center justify-center"
+            className="w-16 h-16 rounded-2xl flex items-center justify-center animate-pulse"
             style={{ background: "rgba(34,197,94,0.12)", color: "#16a34a" }}
             aria-hidden="true"
           >
-            <Mail className="w-8 h-8" />
+            <Loader2 className="w-8 h-8 animate-spin" />
           </div>
           <div>
             <h2
               className="text-lg font-bold mb-1"
               style={{ fontFamily: "var(--font-heading)", color: "var(--color-puce-red)" }}
             >
-              Check your inbox
+              Waiting for verification...
             </h2>
             <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>
               {successMessage}
