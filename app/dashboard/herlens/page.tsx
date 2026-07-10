@@ -1,7 +1,7 @@
 /**
  * app/dashboard/herlens/page.tsx
  *
- * HerLens — AI-curated daily knowledge hub.
+ * HerLens - AI-curated daily knowledge hub.
  *
  * Architecture:
  * Currently uses placeholder data from lib/data/placeholder.ts
@@ -61,7 +61,7 @@ export default function HerLensPage() {
         subtitle="Stay informed. Stay ahead."
       />
 
-      {/* Meta bar — last updated + refresh note */}
+      {/* Meta bar - last updated + refresh note */}
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function HerLensPage() {
         {/*
          * TODO Stage 2: Replace this static label with a live "Last refreshed X minutes ago"
          * using the timestamp stored in Supabase after each scheduled NewsData.io → Gemini run.
-         * There is intentionally NO manual refresh button — news is always pre-cached.
+         * There is intentionally NO manual refresh button - news is always pre-cached.
          */}
         <span
           className="text-xs"
@@ -97,7 +97,7 @@ export default function HerLensPage() {
         </span>
       </motion.div>
 
-      {/* Category pills — horizontal scroll on mobile */}
+      {/* Category pills - horizontal scroll on mobile */}
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}

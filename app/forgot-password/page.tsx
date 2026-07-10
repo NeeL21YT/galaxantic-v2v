@@ -1,7 +1,7 @@
 /**
  * app/forgot-password/page.tsx
  *
- * Forgot password — wired to Supabase Auth via resetPassword server action.
+ * Forgot password - wired to Supabase Auth via resetPassword server action.
  * Sends a reset email with a link to /auth/callback?next=/dashboard/settings.
  */
 

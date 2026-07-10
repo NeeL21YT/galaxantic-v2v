@@ -1,7 +1,7 @@
 /**
  * components/resume/AnalysisDashboard.tsx
  *
- * Full AI analysis display — renders all 12 sections returned by Gemini.
+ * Full AI analysis display - renders all 12 sections returned by Gemini.
  * This component only receives already-analyzed data; no fetching here.
  */
 

@@ -3,7 +3,7 @@
  *
  * Database helper functions for the `profiles` table.
  *
- * These are thin data-access wrappers — no business logic.
+ * These are thin data-access wrappers - no business logic.
  * All functions run server-side only (Server Components, Server Actions,
  * Route Handlers). Never import from client components.
  *

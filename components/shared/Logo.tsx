@@ -1,7 +1,7 @@
 /**
  * components/shared/Logo.tsx
  *
- * Herizon brand logo — wordmark only, no external assets required.
+ * Herizon brand logo - wordmark only, no external assets required.
  * Uses SVG text with brand colors.
  */
 

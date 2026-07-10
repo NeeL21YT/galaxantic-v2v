@@ -1,9 +1,9 @@
 /**
  * app/dashboard/settings/page.tsx
  *
- * Settings — Profile, Notifications, Security, Preferences, Danger Zone.
+ * Settings - Profile, Notifications, Security, Preferences, Danger Zone.
  *
- * Server Component wrapper — fetches the real user email and passes it
+ * Server Component wrapper - fetches the real user email and passes it
  * to the client shell so the delete confirmation can verify it.
  */
 
@@ -12,7 +12,7 @@ import { getUser } from "@/lib/supabase/server";
 import { SettingsPageClient } from "@/components/dashboard/SettingsPageClient";
 
 export const metadata = {
-  title: "Settings — Herizon",
+  title: "Settings - Herizon",
 };
 
 export default async function SettingsPage() {

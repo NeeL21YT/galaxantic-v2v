@@ -38,7 +38,7 @@ export function Stepper({ steps, currentStep }: StepperProps) {
         />
       </div>
 
-      {/* Step indicators — horizontal scroll on mobile */}
+      {/* Step indicators - horizontal scroll on mobile */}
       <div
         className="flex items-start gap-0 overflow-x-auto pb-2 md:pb-0"
         style={{ scrollbarWidth: "none" }}

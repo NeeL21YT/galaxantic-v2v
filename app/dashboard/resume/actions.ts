@@ -3,10 +3,10 @@
  *
  * Server Actions for the resume intelligence pipeline.
  *
- * processResume()      — single orchestration: Upload → Extract → Analyze → Save
- * reanalyzeResume()    — re-run Gemini on stored extracted_text (no re-upload)
- * fetchUserResumes()   — return all resume rows for the current user
- * fetchLatestAnalysis() — return the most recently completed analysis
+ * processResume()      - single orchestration: Upload → Extract → Analyze → Save
+ * reanalyzeResume()    - re-run Gemini on stored extracted_text (no re-upload)
+ * fetchUserResumes()   - return all resume rows for the current user
+ * fetchLatestAnalysis() - return the most recently completed analysis
  */
 
 "use server";
@@ -27,6 +27,7 @@ import {
   getLatestAnalyzedResume,
   getResumeById,
   findResumeByHash,
+  clearAllUserResumes,
 } from "@/lib/db/resumes";
 import { revalidatePath } from "next/cache";
 import type { Resume } from "@/types/database";
@@ -71,7 +72,7 @@ async function extractText(
  *   5. Check hash for deduplication (skip Gemini if duplicate found)
  *   6. Call Gemini   (status: analyzing)
  *   7. Save analysis (status: completed)
- *   8. Return result directly — no page re-fetch needed
+ *   8. Return result directly - no page re-fetch needed
  *
  * Returns analysis data directly in the response so the UI can update
  * immediately without a server re-render round-trip.
@@ -169,7 +170,7 @@ export async function processResume(
       analysis: dupAnalysis,
       modelUsed: existing.model_used ?? "gemini-2.5-flash",
       analysisVersion: existing.analysis_version ?? "1.0",
-      analysisDurationMs: 0, // instant — reused from cache
+      analysisDurationMs: 0, // instant - reused from cache
     });
     await saveExtractedText(resumeId, extractedText, textHash);
 
@@ -343,4 +344,20 @@ export async function fetchLatestAnalysis(): Promise<
 
   const resume = await getLatestAnalyzedResume();
   return { success: true, data: resume };
+}
+
+/**
+ * Clear all resumes for the current user.
+ */
+export async function clearResumesAction(): Promise<ResumeActionResult> {
+  const user = await getUser();
+  if (!user) return { success: false, error: "Not authenticated." };
+
+  const cleared = await clearAllUserResumes(user.id);
+  if (!cleared) {
+    return { success: false, error: "Failed to clear resumes." };
+  }
+
+  revalidatePath("/dashboard/resume");
+  return { success: true, data: undefined };
 }

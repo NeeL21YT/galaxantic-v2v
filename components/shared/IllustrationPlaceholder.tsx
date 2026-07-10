@@ -53,10 +53,10 @@ export function IllustrationPlaceholder({
         aria-hidden="true"
         preserveAspectRatio="xMidYMid slice"
       >
-        {/* Large soft circle — top right */}
+        {/* Large soft circle - top right */}
         <circle cx="340" cy="60" r="120" fill="rgba(180,108,114,0.18)" />
 
-        {/* Medium circle — bottom left */}
+        {/* Medium circle - bottom left */}
         <circle cx="60" cy="280" r="90" fill="rgba(245,230,209,0.6)" />
 
         {/* Small accent circle */}

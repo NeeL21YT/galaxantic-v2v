@@ -3,7 +3,7 @@
  *
  * Server Actions for Supabase authentication.
  *
- * All functions run exclusively on the server — credentials and tokens
+ * All functions run exclusively on the server - credentials and tokens
  * never touch the client bundle.
  *
  * Auth logic is intentionally isolated here so that Stage 2B (database),
@@ -11,7 +11,7 @@
  * coupling to business logic.
  *
  * NOTE: `redirect()` throws an internal Next.js error (NEXT_REDIRECT) to
- * work. Do not wrap redirect() calls in try/catch — let it propagate.
+ * work. Do not wrap redirect() calls in try/catch - let it propagate.
  */
 
 "use server";
@@ -60,7 +60,7 @@ export async function signIn(
  *
  * Supabase sends an email verification link by default.
  * On success, returns { success: true } with a message asking the user
- * to check their inbox — do NOT redirect immediately.
+ * to check their inbox - do NOT redirect immediately.
  *
  * TODO Stage 2B: After Supabase confirms the user (via /auth/callback),
  * create a profile row in the `profiles` table:
@@ -235,6 +235,6 @@ function mapAuthError(message: string): string {
     return "Network error. Please check your connection and try again.";
   }
 
-  // Fallback — return the original message if we don't recognise it.
+  // Fallback - return the original message if we don't recognise it.
   return message;
 }

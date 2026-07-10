@@ -1,0 +1,1328 @@
+[
+  {
+    "id": "internship_57_09zzu0q",
+    "title": "Software Engineering Intern 2027",
+    "organization": "PwC",
+    "category": "internship",
+    "description": "PwC is seeking a highly motivated Software Engineering Intern 2027 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Java",
+      "React",
+      "PostgreSQL",
+      "Next.js",
+      "Azure"
+    ],
+    "preferredSkills": [
+      "Rust",
+      "Kubernetes"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-28T14:30:00.197Z",
+    "duration": "5 months",
+    "stipend": "$3023/month",
+    "applyUrl": "https://example.com/apply/k5z7j3",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Backend",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_58_xjq74q4",
+    "title": "Marketing Intern 2027",
+    "organization": "Swiggy",
+    "category": "internship",
+    "description": "Discover what you're capable of with Swiggy. The Marketing Intern 2027 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UX Research",
+      "AWS",
+      "Java"
+    ],
+    "preferredSkills": [
+      "Go",
+      "Node.js",
+      "Research"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-31T14:30:00.198Z",
+    "duration": "4 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/i42u5x",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "working",
+    "tags": [
+      "Backend",
+      "Frontend",
+      "Research"
+    ]
+  },
+  {
+    "id": "internship_59_8jbu5xq",
+    "title": "Marketing Intern 2026",
+    "organization": "NVIDIA",
+    "category": "internship",
+    "description": "Join NVIDIA as a Marketing Intern 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This internship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "Data Science",
+      "Node.js",
+      "Machine Learning"
+    ],
+    "preferredSkills": [
+      "Azure"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-28T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$3921/month",
+    "applyUrl": "https://example.com/apply/hyqf0a",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "any",
+    "tags": [
+      "AI",
+      "Women",
+      "Education"
+    ]
+  },
+  {
+    "id": "internship_60_h37d1eq",
+    "title": "Design Intern 2027",
+    "organization": "Accenture",
+    "category": "internship",
+    "description": "Join Accenture as a Design Intern 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This internship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Java",
+      "React",
+      "UX Research"
+    ],
+    "preferredSkills": [
+      "TypeScript"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-06T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/wz4nlb",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "Research",
+      "AI",
+      "Education",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_61_o8ijjb1",
+    "title": "Data Intern 2027",
+    "organization": "Microsoft Imagine Cup",
+    "category": "internship",
+    "description": "Discover what you're capable of with Microsoft Imagine Cup. The Data Intern 2027 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Research",
+      "PostgreSQL",
+      "Communication",
+      "Marketing"
+    ],
+    "preferredSkills": [
+      "UX Research",
+      "Java"
+    ],
+    "location": "Mumbai",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-22T14:30:00.198Z",
+    "duration": "2 months",
+    "stipend": "$4955/month",
+    "applyUrl": "https://example.com/apply/xm3af2",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Remote"
+    ]
+  },
+  {
+    "id": "internship_62_o1xld1y",
+    "title": "Software Engineering Intern 2027",
+    "organization": "Outreachy",
+    "category": "internship",
+    "description": "Outreachy is seeking a highly motivated Software Engineering Intern 2027 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "AWS",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "Azure",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-15T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/1cmrau",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "working",
+    "tags": [
+      "Remote",
+      "Finance",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "internship_63_yggdy7v",
+    "title": "Software Engineering Intern 2026",
+    "organization": "Devfolio",
+    "category": "internship",
+    "description": "Discover what you're capable of with Devfolio. The Software Engineering Intern 2026 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "PostgreSQL",
+      "Communication",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "UX Research",
+      "SQL"
+    ],
+    "location": "Seattle",
+    "country": "United States",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-30T14:30:00.198Z",
+    "duration": "6 months",
+    "stipend": "$4134/month",
+    "applyUrl": "https://example.com/apply/13drle",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "AI",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "internship_64_ml4dvtg",
+    "title": "Design Intern 2026",
+    "organization": "Flipkart",
+    "category": "internship",
+    "description": "Flipkart is seeking a highly motivated Design Intern 2026 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UX Research",
+      "Docker",
+      "TypeScript",
+      "Android",
+      "AWS"
+    ],
+    "preferredSkills": [
+      "AWS",
+      "Docker"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-25T14:30:00.198Z",
+    "duration": "5 months",
+    "stipend": "$2738/month",
+    "applyUrl": "https://example.com/apply/tlahu4",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "working",
+    "tags": [
+      "AI",
+      "Remote"
+    ]
+  },
+  {
+    "id": "internship_65_cdirw39",
+    "title": "Marketing Intern 2026",
+    "organization": "Apple",
+    "category": "internship",
+    "description": "Join Apple as a Marketing Intern 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This internship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Node.js"
+    ],
+    "preferredSkills": [
+      "Finance"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-19T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$2673/month",
+    "applyUrl": "https://example.com/apply/1c22js",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "Finance",
+      "Women",
+      "Remote"
+    ]
+  },
+  {
+    "id": "internship_66_onrobvf",
+    "title": "Software Engineering Intern 2027",
+    "organization": "Google Solution Challenge",
+    "category": "internship",
+    "description": "Join Google Solution Challenge as a Software Engineering Intern 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This internship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "iOS",
+      "Kubernetes",
+      "PostgreSQL"
+    ],
+    "preferredSkills": [
+      "Cybersecurity",
+      "Python",
+      "Go"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-18T14:30:00.198Z",
+    "duration": "5 months",
+    "stipend": "$1379/month",
+    "applyUrl": "https://example.com/apply/bvqlm7",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Cloud",
+      "Education",
+      "Healthcare",
+      "AI"
+    ]
+  },
+  {
+    "id": "internship_67_48oneta",
+    "title": "Marketing Intern 2026",
+    "organization": "Amazon",
+    "category": "internship",
+    "description": "Discover what you're capable of with Amazon. The Marketing Intern 2026 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Java",
+      "Research",
+      "Next.js",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "TypeScript"
+    ],
+    "location": "Chennai",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-07T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/tm0wst",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "student",
+    "tags": [
+      "Education",
+      "Backend",
+      "Remote",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "internship_68_nuzpq32",
+    "title": "Data Intern 2027",
+    "organization": "AMD",
+    "category": "internship",
+    "description": "We at AMD are excited to announce our opening for the Data Intern 2027 position. As a key participant in this internship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "Python",
+      "Flutter",
+      "Leadership"
+    ],
+    "preferredSkills": [
+      "Azure",
+      "Java"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-17T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/nux82l",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "working",
+    "tags": [
+      "Backend",
+      "Leadership",
+      "Healthcare",
+      "Remote"
+    ]
+  },
+  {
+    "id": "internship_69_8uy420p",
+    "title": "Data Intern 2026",
+    "organization": "Smart India Hackathon",
+    "category": "internship",
+    "description": "Smart India Hackathon is seeking a highly motivated Data Intern 2026 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Kubernetes",
+      "TypeScript",
+      "AWS",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "preferredSkills": [
+      "TypeScript",
+      "Figma"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-18T14:30:00.198Z",
+    "duration": "6 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/i3vlj4",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "student",
+    "tags": [
+      "Frontend",
+      "Open Source",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "internship_70_e794h3j",
+    "title": "Design Intern 2027",
+    "organization": "Infosys",
+    "category": "internship",
+    "description": "Infosys is seeking a highly motivated Design Intern 2027 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Research",
+      "Flutter"
+    ],
+    "preferredSkills": [
+      "Node.js"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-14T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/x1ohfq",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Remote",
+      "AI",
+      "Research",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_71_0w8q15r",
+    "title": "Marketing Intern 2026",
+    "organization": "Devfolio",
+    "category": "internship",
+    "description": "We at Devfolio are excited to announce our opening for the Marketing Intern 2026 position. As a key participant in this internship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "iOS",
+      "Node.js",
+      "Leadership",
+      "UI Design"
+    ],
+    "preferredSkills": [
+      "TypeScript"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-19T14:30:00.198Z",
+    "duration": "5 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/ze37rz",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "Backend",
+      "Cloud",
+      "Finance",
+      "Research"
+    ]
+  },
+  {
+    "id": "internship_72_ql7wy2u",
+    "title": "Marketing Intern 2027",
+    "organization": "MLH",
+    "category": "internship",
+    "description": "MLH is seeking a highly motivated Marketing Intern 2027 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Communication",
+      "Figma",
+      "Rust",
+      "Cybersecurity"
+    ],
+    "preferredSkills": [
+      "Docker",
+      "Teaching",
+      "PostgreSQL"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-10-07T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$1202/month",
+    "applyUrl": "https://example.com/apply/2jsu4k",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Finance",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_73_emxxz1o",
+    "title": "Design Intern 2027",
+    "organization": "Apple",
+    "category": "internship",
+    "description": "Discover what you're capable of with Apple. The Design Intern 2027 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Cybersecurity",
+      "Flutter",
+      "Machine Learning"
+    ],
+    "preferredSkills": [
+      "UX Research"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-17T14:30:00.198Z",
+    "duration": "5 months",
+    "stipend": "$4270/month",
+    "applyUrl": "https://example.com/apply/qk9jq1",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Leadership",
+      "Healthcare",
+      "Finance"
+    ]
+  },
+  {
+    "id": "internship_74_zwmts9v",
+    "title": "Marketing Intern 2027",
+    "organization": "Microsoft Imagine Cup",
+    "category": "internship",
+    "description": "Microsoft Imagine Cup is seeking a highly motivated Marketing Intern 2027 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Azure",
+      "Docker",
+      "Rust",
+      "AWS",
+      "Next.js"
+    ],
+    "preferredSkills": [
+      "Cybersecurity"
+    ],
+    "location": "Toronto",
+    "country": "Canada",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-30T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/ou195v",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Frontend",
+      "Open Source",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "internship_75_9d10us1",
+    "title": "Marketing Intern 2027",
+    "organization": "Apple",
+    "category": "internship",
+    "description": "Join Apple as a Marketing Intern 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This internship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Rust",
+      "UX Research",
+      "Communication",
+      "React",
+      "Research"
+    ],
+    "preferredSkills": [
+      "Teaching",
+      "Machine Learning",
+      "Node.js"
+    ],
+    "location": "Berlin",
+    "country": "Germany",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-21T14:30:00.198Z",
+    "duration": "6 months",
+    "stipend": "$2843/month",
+    "applyUrl": "https://example.com/apply/is8hhx",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_76_0dz5o3l",
+    "title": "Marketing Intern 2027",
+    "organization": "Adobe",
+    "category": "internship",
+    "description": "We at Adobe are excited to announce our opening for the Marketing Intern 2027 position. As a key participant in this internship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "MongoDB",
+      "Node.js",
+      "Marketing",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "PostgreSQL",
+      "Go"
+    ],
+    "location": "Sydney",
+    "country": "Australia",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-25T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/7x7nec",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "student",
+    "tags": [
+      "Women",
+      "Remote"
+    ]
+  },
+  {
+    "id": "internship_77_byvupb4",
+    "title": "Design Intern 2027",
+    "organization": "Wipro",
+    "category": "internship",
+    "description": "Wipro is seeking a highly motivated Design Intern 2027 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Azure",
+      "Python",
+      "Marketing",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "Communication",
+      "Flutter"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-30T14:30:00.198Z",
+    "duration": "2 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/zl6l2e",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "any",
+    "tags": [
+      "Women",
+      "Cloud",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_78_fcexyam",
+    "title": "Design Intern 2026",
+    "organization": "AMD",
+    "category": "internship",
+    "description": "We at AMD are excited to announce our opening for the Design Intern 2026 position. As a key participant in this internship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "Communication"
+    ],
+    "preferredSkills": [
+      "Rust",
+      "UI Design",
+      "Leadership"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-20T14:30:00.198Z",
+    "duration": "2 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/va3d17",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Education",
+      "AI",
+      "Open Source",
+      "Women"
+    ]
+  },
+  {
+    "id": "internship_79_cjg4hxy",
+    "title": "Software Engineering Intern 2026",
+    "organization": "TCS",
+    "category": "internship",
+    "description": "TCS is seeking a highly motivated Software Engineering Intern 2026 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Figma",
+      "Java",
+      "Python",
+      "Data Science",
+      "SQL"
+    ],
+    "preferredSkills": [
+      "Rust",
+      "Finance",
+      "React"
+    ],
+    "location": "Seattle",
+    "country": "United States",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-07-29T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/4v5gb2",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "undergraduate",
+    "careerStage": "working",
+    "tags": [
+      "Women",
+      "Education",
+      "Research",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "internship_80_260q0io",
+    "title": "Marketing Intern 2027",
+    "organization": "Anthropic",
+    "category": "internship",
+    "description": "Discover what you're capable of with Anthropic. The Marketing Intern 2027 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UX Research",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "PostgreSQL",
+      "React"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-10T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$1284/month",
+    "applyUrl": "https://example.com/apply/ronv4x",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "working",
+    "tags": [
+      "AI",
+      "Leadership",
+      "Remote"
+    ]
+  },
+  {
+    "id": "internship_81_h7hc9zu",
+    "title": "Software Engineering Intern 2027",
+    "organization": "AMD",
+    "category": "internship",
+    "description": "Discover what you're capable of with AMD. The Software Engineering Intern 2027 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Azure",
+      "Finance",
+      "Docker"
+    ],
+    "preferredSkills": [
+      "Python"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-07T14:30:00.198Z",
+    "duration": "6 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/o4y28q",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "phd",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Frontend",
+      "Cloud",
+      "Education"
+    ]
+  },
+  {
+    "id": "internship_82_jlm5jc1",
+    "title": "Design Intern 2026",
+    "organization": "Meesho",
+    "category": "internship",
+    "description": "Meesho is seeking a highly motivated Design Intern 2026 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "SQL",
+      "Machine Learning",
+      "Android",
+      "Data Science"
+    ],
+    "preferredSkills": [
+      "UX Research",
+      "Android"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-07-17T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$4766/month",
+    "applyUrl": "https://example.com/apply/8m30q9",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "career_break",
+    "tags": [
+      "Women",
+      "Healthcare",
+      "Research",
+      "Finance"
+    ]
+  },
+  {
+    "id": "internship_83_be95qn7",
+    "title": "Marketing Intern 2026",
+    "organization": "Accenture",
+    "category": "internship",
+    "description": "Discover what you're capable of with Accenture. The Marketing Intern 2026 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Android",
+      "Communication",
+      "UX Research",
+      "UI Design",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "React"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-24T14:30:00.198Z",
+    "duration": "5 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/5g13ne",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "undergraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Research",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "internship_84_gttvwr8",
+    "title": "Software Engineering Intern 2026",
+    "organization": "ACM",
+    "category": "internship",
+    "description": "ACM is seeking a highly motivated Software Engineering Intern 2026 to join us. This internship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Node.js",
+      "Android",
+      "Cybersecurity",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "Machine Learning",
+      "Node.js",
+      "UX Research"
+    ],
+    "location": "Seattle",
+    "country": "United States",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-31T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$2526/month",
+    "applyUrl": "https://example.com/apply/scrobw",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "any",
+    "tags": [
+      "AI",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_85_6au72w0",
+    "title": "Data Intern 2026",
+    "organization": "Swiggy",
+    "category": "internship",
+    "description": "Discover what you're capable of with Swiggy. The Data Intern 2026 role is a fast-paced internship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Research",
+      "Teaching",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "Next.js",
+      "AWS"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-10-04T14:30:00.198Z",
+    "duration": null,
+    "stipend": "$2721/month",
+    "applyUrl": "https://example.com/apply/f25506",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "postgraduate",
+    "careerStage": "working",
+    "tags": [
+      "Healthcare",
+      "Backend"
+    ]
+  },
+  {
+    "id": "internship_86_h978cj6",
+    "title": "Marketing Intern 2026",
+    "organization": "AICTE",
+    "category": "internship",
+    "description": "We at AICTE are excited to announce our opening for the Marketing Intern 2026 position. As a key participant in this internship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Figma",
+      "Next.js",
+      "Flutter",
+      "AWS"
+    ],
+    "preferredSkills": [
+      "AWS"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-05T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/4lfphw",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "student",
+    "tags": [
+      "Open Source",
+      "Finance",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "internship_87_v1xtxhz",
+    "title": "Design Intern 2026",
+    "organization": "Amazon",
+    "category": "internship",
+    "description": "Join Amazon as a Design Intern 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This internship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Node.js",
+      "Data Science"
+    ],
+    "preferredSkills": [
+      "Research",
+      "Cybersecurity",
+      "MongoDB"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-16T14:30:00.198Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/4fxl8t",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "student",
+    "tags": [
+      "Leadership",
+      "Frontend"
+    ]
+  }
+]

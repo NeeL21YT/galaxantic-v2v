@@ -1,7 +1,7 @@
 /**
  * app/login/page.tsx
  *
- * Login page — wired to Supabase Auth via signIn server action.
+ * Login page - wired to Supabase Auth via signIn server action.
  * The signIn action redirects to /dashboard on success; errors are
  * displayed inline using the Toast component.
  *

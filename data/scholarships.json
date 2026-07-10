@@ -1,0 +1,1310 @@
+[
+  {
+    "id": "scholarship_88_znzzci6",
+    "title": "Merit Scholarship 2027",
+    "organization": "Devfolio",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with Devfolio. The Merit Scholarship 2027 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "Kubernetes",
+      "Docker"
+    ],
+    "preferredSkills": [
+      "Machine Learning",
+      "Next.js",
+      "Java"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-26T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/sfdi3e",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "any",
+    "tags": [
+      "Frontend",
+      "Remote",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "scholarship_89_aesjfja",
+    "title": "Tech Innovators Scholarship 2026",
+    "organization": "Reliance Foundation",
+    "category": "scholarship",
+    "description": "Join Reliance Foundation as a Tech Innovators Scholarship 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Teaching",
+      "Next.js",
+      "Node.js",
+      "Figma",
+      "Docker"
+    ],
+    "preferredSkills": [
+      "Go",
+      "Flutter",
+      "Kubernetes"
+    ],
+    "location": "Delhi",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-10-06T14:30:00.199Z",
+    "duration": "2 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/umpi67",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "any",
+    "tags": [
+      "Research",
+      "Women",
+      "Remote",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "scholarship_90_dgg1o75",
+    "title": "Future Leaders Grant 2027",
+    "organization": "IEEE",
+    "category": "scholarship",
+    "description": "We at IEEE are excited to announce our opening for the Future Leaders Grant 2027 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Rust",
+      "Communication",
+      "Cybersecurity",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "TypeScript"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-04T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/gamgpi",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Women"
+    ]
+  },
+  {
+    "id": "scholarship_91_rpqgv76",
+    "title": "Future Leaders Grant 2027",
+    "organization": "Reliance Foundation",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with Reliance Foundation. The Future Leaders Grant 2027 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "PostgreSQL",
+      "React",
+      "Next.js",
+      "Java"
+    ],
+    "preferredSkills": [
+      "Communication",
+      "Finance",
+      "MongoDB"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-27T14:30:00.199Z",
+    "duration": "4 months",
+    "stipend": "$1798/month",
+    "applyUrl": "https://example.com/apply/ms6zrk",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "working",
+    "tags": [
+      "Open Source",
+      "Education",
+      "Leadership",
+      "Finance"
+    ]
+  },
+  {
+    "id": "scholarship_92_wk8kk6j",
+    "title": "Future Leaders Grant 2027",
+    "organization": "PwC",
+    "category": "scholarship",
+    "description": "Join PwC as a Future Leaders Grant 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Docker",
+      "Data Science",
+      "Machine Learning",
+      "Android",
+      "iOS"
+    ],
+    "preferredSkills": [
+      "Cybersecurity"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-29T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$1025/month",
+    "applyUrl": "https://example.com/apply/gqbrsk",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Backend",
+      "Cloud"
+    ]
+  },
+  {
+    "id": "scholarship_93_nxqc61c",
+    "title": "Merit Scholarship 2027",
+    "organization": "Google Solution Challenge",
+    "category": "scholarship",
+    "description": "We at Google Solution Challenge are excited to announce our opening for the Merit Scholarship 2027 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Android",
+      "PostgreSQL",
+      "Teaching",
+      "Machine Learning"
+    ],
+    "preferredSkills": [
+      "Leadership"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-16T14:30:00.199Z",
+    "duration": "2 months",
+    "stipend": "$1503/month",
+    "applyUrl": "https://example.com/apply/g71vnt",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "any",
+    "tags": [
+      "AI",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "scholarship_94_etj0pub",
+    "title": "Tech Innovators Scholarship 2027",
+    "organization": "MLH",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with MLH. The Tech Innovators Scholarship 2027 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Android",
+      "Flutter",
+      "UI Design"
+    ],
+    "preferredSkills": [
+      "iOS",
+      "Go"
+    ],
+    "location": "Mumbai",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-23T14:30:00.199Z",
+    "duration": "3 months",
+    "stipend": "$1930/month",
+    "applyUrl": "https://example.com/apply/pd08eu",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "student",
+    "tags": [
+      "Cloud",
+      "Healthcare",
+      "AI"
+    ]
+  },
+  {
+    "id": "scholarship_95_kql7gek",
+    "title": "Merit Scholarship 2027",
+    "organization": "Adobe",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with Adobe. The Merit Scholarship 2027 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "SQL",
+      "Leadership",
+      "UX Research",
+      "Rust"
+    ],
+    "preferredSkills": [
+      "Data Science",
+      "React",
+      "Leadership"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-11T14:30:00.199Z",
+    "duration": "4 months",
+    "stipend": "$1983/month",
+    "applyUrl": "https://example.com/apply/9xjre7",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "diploma",
+    "careerStage": "student",
+    "tags": [
+      "Remote",
+      "Frontend",
+      "Research",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "scholarship_96_kgj6v0m",
+    "title": "Tech Innovators Scholarship 2026",
+    "organization": "Reliance Foundation",
+    "category": "scholarship",
+    "description": "Join Reliance Foundation as a Tech Innovators Scholarship 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "AWS",
+      "Java",
+      "UX Research"
+    ],
+    "preferredSkills": [
+      "Leadership"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-07-23T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/2yjzyq",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": true,
+    "educationLevel": "postgraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Open Source",
+      "Backend",
+      "AI",
+      "Women"
+    ]
+  },
+  {
+    "id": "scholarship_97_fu17iek",
+    "title": "Merit Scholarship 2027",
+    "organization": "Intel",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with Intel. The Merit Scholarship 2027 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Marketing",
+      "Docker",
+      "Rust",
+      "UI Design",
+      "React"
+    ],
+    "preferredSkills": [
+      "React",
+      "Next.js"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-27T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$4195/month",
+    "applyUrl": "https://example.com/apply/j65ism",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "any",
+    "tags": [
+      "Cloud",
+      "Education",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "scholarship_98_of5gc75",
+    "title": "Merit Scholarship 2026",
+    "organization": "Netflix",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with Netflix. The Merit Scholarship 2026 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Data Science",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "Communication",
+      "PostgreSQL",
+      "Node.js"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-07-19T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/jbjq1k",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Healthcare",
+      "Finance"
+    ]
+  },
+  {
+    "id": "scholarship_99_avbnkhx",
+    "title": "Women in STEM Scholarship 2027",
+    "organization": "Smart India Hackathon",
+    "category": "scholarship",
+    "description": "Join Smart India Hackathon as a Women in STEM Scholarship 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Figma",
+      "Teaching"
+    ],
+    "preferredSkills": [
+      "Research",
+      "Node.js",
+      "UI Design"
+    ],
+    "location": "Pune",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-30T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$3368/month",
+    "applyUrl": "https://example.com/apply/bwh549",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "working",
+    "tags": [
+      "Education",
+      "Women"
+    ]
+  },
+  {
+    "id": "scholarship_100_29f0jh7",
+    "title": "Women in STEM Scholarship 2026",
+    "organization": "Intel",
+    "category": "scholarship",
+    "description": "Join Intel as a Women in STEM Scholarship 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UX Research",
+      "Kubernetes"
+    ],
+    "preferredSkills": [
+      "AWS"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-21T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/4zhbul",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "undergraduate",
+    "careerStage": "any",
+    "tags": [
+      "Research",
+      "Backend"
+    ]
+  },
+  {
+    "id": "scholarship_101_3zmb062",
+    "title": "Merit Scholarship 2026",
+    "organization": "AMD",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with AMD. The Merit Scholarship 2026 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "React",
+      "Node.js",
+      "TypeScript"
+    ],
+    "preferredSkills": [
+      "Kubernetes"
+    ],
+    "location": "Seattle",
+    "country": "United States",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-13T14:30:00.199Z",
+    "duration": "2 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/1caxhm",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "undergraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Healthcare",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "scholarship_102_ecwq7jn",
+    "title": "Tech Innovators Scholarship 2026",
+    "organization": "Kaggle",
+    "category": "scholarship",
+    "description": "Join Kaggle as a Tech Innovators Scholarship 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UI Design",
+      "Node.js",
+      "Data Science"
+    ],
+    "preferredSkills": [
+      "TypeScript",
+      "Python"
+    ],
+    "location": "Mumbai",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-10T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$1268/month",
+    "applyUrl": "https://example.com/apply/nrf6ve",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "working",
+    "tags": [
+      "Women",
+      "Research",
+      "Education"
+    ]
+  },
+  {
+    "id": "scholarship_103_o1o1uhz",
+    "title": "Women in STEM Scholarship 2027",
+    "organization": "Microsoft",
+    "category": "scholarship",
+    "description": "Join Microsoft as a Women in STEM Scholarship 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "Azure",
+      "Figma",
+      "Leadership",
+      "Node.js"
+    ],
+    "preferredSkills": [
+      "Machine Learning"
+    ],
+    "location": "London",
+    "country": "United Kingdom",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-26T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/lqhudk",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "any",
+    "tags": [
+      "Frontend",
+      "Cloud",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "scholarship_104_2kiuvjs",
+    "title": "Future Leaders Grant 2027",
+    "organization": "PhonePe",
+    "category": "scholarship",
+    "description": "We at PhonePe are excited to announce our opening for the Future Leaders Grant 2027 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "iOS",
+      "Java",
+      "PostgreSQL",
+      "Figma"
+    ],
+    "preferredSkills": [
+      "Go",
+      "Cybersecurity"
+    ],
+    "location": "Seattle",
+    "country": "United States",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-08-19T14:30:00.199Z",
+    "duration": "4 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/yptr9u",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "career_break",
+    "tags": [
+      "AI",
+      "Remote",
+      "Education"
+    ]
+  },
+  {
+    "id": "scholarship_105_632jojy",
+    "title": "Merit Scholarship 2026",
+    "organization": "Microsoft",
+    "category": "scholarship",
+    "description": "We at Microsoft are excited to announce our opening for the Merit Scholarship 2026 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Next.js",
+      "Flutter",
+      "Kubernetes"
+    ],
+    "preferredSkills": [
+      "PostgreSQL"
+    ],
+    "location": "Hyderabad",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-07-17T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$4126/month",
+    "applyUrl": "https://example.com/apply/ry7blf",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Cloud",
+      "Research"
+    ]
+  },
+  {
+    "id": "scholarship_106_7zu3txk",
+    "title": "Future Leaders Grant 2026",
+    "organization": "Freshworks",
+    "category": "scholarship",
+    "description": "Join Freshworks as a Future Leaders Grant 2026 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Machine Learning",
+      "Leadership"
+    ],
+    "preferredSkills": [
+      "React",
+      "Next.js"
+    ],
+    "location": "Chennai",
+    "country": "India",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-12T14:30:00.199Z",
+    "duration": "2 months",
+    "stipend": "$2042/month",
+    "applyUrl": "https://example.com/apply/auw946",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "any",
+    "tags": [
+      "Backend",
+      "AI"
+    ]
+  },
+  {
+    "id": "scholarship_107_xzy6xca",
+    "title": "Merit Scholarship 2027",
+    "organization": "NVIDIA",
+    "category": "scholarship",
+    "description": "NVIDIA is seeking a highly motivated Merit Scholarship 2027 to join us. This scholarship is designed to challenge you and accelerate your career. You'll be taking ownership of significant deliverables, participating in strategic planning, and executing on vision. We offer mentorship, state-of-the-art resources, and a collaborative atmosphere where your voice is heard and your contributions are celebrated.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "MongoDB",
+      "React",
+      "UI Design",
+      "Cybersecurity",
+      "iOS"
+    ],
+    "preferredSkills": [
+      "Go"
+    ],
+    "location": "Toronto",
+    "country": "Canada",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-10-06T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$3342/month",
+    "applyUrl": "https://example.com/apply/ial4h2",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "phd",
+    "careerStage": "any",
+    "tags": [
+      "Cloud",
+      "Research",
+      "Frontend",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "scholarship_108_niedm7h",
+    "title": "Tech Innovators Scholarship 2026",
+    "organization": "Devfolio",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with Devfolio. The Tech Innovators Scholarship 2026 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Android",
+      "Cybersecurity",
+      "PostgreSQL",
+      "Research"
+    ],
+    "preferredSkills": [
+      "PostgreSQL",
+      "UX Research"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-30T14:30:00.199Z",
+    "duration": "5 months",
+    "stipend": "$2059/month",
+    "applyUrl": "https://example.com/apply/hap80j",
+    "featured": true,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "working",
+    "tags": [
+      "Backend",
+      "Finance",
+      "Cloud",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "scholarship_109_bryz7ep",
+    "title": "Women in STEM Scholarship 2027",
+    "organization": "IEEE",
+    "category": "scholarship",
+    "description": "Join IEEE as a Women in STEM Scholarship 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Android",
+      "Finance"
+    ],
+    "preferredSkills": [
+      "SQL"
+    ],
+    "location": "Sydney",
+    "country": "Australia",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-09-10T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$3755/month",
+    "applyUrl": "https://example.com/apply/fpjr37",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "career_break",
+    "tags": [
+      "Backend",
+      "Finance"
+    ]
+  },
+  {
+    "id": "scholarship_110_ws77knp",
+    "title": "Women in STEM Scholarship 2027",
+    "organization": "Google",
+    "category": "scholarship",
+    "description": "Join Google as a Women in STEM Scholarship 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Flutter",
+      "React",
+      "UX Research"
+    ],
+    "preferredSkills": [
+      "Figma",
+      "iOS"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-09T14:30:00.199Z",
+    "duration": null,
+    "stipend": "$1491/month",
+    "applyUrl": "https://example.com/apply/vqnsau",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": true,
+    "educationLevel": "any",
+    "careerStage": "any",
+    "tags": [
+      "Women",
+      "AI",
+      "Finance"
+    ]
+  },
+  {
+    "id": "scholarship_111_mqqjsdd",
+    "title": "Tech Innovators Scholarship 2026",
+    "organization": "PhonePe",
+    "category": "scholarship",
+    "description": "We at PhonePe are excited to announce our opening for the Tech Innovators Scholarship 2026 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Research",
+      "Node.js",
+      "Finance",
+      "Docker",
+      "SQL"
+    ],
+    "preferredSkills": [
+      "Python"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-16T14:30:00.199Z",
+    "duration": "6 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/othd2t",
+    "featured": true,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Frontend",
+      "Healthcare"
+    ]
+  },
+  {
+    "id": "scholarship_112_8vy9uue",
+    "title": "Future Leaders Grant 2026",
+    "organization": "Razorpay",
+    "category": "scholarship",
+    "description": "We at Razorpay are excited to announce our opening for the Future Leaders Grant 2026 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Azure",
+      "TypeScript",
+      "Marketing",
+      "Flutter",
+      "Kubernetes"
+    ],
+    "preferredSkills": [
+      "Marketing",
+      "TypeScript",
+      "Figma"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-08T14:30:00.199Z",
+    "duration": "6 months",
+    "stipend": "$1769/month",
+    "applyUrl": "https://example.com/apply/0h5pg9",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "any",
+    "tags": [
+      "Research",
+      "Frontend",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "scholarship_113_k1kx697",
+    "title": "Future Leaders Grant 2026",
+    "organization": "PhonePe",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with PhonePe. The Future Leaders Grant 2026 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "TypeScript",
+      "Teaching"
+    ],
+    "preferredSkills": [
+      "Figma"
+    ],
+    "location": "Toronto",
+    "country": "Canada",
+    "remote": false,
+    "hybrid": false,
+    "deadline": "2026-10-04T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/3exwse",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "AI",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "scholarship_114_9nh8jsd",
+    "title": "Women in STEM Scholarship 2027",
+    "organization": "Google Summer of Code",
+    "category": "scholarship",
+    "description": "Join Google Summer of Code as a Women in STEM Scholarship 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Python",
+      "Azure"
+    ],
+    "preferredSkills": [
+      "MongoDB",
+      "Teaching",
+      "Java"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-09-19T14:30:00.199Z",
+    "duration": "4 months",
+    "stipend": "$4026/month",
+    "applyUrl": "https://example.com/apply/nw6fw5",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "working",
+    "tags": [
+      "AI",
+      "Finance",
+      "Women"
+    ]
+  },
+  {
+    "id": "scholarship_115_vw32db6",
+    "title": "Merit Scholarship 2026",
+    "organization": "Apple",
+    "category": "scholarship",
+    "description": "We at Apple are excited to announce our opening for the Merit Scholarship 2026 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "UI Design",
+      "TypeScript",
+      "MongoDB",
+      "React"
+    ],
+    "preferredSkills": [
+      "Node.js"
+    ],
+    "location": "New York",
+    "country": "United States",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-01T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/y94azq",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "postgraduate",
+    "careerStage": "career_break",
+    "tags": [
+      "Research",
+      "Open Source"
+    ]
+  },
+  {
+    "id": "scholarship_116_bxnpvmn",
+    "title": "Women in STEM Scholarship 2026",
+    "organization": "IEEE",
+    "category": "scholarship",
+    "description": "Discover what you're capable of with IEEE. The Women in STEM Scholarship 2026 role is a fast-paced scholarship aimed at ambitious individuals ready to take their career to the next level. You will work on cutting-edge systems, optimize existing workflows, and help us scale. We believe in empowering our people, providing excellent benefits, and fostering a workplace where creativity and technical excellence shine.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "MongoDB",
+      "React",
+      "Marketing",
+      "UI Design"
+    ],
+    "preferredSkills": [
+      "PostgreSQL"
+    ],
+    "location": "Remote",
+    "country": "Global",
+    "remote": true,
+    "hybrid": false,
+    "deadline": "2026-08-30T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/qsgoca",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "high_school",
+    "careerStage": "student",
+    "tags": [
+      "Healthcare",
+      "Frontend"
+    ]
+  },
+  {
+    "id": "scholarship_117_gqkqswz",
+    "title": "Tech Innovators Scholarship 2027",
+    "organization": "Meta",
+    "category": "scholarship",
+    "description": "We at Meta are excited to announce our opening for the Tech Innovators Scholarship 2027 position. As a key participant in this scholarship, you will dive deep into challenging projects, working alongside industry veterans. Expect to push the boundaries of what's possible, experiment with new technologies, and contribute to our core objectives. Our culture values continuous learning, inclusivity, and bold ideas.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "Go",
+      "Java",
+      "React"
+    ],
+    "preferredSkills": [
+      "Machine Learning"
+    ],
+    "location": "Bengaluru",
+    "country": "India",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-08-26T14:30:00.199Z",
+    "duration": null,
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/uzc2k4",
+    "featured": false,
+    "womenFocused": false,
+    "careerBreakFriendly": false,
+    "educationLevel": "any",
+    "careerStage": "student",
+    "tags": [
+      "Finance",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "scholarship_118_99fetlt",
+    "title": "Future Leaders Grant 2027",
+    "organization": "Accenture",
+    "category": "scholarship",
+    "description": "Join Accenture as a Future Leaders Grant 2027 and be part of an innovative team driving the future of technology. We are looking for passionate individuals who thrive in dynamic environments. You will collaborate with cross-functional teams, solving complex problems and delivering high-quality solutions. This scholarship offers a unique opportunity to grow your skills while making a tangible impact on our global user base.",
+    "eligibility": [
+      "Must be 18 years or older.",
+      "Passionate about technology and innovation."
+    ],
+    "requirements": [
+      "Strong problem-solving skills.",
+      "Excellent communication abilities."
+    ],
+    "skills": [
+      "MongoDB",
+      "Cybersecurity",
+      "Java",
+      "Communication",
+      "Marketing"
+    ],
+    "preferredSkills": [
+      "Data Science",
+      "React"
+    ],
+    "location": "Berlin",
+    "country": "Germany",
+    "remote": false,
+    "hybrid": true,
+    "deadline": "2026-09-24T14:30:00.199Z",
+    "duration": "3 months",
+    "stipend": null,
+    "applyUrl": "https://example.com/apply/4gj7a7",
+    "featured": false,
+    "womenFocused": true,
+    "careerBreakFriendly": false,
+    "educationLevel": "diploma",
+    "careerStage": "any",
+    "tags": [
+      "Research",
+      "Women",
+      "AI"
+    ]
+  }
+]

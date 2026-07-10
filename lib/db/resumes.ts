@@ -30,6 +30,24 @@ export async function getUserResumes(): Promise<Resume[]> {
 }
 
 /**
+ * Deletes all resumes for the current user from the database.
+ * (Note: Storage files are left orphaned for hackathon scope)
+ */
+export async function clearAllUserResumes(userId: string): Promise<boolean> {
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("resumes")
+    .delete()
+    .eq("user_id", userId);
+
+  if (error) {
+    console.error("[db/resumes] clearAllUserResumes:", error.message);
+    return false;
+  }
+  return true;
+}
+
+/**
  * Returns the most recently analyzed resume for the current user,
  * or null if no analysis exists yet.
  */
@@ -70,7 +88,7 @@ export async function getResumeById(id: string): Promise<Resume | null> {
 
 /**
  * Looks up an existing completed analysis by text hash.
- * Used for deduplication — avoids re-running Gemini on identical text.
+ * Used for deduplication - avoids re-running Gemini on identical text.
  */
 export async function findResumeByHash(
   textHash: string,

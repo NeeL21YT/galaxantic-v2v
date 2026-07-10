@@ -5,7 +5,7 @@
  * Call createClient() once per request inside Server Components,
  * Server Actions, and Route Handlers.
  *
- * IMPORTANT: Always create a new instance per request — never share
+ * IMPORTANT: Always create a new instance per request - never share
  * a server client across requests.
  *
  * Cookie handling uses the non-deprecated getAll/setAll API.
@@ -48,7 +48,7 @@ export async function createClient() {
  * Returns the currently authenticated Supabase user, or null if not signed in.
  *
  * Uses `getUser()` (not `getSession()`) which contacts the Supabase Auth
- * server to validate the token — safe to use for authorization decisions.
+ * server to validate the token - safe to use for authorization decisions.
  *
  * Import this in protected Server Components and layouts instead of
  * maintaining client-side auth state.
@@ -61,7 +61,7 @@ export async function getUser(): Promise<User | null> {
   } = await supabase.auth.getUser();
 
   if (error) {
-    // Token invalid or expired — treat as unauthenticated
+    // Token invalid or expired - treat as unauthenticated
     return null;
   }
 

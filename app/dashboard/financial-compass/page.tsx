@@ -1,18 +1,18 @@
 /**
  * app/dashboard/financial-compass/page.tsx
  *
- * Financial Compass — 7-step financial planning wizard.
+ * Financial Compass - 7-step financial planning wizard.
  *
  * Current: All data is local React state (placeholder).
  *
- * TODO Stage 2 — Supabase Autosave:
+ * TODO Stage 2 - Supabase Autosave:
  *   - On each step completion, save formData + currentStep to Supabase
  *     (user_financial_compass table, keyed by user ID).
  *   - On page load, fetch the last saved step from Supabase and
  *     restore state so the user can continue from where they left off.
  *   - Use optimistic updates for snappy UX during save.
  *
- * TODO Stage 2 — AI Analysis (Step 4):
+ * TODO Stage 2 - AI Analysis (Step 4):
  *   - Call a Gemini server action with the formData from Steps 1–3.
  *   - Gemini should return: Financial Health score, Savings Rate,
  *     Income Stability, Risk Score, and personalised recommendations.
@@ -602,7 +602,7 @@ function Step4() {
 /* ── Step 5: Budget Allocation ───────────────────────────────── */
 
 function Step5() {
-  const income = 50000; // Placeholder — TODO Stage 2: derive from formData
+  const income = 50000; // Placeholder - TODO Stage 2: derive from formData
 
   return (
     <StepCard
@@ -676,7 +676,7 @@ function Step7({
         <Checklist items={actionItems} onToggle={onToggle} />
       </StepCard>
 
-      {/* Business Planner — shown only if goal is Start a Business */}
+      {/* Business Planner - shown only if goal is Start a Business */}
       {isBusinessGoal && (
         <StepCard
           title="Business Planner"

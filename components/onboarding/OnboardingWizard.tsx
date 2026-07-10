@@ -15,7 +15,7 @@
  * On completion, calls the `completeOnboarding` server action which
  * saves the profile and redirects to /dashboard.
  *
- * Uses the existing design system — no inline ad-hoc styles beyond
+ * Uses the existing design system - no inline ad-hoc styles beyond
  * CSS variable references.
  */
 
@@ -147,7 +147,7 @@ export function OnboardingWizard({ profile }: OnboardingWizardProps) {
       if (!result.success) {
         setError(result.error);
       }
-      // On success, completeOnboarding redirects — no further action needed.
+      // On success, completeOnboarding redirects - no further action needed.
     });
   }
 
@@ -408,7 +408,7 @@ export function OnboardingWizard({ profile }: OnboardingWizardProps) {
                 Your Skills
               </h2>
               <p className="text-sm mb-6" style={{ color: "var(--color-text-muted)" }}>
-                Select all that apply — this helps us surface relevant opportunities.
+                Select all that apply - this helps us surface relevant opportunities.
               </p>
               <ChipSelector
                 options={SKILL_OPTIONS}
@@ -471,25 +471,25 @@ export function OnboardingWizard({ profile }: OnboardingWizardProps) {
 
               <div className="flex flex-col gap-3">
                 {[
-                  { label: "Full Name", value: form.full_name || "—" },
-                  { label: "Location", value: form.location || "—" },
+                  { label: "Full Name", value: form.full_name || "-" },
+                  { label: "Location", value: form.location || "-" },
                   {
                     label: "Education",
                     value:
-                      EDUCATION_OPTIONS.find((e) => e.value === form.education_level)?.label || "—",
+                      EDUCATION_OPTIONS.find((e) => e.value === form.education_level)?.label || "-",
                   },
                   {
                     label: "Career Stage",
                     value:
-                      CAREER_OPTIONS.find((c) => c.value === form.career_stage)?.label || "—",
+                      CAREER_OPTIONS.find((c) => c.value === form.career_stage)?.label || "-",
                   },
                   {
                     label: "Skills",
-                    value: form.skills.length > 0 ? form.skills.join(", ") : "—",
+                    value: form.skills.length > 0 ? form.skills.join(", ") : "-",
                   },
                   {
                     label: "Interests",
-                    value: form.interests.length > 0 ? form.interests.join(", ") : "—",
+                    value: form.interests.length > 0 ? form.interests.join(", ") : "-",
                   },
                 ].map(({ label, value }) => (
                   <div

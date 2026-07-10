@@ -29,7 +29,7 @@ import { createMiddlewareClient } from "@/lib/supabase/middleware";
 export async function proxy(request: NextRequest) {
   const { supabase, response } = await createMiddlewareClient(request);
 
-  // IMPORTANT: Call getUser() — this triggers the token refresh and writes
+  // IMPORTANT: Call getUser() - this triggers the token refresh and writes
   // the updated session cookies to the response.
   // Do NOT use getSession() here: it reads from cookies without contacting
   // the Supabase Auth server, so it cannot be trusted for routing decisions.
@@ -52,7 +52,7 @@ export async function proxy(request: NextRequest) {
 
     // ── Onboarding guard ──────────────────────────────────────
     // If the user IS authenticated but hasn't completed onboarding,
-    // send them to /dashboard/onboarding — unless they're already there.
+    // send them to /dashboard/onboarding - unless they're already there.
     // We exempt /dashboard/onboarding itself to avoid an infinite loop.
     if (!pathname.startsWith("/dashboard/onboarding")) {
       const { data: profile } = await supabase

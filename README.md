@@ -119,7 +119,7 @@ Your personal AI mentor.
 
 **Event:** Vibe2Vision Hackathon
 
-**Track:** ElevateHer — Education, FinTech & Career Empowerment
+**Track:** ElevateHer - Education, FinTech & Career Empowerment
 
 ---
 

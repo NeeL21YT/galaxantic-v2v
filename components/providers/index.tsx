@@ -17,7 +17,7 @@ interface ProvidersProps {
 
 /**
  * Root Providers wrapper.
- * Currently passes children through — ready for Stage 2 integrations.
+ * Currently passes children through - ready for Stage 2 integrations.
  */
 export function Providers({ children }: ProvidersProps) {
   // Stage 2: Wrap with SupabaseProvider, ReactQueryProvider, etc.

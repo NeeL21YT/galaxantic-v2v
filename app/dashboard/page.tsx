@@ -1,7 +1,7 @@
 /**
  * app/dashboard/page.tsx
  *
- * Dashboard home — metrics, quick actions, recent activity.
+ * Dashboard home - metrics, quick actions, recent activity.
  */
 
 import { LayoutDashboard, FileText, Bot, Compass, Map, TrendingUp } from "lucide-react";
@@ -13,13 +13,14 @@ import { Button } from "@/components/ui/Button";
 import { getProfile } from "@/lib/db/profiles";
 import { getUser } from "@/lib/supabase/server";
 import { getLatestAnalyzedResume } from "@/lib/db/resumes";
+import { getMatchedCount } from "@/app/dashboard/opportunities/actions";
 import {
   PLACEHOLDER_ACTIVITY,
   PLACEHOLDER_MILESTONES,
 } from "@/lib/data/placeholder";
 
 export const metadata = {
-  title: "Dashboard — Herizon",
+  title: "Dashboard - Herizon",
   description: "Your career hub. Track readiness, opportunities, and milestones.",
 };
 
@@ -27,11 +28,12 @@ export default async function DashboardPage() {
   const activeMilestone = PLACEHOLDER_MILESTONES.find((m) => m.status === "in-progress");
   const completedCount = PLACEHOLDER_MILESTONES.filter((m) => m.status === "completed").length;
 
-  // Fetch real name, profile and latest resume analysis in parallel
-  const [profile, user, latestResume] = await Promise.all([
+  // Fetch real name, profile, latest resume analysis, and opportunity count in parallel
+  const [profile, user, latestResume, matchedCount] = await Promise.all([
     getProfile(),
     getUser(),
     getLatestAnalyzedResume(),
+    getMatchedCount(),
   ]);
   const firstName =
     profile?.full_name?.trim().split(" ")[0] ||
@@ -54,7 +56,7 @@ export default async function DashboardPage() {
         <StatCard
           icon={<TrendingUp />}
           label="Career Readiness"
-          value={careerReadiness !== null ? `${careerReadiness}%` : "—"}
+          value={careerReadiness !== null ? `${careerReadiness}%` : "-"}
           description={careerReadiness !== null ? undefined : "Upload a resume to track"}
           accent="rose"
           index={0}
@@ -62,9 +64,8 @@ export default async function DashboardPage() {
         <StatCard
           icon={<Compass />}
           label="Matched Opportunities"
-          value="6"
-          trend="up"
-          trendLabel="3 new today"
+          value={matchedCount > 0 ? String(matchedCount) : "-"}
+          description={matchedCount === 0 ? "Complete your profile" : undefined}
           accent="blue"
           index={1}
         />
@@ -79,7 +80,7 @@ export default async function DashboardPage() {
         <StatCard
           icon={<FileText />}
           label="Resume Score"
-          value={resumeScore !== null ? String(resumeScore) : "—"}
+          value={resumeScore !== null ? String(resumeScore) : "-"}
           description={resumeScore !== null ? "4 AI suggestions pending" : "Upload a resume to score"}
           accent="amber"
           index={3}
@@ -111,7 +112,7 @@ export default async function DashboardPage() {
             <QuickActionCard
               icon={<Compass />}
               label="Find Opportunities"
-              description="Browse 6 matches"
+              description={matchedCount > 0 ? `Browse ${matchedCount} matches` : "Discover AI matches"}
               href="/dashboard/opportunities"
               accent="rose"
               index={1}

@@ -3,13 +3,13 @@
  *
  * Root layout for all dashboard pages.
  *
- * Async Server Component — fetches the user profile server-side once
+ * Async Server Component - fetches the user profile server-side once
  * at the layout level. All dashboard pages nested under this layout
  * inherit user data via props, keeping client-side auth state
  * unnecessary and the architecture clean.
  *
  * Route protection is handled by proxy.ts. This layout provides a
- * second layer of defence — if getUser() returns null here (edge case
+ * second layer of defence - if getUser() returns null here (edge case
  * where proxy was bypassed), the user sees an empty name gracefully.
  *
  * Provides: DashboardSidebar (desktop) + DashboardNavbar + MobileSidebarDrawer

@@ -19,7 +19,7 @@ import { getProfile } from "@/lib/db/profiles";
 import { OnboardingWizard } from "@/components/onboarding/OnboardingWizard";
 
 export const metadata = {
-  title: "Set Up Your Profile — Herizon",
+  title: "Set Up Your Profile - Herizon",
   description:
     "Complete your Herizon profile to unlock personalized career guidance, opportunities, and AI-powered tools.",
 };

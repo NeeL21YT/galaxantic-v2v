@@ -132,7 +132,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            {/* Primary — white button */}
+            {/* Primary - white button */}
             <motion.a
               href="/register"
               whileHover={{ scale: 1.03 }}
@@ -148,7 +148,7 @@ export function CTASection() {
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </motion.a>
 
-            {/* Secondary — ghost on dark */}
+            {/* Secondary - ghost on dark */}
             <motion.a
               href="#features"
               whileHover={{ scale: 1.03 }}

@@ -8,7 +8,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Bot } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -137,7 +137,7 @@ export function HeroSection() {
               style={{ color: "var(--color-text-secondary)" }}
             >
               Herizon empowers women with AI-powered career guidance, opportunity
-              discovery, personalized learning and career restart support — all in
+              discovery, personalized learning and career restart support - all in
               one elegant platform.
             </motion.p>
 
@@ -231,7 +231,7 @@ export function HeroSection() {
               />
             </div>
 
-            {/* Floating card — top left */}
+            {/* Floating card - top left */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
@@ -243,7 +243,9 @@ export function HeroSection() {
               }}
               aria-hidden="true"
             >
-              <span className="text-2xl">🎯</span>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "rgba(180,108,114,0.1)", color: "var(--color-rose-gold)" }}>
+                <Target className="w-5 h-5" />
+              </div>
               <div>
                 <p
                   className="text-xs font-semibold leading-tight"
@@ -260,7 +262,7 @@ export function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Floating card — bottom right */}
+            {/* Floating card - bottom right */}
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 0.5 }}
@@ -272,7 +274,9 @@ export function HeroSection() {
               }}
               aria-hidden="true"
             >
-              <span className="text-2xl">🤖</span>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "rgba(94,123,155,0.1)", color: "var(--color-rackley)" }}>
+                <Bot className="w-5 h-5" />
+              </div>
               <div>
                 <p
                   className="text-xs font-semibold leading-tight"

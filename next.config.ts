@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
   // Turbopack is the default bundler in Next.js 16.
   // pdfjs-dist and mammoth are only ever imported via dynamic import()
-  // inside Server Actions, so they never enter the client bundle —
+  // inside Server Actions, so they never enter the client bundle -
   // no special canvas alias is needed in Turbopack mode.
   turbopack: {},
 };

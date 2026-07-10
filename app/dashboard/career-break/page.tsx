@@ -1,7 +1,7 @@
 /**
  * app/dashboard/career-break/page.tsx
  *
- * Career Break Companion — gap analysis, skill gaps, readiness, next steps.
+ * Career Break Companion - gap analysis, skill gaps, readiness, next steps.
  */
 
 import {
@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/Button";
 import { PLACEHOLDER_USER, PLACEHOLDER_SKILL_GAPS } from "@/lib/data/placeholder";
 
 export const metadata = {
-  title: "Career Break Companion — Herizon",
+  title: "Career Break Companion - Herizon",
   description: "Analyse your career gap and plan your confident comeback.",
 };
 
@@ -52,7 +52,7 @@ export default function CareerBreakPage() {
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <StatCard icon={<TrendingUp />} label="Career Readiness" value={`${PLACEHOLDER_USER.careerReadiness}%`} trend="up" trendLabel="+8% this week" accent="rose" index={0} />
-        <StatCard icon={<Clock />} label="Break Duration" value="24 mo" description="Jan 2023 — Jan 2025" accent="blue" index={1} />
+        <StatCard icon={<Clock />} label="Break Duration" value="24 mo" description="Jan 2023 - Jan 2025" accent="blue" index={1} />
         <StatCard icon={<Briefcase />} label="Skills to Upskill" value="5" description="Identified by AI" accent="amber" index={2} />
         <StatCard icon={<CheckCircle2 />} label="Steps Completed" value="1 / 4" description="Resume refresh done" accent="green" index={3} />
       </div>

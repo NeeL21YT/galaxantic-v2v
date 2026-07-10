@@ -6,7 +6,7 @@
  * Responsibilities:
  * - Validate and sanitize user input
  * - Call the db helper layer (lib/db/profiles)
- * - Return typed ActionResult — never throw to the client
+ * - Return typed ActionResult - never throw to the client
  *
  * These actions are intentionally separate from auth actions
  * (lib/supabase/actions.ts) to keep auth isolated from profile
@@ -50,7 +50,7 @@ export async function fetchProfile(): Promise<ProfileActionResult> {
 export async function updateProfileAction(
   updates: ProfileUpdate
 ): Promise<ProfileActionResult> {
-  // Sanitize text fields — trim whitespace and convert empty strings to null
+  // Sanitize text fields - trim whitespace and convert empty strings to null
   const sanitized: ProfileUpdate = {};
 
   if (updates.full_name !== undefined) {
@@ -100,7 +100,7 @@ export async function updateProfileAction(
  * Final onboarding action. Validates required fields, saves the full
  * profile, sets onboarding_completed = true, then redirects to /dashboard.
  *
- * NOTE: redirect() throws a special Next.js error — do NOT wrap in
+ * NOTE: redirect() throws a special Next.js error - do NOT wrap in
  * try/catch. Let it propagate so Next.js can handle the redirect.
  */
 export async function completeOnboarding(formData: {
@@ -136,6 +136,6 @@ export async function completeOnboarding(formData: {
     };
   }
 
-  // Redirect throws — must not be inside try/catch
+  // Redirect throws - must not be inside try/catch
   redirect("/dashboard");
 }

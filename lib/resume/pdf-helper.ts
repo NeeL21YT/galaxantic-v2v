@@ -41,7 +41,7 @@ export async function extractTextFromPDF(buffer: ArrayBuffer): Promise<string> {
     console.log("[pdf-helper] extracted text length:", data?.text?.length ?? 0);
 
     if (!data?.text) {
-      throw new Error("pdf-parse returned empty text — file may be image-based or corrupted.");
+      throw new Error("pdf-parse returned empty text - file may be image-based or corrupted.");
     }
 
     return normalizeText(data.text);

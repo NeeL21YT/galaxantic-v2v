@@ -3,7 +3,7 @@
  *
  * Analyses resume text using the Gemini API.
  *
- * Model waterfall — tries each model in priority order.
+ * Model waterfall - tries each model in priority order.
  * Fast-switches on 404 (model unavailable) or 503 (overloaded).
  * If all models fail returns a user-friendly busy message.
  *
@@ -36,7 +36,7 @@ type ErrorClass = "FAST_SWITCH" | "RETRY" | "FATAL";
 function classifyError(err: unknown): ErrorClass {
   const msg = (err instanceof Error ? err.message : String(err)).toLowerCase();
 
-  // Instant switch — model is gone or slammed right now
+  // Instant switch - model is gone or slammed right now
   if (msg.includes("404") || msg.includes("not_found") || msg.includes("no longer available")) {
     return "FAST_SWITCH";
   }
@@ -44,12 +44,12 @@ function classifyError(err: unknown): ErrorClass {
     return "FAST_SWITCH";
   }
 
-  // Short wait then switch — quota
+  // Short wait then switch - quota
   if (msg.includes("429") || msg.includes("quota") || msg.includes("rate limit")) {
     return "RETRY";
   }
 
-  // Unknown — one retry before switching
+  // Unknown - one retry before switching
   return "RETRY";
 }
 
@@ -111,7 +111,7 @@ Scoring guidelines:
 - careerReadiness: How ready this candidate is to land interviews for their target role
 
 For each section provide 3–6 concrete, specific, actionable items.
-Reference actual content from the resume where possible — do not be generic.`;
+Reference actual content from the resume where possible - do not be generic.`;
 }
 
 /* ── Validation ───────────────────────────────────────────── */
@@ -230,7 +230,7 @@ export async function analyzeResumeWithGemini(
         const errMsg = err instanceof Error ? err.message : String(err);
 
         if (cls === "FAST_SWITCH") {
-          // Don't retry this model — move to next immediately
+          // Don't retry this model - move to next immediately
           console.warn(`[gemini] Fast-switch from ${model.label}: ${errMsg.slice(0, 120)}`);
           break; // exit inner loop → try next model
         }
@@ -240,7 +240,7 @@ export async function analyzeResumeWithGemini(
           console.warn(`[gemini] ${model.label} attempt 1 failed, retrying in 2s: ${errMsg.slice(0, 120)}`);
           await new Promise((r) => setTimeout(r, 2000));
         } else {
-          // Second attempt also failed — switch to next model
+          // Second attempt also failed - switch to next model
           console.warn(`[gemini] ${model.label} both attempts failed, switching model.`);
         }
       }

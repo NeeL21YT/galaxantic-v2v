@@ -6,6 +6,7 @@
 
 import { Logo } from "@/components/shared/Logo";
 import { Divider } from "@/components/ui/Divider";
+import { Trophy } from "lucide-react";
 import Link from "next/link";
 
 /* ── Data ──────────────────────────────────────────────────── */
@@ -22,7 +23,7 @@ const FOOTER_LINKS = [
   {
     heading: "Company",
     links: [
-      { label: "About", href: "#" },
+      { label: "About", href: "/#about" },
       { label: "Contact", href: "#" },
     ],
   },
@@ -59,22 +60,25 @@ export function Footer() {
               className="text-sm leading-relaxed max-w-xs"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              Empowering women to grow, restart and lead — with AI-powered
+              Empowering women to grow, restart and lead - with AI-powered
               career guidance designed for every stage of your journey.
             </p>
 
 
             {/* Hackathon badge */}
-            <span
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium w-fit"
+            <a
+              href="https://unstop.com/hackathons/vibe2vision-ieee-sheaspire-30-veer-surendra-sai-university-of-technology-vssut-odisha-1703344"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium w-fit hover:opacity-80 transition-opacity"
               style={{
                 background: "var(--color-champagne)",
                 color: "var(--color-puce-red)",
                 border: "1px solid rgba(110,46,52,0.15)",
               }}
             >
-              🏆 Built for Vibe2Vision Hackathon
-            </span>
+              <Trophy className="w-3.5 h-3.5" /> Built for Vibe2Vision Hackathon
+            </a>
           </div>
 
           {/* Link columns */}
@@ -136,14 +140,24 @@ export function Footer() {
             >
               Team Galaxantic
             </a>{" "}
-            for the Vibe2Vision Hackathon.
+            for the{" "}
+            <a
+              href="https://unstop.com/hackathons/vibe2vision-ieee-sheaspire-30-veer-surendra-sai-university-of-technology-vssut-odisha-1703344"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline"
+              style={{ color: "var(--color-rose-gold)" }}
+            >
+              Vibe2Vision Hackathon
+            </a>
+            .
           </p>
 
           <p
             className="text-xs"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Track 3 — ElevateHer: Education, FinTech &amp; Career Empowerment
+            Track 3 - ElevateHer: Education, FinTech &amp; Career Empowerment
           </p>
         </div>
       </div>

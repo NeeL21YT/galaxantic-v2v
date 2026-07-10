@@ -2,7 +2,7 @@
  * components/ui/Toast.tsx
  *
  * Lightweight toast notification component.
- * No external dependencies — uses the existing CSS design tokens.
+ * No external dependencies - uses the existing CSS design tokens.
  *
  * Usage:
  *   const [toast, setToast] = useState<ToastProps | null>(null)

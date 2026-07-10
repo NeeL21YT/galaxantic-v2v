@@ -52,7 +52,7 @@ export function LoginForm() {
 
     startTransition(async () => {
       const result = await signIn(email, password);
-      // If signIn succeeds it redirects server-side — this code only
+      // If signIn succeeds it redirects server-side - this code only
       // runs when it returns an error.
       if (!result.success) {
         setAuthError(result.error);

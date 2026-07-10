@@ -1,7 +1,7 @@
 /**
  * app/dashboard/ai-coach/page.tsx
  *
- * AI Coach — chat interface with suggested prompts and typing indicator.
+ * AI Coach - chat interface with suggested prompts and typing indicator.
  */
 
 "use client";
@@ -39,14 +39,14 @@ export default function AICoachPage() {
     setInput("");
     setIsTyping(true);
 
-    // Simulate AI typing delay — TODO Stage 2: replace with Gemini API call
+    // Simulate AI typing delay - TODO Stage 2: replace with Gemini API call
     setTimeout(() => {
       setIsTyping(false);
       const aiMsg: ChatMessage = {
         id: `ai-${Date.now()}`,
         sender: "ai",
         content:
-          "That's a great question! I'll help you work through this. For now, I'm in demo mode — in Stage 2 I'll be powered by **Gemini AI** to give you personalised, real-time coaching. Stay tuned! 🚀",
+          "That's a great question! I'll help you work through this. For now, I'm in demo mode - in Stage 2 I'll be powered by **Gemini AI** to give you personalised, real-time coaching. Stay tuned! 🚀",
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, aiMsg]);

@@ -30,7 +30,7 @@ const FEATURES = [
     title: "Opportunity Navigator",
     tag: "Discover",
     description:
-      "Your personalized feed of internships, scholarships, fellowships, hackathons and job openings — curated by AI, filtered by eligibility, and tracked by deadline. Never miss the right opportunity.",
+      "Your personalized feed of internships, scholarships, fellowships, hackathons and job openings - curated by AI, filtered by eligibility, and tracked by deadline. Never miss the right opportunity.",
     href: "/dashboard/opportunities",
   },
   {
@@ -38,7 +38,7 @@ const FEATURES = [
     title: "AI Career Coach",
     tag: "Grow",
     description:
-      "Your always-on personal mentor. Get AI-powered resume reviews, interview preparation, learning roadmaps, and career guidance — designed to help you grow with clarity and confidence.",
+      "Your always-on personal mentor. Get AI-powered resume reviews, interview preparation, learning roadmaps, and career guidance - designed to help you grow with clarity and confidence.",
     href: "/dashboard/ai-coach",
   },
 ] as const;
@@ -77,7 +77,7 @@ export function FeaturesSection() {
                   </span>
                 </>
               }
-              subtitle="Herizon combines three powerful modules into one seamless platform — built specifically for women at every stage of their career."
+              subtitle="Herizon combines three powerful modules into one seamless platform - built specifically for women at every stage of their career."
               align="center"
               accent
             />

@@ -54,7 +54,7 @@ export function StepIndicator({ steps, currentStep }: StepIndicatorProps) {
                   step.number
                 )}
               </div>
-              {/* Label — hidden on small screens */}
+              {/* Label - hidden on small screens */}
               <span
                 className="hidden sm:block text-[10px] font-medium whitespace-nowrap"
                 style={{

@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 /* ── Metadata ───────────────────────────────────────────────── */
 export const metadata: Metadata = {
   title: {
-    default: "Herizon — Empowering Every Woman's Career Journey",
+    default: "Herizon - Empowering Every Woman's Career Journey",
     template: "%s | Herizon",
   },
   description:
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
     siteName: "Herizon",
-    title: "Herizon — Empowering Every Woman's Career Journey",
+    title: "Herizon - Empowering Every Woman's Career Journey",
     description:
       "AI-powered career empowerment platform designed to help women confidently restart careers, discover opportunities, and grow.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Herizon — Empowering Every Woman's Career Journey",
+    title: "Herizon - Empowering Every Woman's Career Journey",
     description:
       "AI-powered career empowerment platform for women.",
   },
@@ -81,7 +81,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* color-scheme: dark — tells the browser and Dark Reader this site is
+        {/* color-scheme: dark - tells the browser and Dark Reader this site is
             already dark-mode-aware. Prevents auto-inversion of the design. */}
         <meta name="color-scheme" content="dark" />
       </head>

@@ -40,7 +40,7 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
       }}
       aria-label={article.headline}
     >
-      {/* Card Header — always visible */}
+      {/* Card Header - always visible */}
       <div className="p-5 flex flex-col gap-3">
         {/* Meta */}
         <div className="flex items-center gap-2">
@@ -182,7 +182,7 @@ export function NewsCard({ article, index = 0 }: NewsCardProps) {
                     {article.sourceName}
                   </span>
                 </div>
-                {/* Source link placeholder — TODO Stage 2: link to real article URL from Supabase */}
+                {/* Source link placeholder - TODO Stage 2: link to real article URL from Supabase */}
                 <span
                   className="flex items-center gap-1 text-xs font-medium rounded-lg px-3 py-1.5"
                   style={{

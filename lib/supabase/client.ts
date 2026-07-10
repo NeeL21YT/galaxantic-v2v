@@ -5,7 +5,7 @@
  * Use this in Client Components ("use client") only.
  *
  * Uses `isSingleton: true` so a single instance is reused across the
- * lifetime of a page — avoids multiple GoTrue instances and the
+ * lifetime of a page - avoids multiple GoTrue instances and the
  * auth state race conditions they cause.
  */
 

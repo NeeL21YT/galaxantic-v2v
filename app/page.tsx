@@ -1,7 +1,7 @@
 /**
  * app/page.tsx
  *
- * Herizon Landing Page — Stage 1A
+ * Herizon Landing Page - Stage 1A
  *
  * Server Component: assembles all landing page sections.
  * Sections that require client interactivity are individually

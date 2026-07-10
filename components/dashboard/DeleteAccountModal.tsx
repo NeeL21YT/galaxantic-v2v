@@ -58,7 +58,7 @@ export function DeleteAccountModal({ userEmail, onClose }: DeleteAccountModalPro
       if (!result.success) {
         setError(result.error);
       }
-      // On success, deleteAccount redirects — no further action needed.
+      // On success, deleteAccount redirects - no further action needed.
     });
   }
 

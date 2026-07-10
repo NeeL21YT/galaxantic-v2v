@@ -1,7 +1,7 @@
 /**
  * app/dashboard/resume/page.tsx
  *
- * Server Component wrapper — fetches existing resumes and the latest
+ * Server Component wrapper - fetches existing resumes and the latest
  * completed analysis from the database, then hands off to the client shell.
  *
  * No placeholder data. All data comes from Supabase.
@@ -13,7 +13,7 @@ import { ResumePageClient } from "@/components/resume/ResumePageClient";
 import type { ResumeAnalysis } from "@/types/resume-analysis";
 
 export const metadata: Metadata = {
-  title: "Resume — Herizon",
+  title: "Resume - Herizon",
   description: "Upload your resume for instant AI scoring, ATS analysis, and a personalised 90-day career roadmap.",
 };
 

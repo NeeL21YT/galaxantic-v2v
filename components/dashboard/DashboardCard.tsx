@@ -1,7 +1,7 @@
 /**
  * components/dashboard/DashboardCard.tsx
  *
- * Generic content card — used for sections on the dashboard home
+ * Generic content card - used for sections on the dashboard home
  * and as a wrapper in feature pages.
  */
 

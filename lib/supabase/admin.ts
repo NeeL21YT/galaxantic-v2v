@@ -1,14 +1,14 @@
 /**
  * lib/supabase/admin.ts
  *
- * Supabase Admin client — uses the service role key.
+ * Supabase Admin client - uses the service role key.
  *
  * IMPORTANT:
  * - NEVER import this in client components.
  * - NEVER expose SUPABASE_SERVICE_ROLE_KEY to the browser.
  * - Only use in Server Actions and Route Handlers.
  *
- * The admin client bypasses RLS entirely — use with extreme care.
+ * The admin client bypasses RLS entirely - use with extreme care.
  * Scope every operation to the minimum required.
  */
 

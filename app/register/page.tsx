@@ -1,7 +1,7 @@
 /**
  * app/register/page.tsx
  *
- * Register page — wired to Supabase Auth via signUp server action.
+ * Register page - wired to Supabase Auth via signUp server action.
  * On success, shows an email verification prompt instead of redirecting
  * (Supabase requires email confirmation by default).
  */

@@ -6,20 +6,20 @@
  * Supabase redirects users here after:
  * - Email address verification (after registration)
  * - Password reset links
- * - OAuth provider sign-in (Google, etc. — future stages)
+ * - OAuth provider sign-in (Google, etc. - future stages)
  *
  * The `code` query param is a one-time PKCE authorisation code.
  * Exchanging it for a session writes the auth cookies to the browser.
  *
  * Query params:
- *   code        — PKCE auth code from Supabase (required)
- *   next        — Path to redirect to after success (optional, defaults to /dashboard)
- *   error       — Error code from Supabase (present on failure)
- *   error_description — Human-readable error message
+ *   code        - PKCE auth code from Supabase (required)
+ *   next        - Path to redirect to after success (optional, defaults to /dashboard)
+ *   error       - Error code from Supabase (present on failure)
+ *   error_description - Human-readable error message
  *
  * Profile Bootstrap (Stage 2B):
  * After a successful code exchange, we upsert a minimal profile row.
- * This is idempotent — if the profile already exists (e.g. on re-verification),
+ * This is idempotent - if the profile already exists (e.g. on re-verification),
  * the upsert updates email/name but keeps all other fields untouched.
  * Proxy then detects onboarding_completed = false and redirects to /dashboard/onboarding.
  */
@@ -80,7 +80,7 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // ── Fallback — code missing or exchange failed ───────────────
+  // ── Fallback - code missing or exchange failed ───────────────
   const loginUrl = new URL("/login", origin);
   loginUrl.searchParams.set(
     "error",

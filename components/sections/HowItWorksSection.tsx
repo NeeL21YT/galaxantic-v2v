@@ -29,7 +29,7 @@ const STEPS = [
     icon: <Lightbulb />,
     title: "AI Career Insights",
     description:
-      "Receive a comprehensive AI analysis — career readiness score, skill gaps, and actionable improvement suggestions.",
+      "Receive a comprehensive AI analysis - career readiness score, skill gaps, and actionable improvement suggestions.",
   },
   {
     number: "03",
@@ -71,7 +71,7 @@ function StepCard({ icon, title, description, index, isLast }: StepCardProps) {
       }}
       className="relative flex flex-col items-center text-center gap-4 flex-1"
     >
-      {/* Connector line — desktop only */}
+      {/* Connector line - desktop only */}
       {!isLast && (
         <div
           className="hidden md:block absolute top-7 left-[calc(50%+2.5rem)] right-0 h-px"
@@ -154,7 +154,7 @@ export function HowItWorksSection() {
           <SectionTitle
             eyebrow="How It Works"
             title="From resume to opportunity in four steps"
-            subtitle="Herizon's AI does the heavy lifting — you focus on growing."
+            subtitle="Herizon's AI does the heavy lifting - you focus on growing."
             align="center"
             accent
           />

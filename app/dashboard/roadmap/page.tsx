@@ -1,7 +1,7 @@
 /**
  * app/dashboard/roadmap/page.tsx
  *
- * Roadmap — 30/60/90-day milestone timeline.
+ * Roadmap - 30/60/90-day milestone timeline.
  */
 
 import { Map, CheckCircle2, Clock, Circle } from "lucide-react";
@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/Button";
 import { PLACEHOLDER_MILESTONES } from "@/lib/data/placeholder";
 
 export const metadata = {
-  title: "Roadmap — Herizon",
+  title: "Roadmap - Herizon",
   description: "Your 30/60/90-day personalised career return roadmap.",
 };
 
@@ -33,8 +33,12 @@ export default function RoadmapPage() {
         title="Career Roadmap"
         subtitle="Your personalised 90-day return-to-work plan."
         action={
-          <Button href="/dashboard/ai-coach" variant="primary" size="sm">
-            <Map className="w-3.5 h-3.5" aria-hidden="true" />
+          <Button 
+            href="/dashboard/ai-coach" 
+            variant="primary" 
+            size="sm"
+            leftIcon={<Map className="w-3.5 h-3.5" aria-hidden="true" />}
+          >
             Update with AI
           </Button>
         }

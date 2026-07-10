@@ -185,7 +185,7 @@ export function UploadProgress({ currentStep }: UploadProgressProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Herizon AI is reviewing your resume — this usually takes 10–30 seconds.
+          Herizon AI is reviewing your resume - this usually takes 10–30 seconds.
         </motion.p>
       )}
     </div>

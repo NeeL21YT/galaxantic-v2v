@@ -36,7 +36,7 @@ export function AuthLayout({
 }: AuthLayoutProps) {
   return (
     <div className="min-h-screen flex" style={{ background: "var(--color-background)" }}>
-      {/* Left panel — illustration (hidden on mobile) */}
+      {/* Left panel - illustration (hidden on mobile) */}
       <div
         className="hidden lg:flex lg:w-[480px] xl:w-[560px] flex-col justify-between p-12 relative overflow-hidden flex-shrink-0"
         style={{ background: "var(--color-puce-red-dark)" }}
@@ -82,7 +82,7 @@ export function AuthLayout({
               &ldquo;{tagline}&rdquo;
             </p>
             <footer className="mt-3 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-              — Herizon
+              - Herizon
             </footer>
           </blockquote>
         </div>
@@ -97,7 +97,7 @@ export function AuthLayout({
         </div>
       </div>
 
-      {/* Right panel — form */}
+      {/* Right panel - form */}
       <div className="flex-1 flex flex-col">
         {/* Mobile logo */}
         <div

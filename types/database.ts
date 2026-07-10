@@ -7,7 +7,7 @@
  * - Each type maps 1:1 to a database table row.
  * - `Insert` and `Update` variants omit auto-generated fields
  *   (id, created_at, updated_at) so callers only pass what they own.
- * - No business logic here — pure data shapes.
+ * - No business logic here - pure data shapes.
  */
 
 /* ── profiles ──────────────────────────────────────────────── */

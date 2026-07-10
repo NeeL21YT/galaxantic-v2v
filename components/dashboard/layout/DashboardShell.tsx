@@ -8,7 +8,7 @@
  * supporting the useState-based mobile drawer toggle.
  *
  * Receives userName and userEmail from the server layout and passes them
- * down to DashboardNavbar and AvatarDropdown — no client-side auth state
+ * down to DashboardNavbar and AvatarDropdown - no client-side auth state
  * required.
  */
 

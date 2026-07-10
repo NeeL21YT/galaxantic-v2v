@@ -21,6 +21,7 @@ import {
   Sparkles,
   Target,
   TrendingUp,
+  Trash2,
 } from "lucide-react";
 import { ResumeDropzone } from "@/components/resume/ResumeDropzone";
 import { UploadProgress, type ProgressStep } from "@/components/resume/UploadProgress";
@@ -28,7 +29,7 @@ import { AnalysisDashboard } from "@/components/resume/AnalysisDashboard";
 import { DashboardCard } from "@/components/dashboard/DashboardCard";
 import { PageHeader } from "@/components/dashboard/PageHeader";
 import { Button } from "@/components/ui/Button";
-import { processResume, reanalyzeResume } from "@/app/dashboard/resume/actions";
+import { processResume, reanalyzeResume, clearResumesAction } from "@/app/dashboard/resume/actions";
 import type { Resume } from "@/types/database";
 import type { ResumeAnalysis } from "@/types/resume-analysis";
 
@@ -84,7 +85,7 @@ function ResumeListItem({
         month: "short",
         year: "numeric",
       })
-    : "—";
+    : "-";
 
   return (
     <div
@@ -119,7 +120,7 @@ function ResumeListItem({
       </div>
 
       <div className="flex items-center gap-2 flex-shrink-0">
-        {/* If we have a score the analysis completed — show Analysed regardless of DB status */}
+        {/* If we have a score the analysis completed - show Analysed regardless of DB status */}
         <StatusBadge status={resume.resume_score !== null ? "completed" : resume.analysis_status} />
         {(resume.resume_score !== null || isAnalyzed) && onReanalyze && (
           <button
@@ -188,7 +189,9 @@ export function ResumePageClient({
   initialAnalysis,
 }: ResumePageClientProps) {
   const [isPending, startTransition] = useTransition();
+  const [isClearing, startClearing] = useTransition();
   const [isReanalyzing, setIsReanalyzing] = useState(false);
+  const [isConfirmOpen, setIsConfirmOpen] = useState(false);
 
   const [resumes, setResumes] = useState<Resume[]>(initialResumes);
   const [activeAnalysis, setActiveAnalysis] = useState<ActiveAnalysis | null>(initialAnalysis);
@@ -251,7 +254,7 @@ export function ResumePageClient({
             file_path: null,
             file_size: selectedFile.size,
             file_type: selectedFile.type,
-            analysis_status: "completed",
+            analysis_status: "completed" as import("@/types/database").AnalysisStatus,
             resume_score: result.data.analysis.resumeScore,
             ats_score: result.data.analysis.atsScore,
             career_readiness: result.data.analysis.careerReadiness,
@@ -275,6 +278,24 @@ export function ResumePageClient({
         setSelectedFile(null);
         setProgressStep("idle");
       }, 1500);
+    });
+  }
+
+  /* ── Clear all resumes ── */
+  function confirmClearAll() {
+    setIsConfirmOpen(true);
+  }
+
+  function handleClearAll() {
+    setIsConfirmOpen(false);
+    startClearing(async () => {
+      const result = await clearResumesAction();
+      if (result.success) {
+        setResumes([]);
+        setActiveAnalysis(null);
+      } else {
+        setErrorMsg(result.error || "Failed to clear resumes.");
+      }
     });
   }
 
@@ -371,7 +392,7 @@ export function ResumePageClient({
               />
             )}
 
-            {/* Analyse button (mobile/tablet — below dropzone) */}
+            {/* Analyse button (mobile/tablet - below dropzone) */}
             {!isProcessing && selectedFile && (
               <div className="lg:hidden">
                 <Button
@@ -389,7 +410,21 @@ export function ResumePageClient({
             {/* Resume history */}
             <DashboardCard
               title="Your Resumes"
-              subtitle={`${resumes.length} upload${resumes.length !== 1 ? "s" : ""}`}
+              subtitle="Recent 5 Uploads"
+              headerAction={
+                resumes.length > 0 && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={confirmClearAll}
+                    disabled={isClearing}
+                    className="text-red-500 hover:text-red-600 hover:bg-red-50"
+                    leftIcon={<Trash2 className={`w-4 h-4 ${isClearing ? "animate-pulse" : ""}`} />}
+                  >
+                    {isClearing ? "Clearing..." : "Clear all"}
+                  </Button>
+                )
+              }
             >
               {resumes.length === 0 ? (
                 <p className="text-xs py-4 text-center" style={{ color: "var(--color-text-muted)" }}>
@@ -500,6 +535,38 @@ export function ResumePageClient({
           )}
         </AnimatePresence>
       </div>
+
+      {/* ── Custom Confirmation Modal ── */}
+      <AnimatePresence>
+        {isConfirmOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="bg-white rounded-2xl p-6 shadow-xl max-w-sm w-full border border-red-100"
+            >
+              <h3 className="text-lg font-semibold text-red-600 mb-2">Clear all resumes?</h3>
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                Are you sure you want to clear all your uploaded resumes and analyses? This action cannot be undone.
+              </p>
+              <div className="flex justify-end gap-3">
+                <Button variant="ghost" onClick={() => setIsConfirmOpen(false)}>
+                  Cancel
+                </Button>
+                <Button
+                  variant="primary"
+                  className="bg-red-500 hover:bg-red-600 text-white border-transparent"
+                  onClick={handleClearAll}
+                >
+                  Yes, Clear All
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
