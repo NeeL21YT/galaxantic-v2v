@@ -38,7 +38,7 @@ const fadeRight = {
 
 const STATS = [
   { value: "50K+", label: "Women Supported" },
-  { value: "3 Core", label: "Career Modules" },
+  { value: "7 Core", label: "Career Modules" },
   { value: "AI-Powered", label: "Career Guidance" },
 ];
 
