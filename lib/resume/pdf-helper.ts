@@ -1,14 +1,14 @@
 /**
  * lib/resume/pdf-helper.ts
  *
- * Extracts plain text from a PDF file buffer using the modern pdfjs-dist.
- * This fixes compression errors seen in pdf-parse (which uses a 5-year-old pdf.js).
+ * Extracts plain text from a PDF file buffer using pdf2json.
+ * This completely avoids Vercel Turbopack errors related to Web Workers, Canvas,
+ * and DOMMatrix that plague pdfjs-dist on Serverless/Edge runtimes.
  *
  * Server-side only.
  */
 
-// No top-level pdfjs-dist import to prevent premature evaluation of DOMMatrix
-import type { TextItem } from "pdfjs-dist/types/src/display/api";
+import PDFParser from "pdf2json";
 
 function normalizeText(raw: string): string {
   return raw
@@ -20,61 +20,36 @@ function normalizeText(raw: string): string {
 }
 
 /**
- * Extracts all text from a PDF ArrayBuffer using pdfjs-dist.
+ * Extracts all text from a PDF ArrayBuffer using pdf2json.
  * Returns normalized plain text suitable for AI analysis.
  */
 export async function extractTextFromPDF(buffer: ArrayBuffer): Promise<string> {
-  try {
-    // Polyfill missing DOM elements for Vercel Node.js / Edge runtimes
-    if (typeof globalThis.DOMMatrix === "undefined") {
+  return new Promise((resolve, reject) => {
+    try {
+      // Initialize pdf2json in "raw text extraction" mode (1)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      globalThis.DOMMatrix = class DOMMatrix {} as any;
-    }
-    if (typeof globalThis.Path2D === "undefined") {
+      const pdfParser = new PDFParser(null, 1 as any);
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      globalThis.Path2D = class Path2D {} as any;
+      pdfParser.on("pdfParser_dataError", (errData: any) => {
+        const errorMsg = errData?.parserError || errData?.message || String(errData);
+        console.error("[pdf-helper] extraction failed:", errorMsg);
+        reject(new Error(String(errorMsg)));
+      });
+
+      pdfParser.on("pdfParser_dataReady", () => {
+        const rawText = pdfParser.getRawTextContent();
+        if (!rawText || !rawText.trim()) {
+          return reject(new Error("No text could be extracted - file may be image-based or corrupted."));
+        }
+        resolve(normalizeText(rawText));
+      });
+
+      const nodeBuffer = Buffer.from(buffer);
+      pdfParser.parseBuffer(nodeBuffer);
+    } catch (err) {
+      console.error("[pdf-helper] fatal parse error:", err);
+      reject(err);
     }
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mod = (await import("pdfjs-dist/legacy/build/pdf.mjs")) as any;
-    const pdfjsLib = mod.default || mod;
-
-    const data = new Uint8Array(buffer);
-    
-    // Initialize document without web workers (safe for Server Actions)
-    const loadingTask = pdfjsLib.getDocument({
-      data,
-      useSystemFonts: true,
-      disableFontFace: true,
-    });
-    
-    const pdfDocument = await loadingTask.promise;
-    const numPages = pdfDocument.numPages;
-    let fullText = "";
-
-    // Loop through each page and extract text
-    for (let i = 1; i <= numPages; i++) {
-      const page = await pdfDocument.getPage(i);
-      const textContent = await page.getTextContent();
-      
-      const pageText = textContent.items
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .map((item: any) => {
-          const textItem = item as TextItem;
-          return textItem.str ? textItem.str : "";
-        })
-        .join(" ");
-        
-      fullText += pageText + "\n";
-    }
-
-    if (!fullText.trim()) {
-      throw new Error("No text could be extracted - file may be image-based or corrupted.");
-    }
-
-    return normalizeText(fullText);
-  } catch (err) {
-    console.error("[pdf-helper] pdfjs-dist extraction failed:", err);
-    throw err;
-  }
+  });
 }
