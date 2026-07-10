@@ -58,7 +58,7 @@ export default function RegisterPage() {
       if (result.success) {
         setSuccessMessage(
           result.message ??
-            "Account created! Check your email and click the verification link to get started."
+            "Please wait till we verify you!"
         );
       } else {
         setAuthError(result.error);
@@ -66,31 +66,16 @@ export default function RegisterPage() {
     });
   }
 
-  // Magic Link Polling: Wait for verification and auto-login
+  // Auto-refresh after 2 seconds so the middleware picks up the session
   useEffect(() => {
     if (!successMessage) return;
 
-    let isChecking = false;
-    const interval = setInterval(async () => {
-      if (isChecking) return;
-      isChecking = true;
-      try {
-        const isVerified = await checkVerificationStatus(email);
-        if (isVerified) {
-          clearInterval(interval);
-          // They clicked the link! Log them in automatically using the password still in state.
-          await signIn(email, password);
-          // signIn redirects to /dashboard, so we don't need to do anything else here.
-        }
-      } catch (err) {
-        console.error("Polling error:", err);
-      } finally {
-        isChecking = false;
-      }
-    }, 3000); // Check every 3 seconds
+    const timer = setTimeout(() => {
+      window.location.reload();
+    }, 2000);
 
-    return () => clearInterval(interval);
-  }, [successMessage, email, password]);
+    return () => clearTimeout(timer);
+  }, [successMessage]);
 
   return (
     <AuthLayout
