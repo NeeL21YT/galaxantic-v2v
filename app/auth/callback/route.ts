@@ -80,11 +80,22 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // ── Fallback - code missing or exchange failed ───────────────
+  // ── Fallback - code missing or PKCE exchange failed ───────────────
   const loginUrl = new URL("/login", origin);
-  loginUrl.searchParams.set(
-    "error",
-    "The verification link has expired or is invalid. Please try again."
-  );
+  
+  if (code) {
+    // If we had a code but no errorCode from Supabase, the email WAS verified 
+    // but the session exchange failed (usually due to cross-browser PKCE).
+    loginUrl.searchParams.set(
+      "message",
+      "Email verified successfully! Please log in to continue."
+    );
+  } else {
+    loginUrl.searchParams.set(
+      "error",
+      "The verification link has expired or is invalid. Please try again."
+    );
+  }
+
   return NextResponse.redirect(loginUrl);
 }

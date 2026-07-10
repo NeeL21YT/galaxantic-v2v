@@ -33,6 +33,10 @@ export function LoginForm() {
     // Show errors passed from /auth/callback (e.g. expired verification link)
     searchParams.get("error") ?? null
   );
+  const [authMessage, setAuthMessage] = useState<string | null>(
+    // Show success messages passed from /auth/callback
+    searchParams.get("message") ?? null
+  );
 
   function validate() {
     const e: typeof errors = {};
@@ -68,6 +72,15 @@ export function LoginForm() {
           message={authError}
           variant="error"
           onDismiss={() => setAuthError(null)}
+        />
+      )}
+      
+      {/* Auth success toast */}
+      {authMessage && (
+        <Toast
+          message={authMessage}
+          variant="success"
+          onDismiss={() => setAuthMessage(null)}
         />
       )}
 
