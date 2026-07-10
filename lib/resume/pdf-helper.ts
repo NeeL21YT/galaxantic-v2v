@@ -8,7 +8,7 @@
  */
 
 // Use legacy build to ensure Node.js compatibility without Web Worker crashes
-import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
 import type { TextItem } from "pdfjs-dist/types/src/display/api";
 
 function normalizeText(raw: string): string {
