@@ -144,6 +144,7 @@ export default async function RoadmapPage() {
                   {phaseMilestones.map((milestone, index) => (
                     <TimelineCard
                       key={milestone.id}
+                      roadmapId={latestRoadmap?.id ?? ""}
                       milestone={milestone}
                       index={index}
                       isLast={index === phaseMilestones.length - 1}

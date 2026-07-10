@@ -6,8 +6,10 @@
 
 "use client";
 
-import { CheckCircle2, Circle, Clock } from "lucide-react";
+import { CheckCircle2, Circle, Clock, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTransition } from "react";
+import { updateMilestoneStatusAction } from "@/app/dashboard/roadmap/actions";
 import type { Milestone, MilestoneStatus } from "@/types/dashboard";
 
 const statusConfig: Record<
@@ -35,19 +37,38 @@ const statusConfig: Record<
 };
 
 interface TimelineCardProps {
+  roadmapId: string;
   milestone: Milestone;
   index?: number;
   isLast?: boolean;
 }
 
-export function TimelineCard({ milestone, index = 0, isLast = false }: TimelineCardProps) {
+export function TimelineCard({ roadmapId, milestone, index = 0, isLast = false }: TimelineCardProps) {
+  const [isPending, startTransition] = useTransition();
   const config = statusConfig[milestone.status];
+  const isCompleted = milestone.status === "completed";
+
+  const handleToggleStatus = () => {
+    startTransition(async () => {
+      let nextStatus: MilestoneStatus = "upcoming";
+      if (milestone.status === "upcoming") nextStatus = "in-progress";
+      else if (milestone.status === "in-progress") nextStatus = "completed";
+      else if (milestone.status === "completed") nextStatus = "upcoming";
+
+      try {
+        await updateMilestoneStatusAction(roadmapId, milestone.id, nextStatus);
+      } catch (err) {
+        console.error("Failed to update status:", err);
+      }
+    });
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -12 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="relative flex gap-4"
+      className={`relative flex gap-4 ${isCompleted ? "opacity-60" : ""}`}
     >
       {/* Timeline spine */}
       {!isLast && (
@@ -64,13 +85,16 @@ export function TimelineCard({ milestone, index = 0, isLast = false }: TimelineC
       )}
 
       {/* Status Icon */}
-      <div
-        className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 z-10"
+      <button
+        type="button"
+        disabled={isPending}
+        onClick={handleToggleStatus}
+        className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 z-10 transition-transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-400"
         style={{ background: config.bg, color: config.color, border: `1.5px solid ${config.color}` }}
-        aria-label={config.label}
+        aria-label={`Mark ${milestone.title} as ${milestone.status === "upcoming" ? "In Progress" : milestone.status === "in-progress" ? "Completed" : "Upcoming"}`}
       >
-        {config.icon}
-      </div>
+        {isPending ? <Loader2 className="w-4 h-4 animate-spin" /> : config.icon}
+      </button>
 
       {/* Content */}
       <div
@@ -83,7 +107,7 @@ export function TimelineCard({ milestone, index = 0, isLast = false }: TimelineC
       >
         <div className="flex items-start justify-between gap-2 mb-2">
           <p
-            className="text-sm font-semibold leading-tight"
+            className={`text-sm font-semibold leading-tight ${isCompleted ? "line-through" : ""}`}
             style={{
               fontFamily: "var(--font-heading)",
               color: milestone.status === "upcoming" ? "var(--color-text-secondary)" : "var(--color-puce-red)",
@@ -98,13 +122,13 @@ export function TimelineCard({ milestone, index = 0, isLast = false }: TimelineC
             {config.label}
           </span>
         </div>
-        <p className="text-xs leading-relaxed mb-3" style={{ color: "var(--color-text-muted)" }}>
+        <p className={`text-xs leading-relaxed mb-3 ${isCompleted ? "line-through" : ""}`} style={{ color: "var(--color-text-muted)" }}>
           {milestone.description}
         </p>
         {/* Tasks */}
         <ul className="flex flex-col gap-1.5">
           {milestone.tasks.map((task) => (
-            <li key={task} className="flex items-center gap-2 text-xs" style={{ color: "var(--color-text-secondary)" }}>
+            <li key={task} className={`flex items-center gap-2 text-xs ${isCompleted ? "line-through" : ""}`} style={{ color: "var(--color-text-secondary)" }}>
               <span
                 className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                 style={{ background: config.color }}
