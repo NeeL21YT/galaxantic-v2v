@@ -120,6 +120,10 @@ Plan your financial independence with a hybrid approach.
 
 **Track:** ElevateHer - Education, FinTech & Career Empowerment
 
+**Result:** 🏅 **5th Place** — Team Galaxantic secured Fifth Position at Vibe2Vision, organized by IEEE VSSUT Student Branch in collaboration with IEEE VSSUT WIE Affinity Group (IEEE SHE ASPIRE 3.0), 9–11 July 2026.
+
+![Certificate of Achievement – Fifth Position, Vibe2Vision](public/images/hackathon-certificate.webp)
+
 ---
 
 # 📄 License
